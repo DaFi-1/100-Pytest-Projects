@@ -3026,5 +3026,3 @@ das onde minha area vai comvergir no futuro,
         Com o plugin pytest-mock a função recebe o parâmetro      ------ mocker
         Os parâmetros mais usados em mocker.patch()               ------ return_value, side_effect, name,x,y 
 
-### CARD 5
-### CARD 5
