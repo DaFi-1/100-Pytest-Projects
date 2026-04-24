@@ -2790,19 +2790,98 @@ main.py::TestCalcular::test_not_case PASSED                                     
 
 -------------- pytest-cov  output --------------
 ```
-## 63 -
+## 63 - mocker de pseudo api
 
 ```python
+import pytest
+import requests 
+
+def pegar_usuario(user_id):
+    url = f"https://jsonplaceholder.typicode.com/users/{user_id}"
+    resposta = requests.get(url)
+
+    if resposta.status_code == 200:
+        return resposta.json()
+
+    raise ValueError("Usuário não encontrado")
+
+class TestCalcular:
+
+    def test_response_error(self, mocker) -> None:
+        fake1 = mocker.Mock()
+        fake1.status_code       = 400
+        fake1.json.return_value = {} 
+        mocker.patch('main.requests.get', return_value=fake1)
+        with pytest.raises(ValueError) as error:
+            pegar_usuario('uva')
+        assert str(error.value) == "Usuário não encontrado"
+
+    def test_response_success(self, mocker) -> None:
+        fake1 = mocker.Mock()
+        fake1.status_code       = 200 
+        fake1.json.return_value = {} 
+        mocker.patch('main.requests.get', return_value=fake1)
+        assert pegar_usuario('uva') == {}
+
 ---------------- pytest  output ----------------
+main.py::TestCalcular::test_response_error PASSED
+main.py::TestCalcular::test_response_success PASSED
 -------------- pytest-cov  output --------------
 ```
-## 64 -
+
+
+## 64 - usando mokeyaptch com a funcao de cima
+
 
 ```python
+import pytest
+import requests 
+
+def pegar_usuario(user_id):
+    url = f"https://jsonplaceholder.typicode.com/users/{user_id}"
+    resposta = requests.get(url)
+
+    if resposta.status_code == 200:
+        return resposta.json()
+
+    raise ValueError("Usuário não encontrado")
+
+class TestCalcular:
+
+    class FakerResponse:
+        status_code = 400
+        def json(self) -> dict:
+            return {}
+
+    class FakerRespons2:
+        status_code = 200 
+        def json(self) -> dict:
+            return {}
+
+    def fake_get(self, url):
+        return self.FakerResponse()
+
+    def fake_get2(self, url):
+        return self.FakerRespons2()
+
+    def test_response_error(self, monkeypatch) -> None:
+        monkeypatch.setattr("main.requests.get", self.fake_get)
+        with pytest.raises(ValueError) as error:
+            pegar_usuario('uva')
+        assert str(error.value) == "Usuário não encontrado"
+
+    def test_json_rresopnse(self, monkeypatch) -> None:
+        monkeypatch.setattr("main.requests.get", self.fake_get2)
+        assert pegar_usuario('uva') == {} 
+
 ---------------- pytest  output ----------------
+main.py::TestCalcular::test_response_error PASSED
+main.py::TestCalcular::test_json_rresopnse PASSED
 -------------- pytest-cov  output --------------
 ```
+
 ## 65 -
+
 
 ```python
 ---------------- pytest  output ----------------
