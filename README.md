@@ -2730,10 +2730,64 @@ TOTAL        13      0   100%
 percepa que nao deu erro chamei uma funcao que tem uma variavel uva que nao foi declarada, como esse test roda?
 simplesmente o monkeypatch faz aa injecao de coisas em modulo, venv, path,objetos, ee foi assim que o teste passou
 
-## 62 -
+## 62 - Primeiro comite depois de muito tempo
 
 ```python
+import pytest
+
+def calcular(a, b, operacao):
+    if operacao == "soma":
+        return a + b
+
+    elif operacao == "subtracao":
+        return a - b
+
+    elif operacao == "multiplicacao":
+        return a * b
+
+    elif operacao == "divisao":
+        if b == 0:
+            raise ValueError("Divisão por zero não é permitida")
+        return a / b
+
+    else:
+        raise ValueError("Operação inválida")
+
+
+class TestCalcular:
+
+    def test_soma(self) -> None:
+        assert calcular(1,1,'soma') == 2
+
+    def test_subtracao(self) -> None:
+        assert calcular(1,1,'subtracao') == 0
+
+    def test_multiplicacao(self) -> None:
+        assert calcular(1,1,'multiplicacao') == 1
+
+    def test_divisao(self) -> None:
+        assert calcular(1,1,'divisao') == 1
+
+    def test_divisao_error(self) -> None:
+        with pytest.raises(ValueError) as error:
+            calcular(1,0,'divisao')
+        assert str(error.value) == "Divisão por zero não é permitida"
+
+    def test_not_case(self) -> None:
+        with pytest.raises(ValueError) as error:
+            calcular(1,0,'')
+        assert str(error.value) == "Operação inválida"
+
+
 ---------------- pytest  output ----------------
+main.py::TestCalcular::test_soma PASSED                                                                                     [ 16%]
+main.py::TestCalcular::test_subtracao PASSED                                                                                [ 33%]
+main.py::TestCalcular::test_multiplicacao PASSED                                                                            [ 50%]
+main.py::TestCalcular::test_divisao PASSED                                                                                  [ 66%]
+main.py::TestCalcular::test_divisao_error PASSED                                                                            [ 83%]
+main.py::TestCalcular::test_not_case PASSED                                                                                 [100%]
+
+
 -------------- pytest-cov  output --------------
 ```
 ## 63 -
