@@ -2880,19 +2880,107 @@ main.py::TestCalcular::test_json_rresopnse PASSED
 -------------- pytest-cov  output --------------
 ```
 
-## 65 -
-
-
-```python
----------------- pytest  output ----------------
--------------- pytest-cov  output --------------
-```
-## 66 -
+## 65 - dois test que faz aaa mesma coisa
 
 ```python
+import pytest
+import requests
+
+def get_user(user_id):
+    response = requests.get(f"https://api.example.com/users/{user_id}")
+    return response.json()
+
+class TestGetUser:
+    def test_success_one(self, mocker) -> None:
+        fake1 = mocker.Mock()
+        fake1.json.return_value = {}
+        mocker.patch('requests.get', return_value=fake1)
+        assert get_user('uva') == {} 
+
+class TestGetUserTwo:
+
+    class FakeGetResponse:
+        def json() -> dict :
+            return {}
+
+    def fakeobj(self, x) -> FakeGetResponse:
+        return self.FakeGetResponse
+
+    def test_success_two(self, monkeypatch) -> None:
+        monkeypatch.setattr('main.requests.get', self.fakeobj)
+        assert get_user('uva') == {} 
+
 ---------------- pytest  output ----------------
+main.py::TestGetUser::test_success_one PASSED                                         [ 50%]
+main.py::TestGetUserTwo::test_success_two PASSED                                      [100%]
 -------------- pytest-cov  output --------------
 ```
+apartir de agora eu vou fazer os test usando os dois tipo com monkeypatch do pytest
+eee o monker , plugin do pytest, tenho que aprender em qual senario usar cada um deles
+ate agorta eu uso eles , para ... o monkeypatch para testar chaadas simples o mocker
+para testar o comportamento daaaaa funcao
+
+## 66 - so mais um para treino
+
+```python
+import pytest
+import requests
+
+def check_api_status():
+    response = requests.get("https://api.example.com/status")
+    if response.status_code == 200:
+        return "ok"
+    return "error"
+
+class TestCheckApiStatus:
+
+    def test_success_erro(self, mocker) -> None:
+        fake1 = mocker.Mock()
+        fake1.status_code = 400 
+        mocker.patch('requests.get', return_value=fake1)
+        assert check_api_status() == 'error' 
+
+    def test_success_success(self, mocker) -> None:
+        fake1 = mocker.Mock()
+        fake1.status_code = 200 
+        mocker.patch('requests.get', return_value=fake1)
+        assert check_api_status() == 'ok' 
+
+class TestCheckApiStatusModeTwo:
+
+    class FakerResponse:
+        status_code = 400
+
+    class FakerResponsex:
+        status_code = 200
+
+    def fakeobj(self, url) -> FakerResponse:
+        return self.FakerResponse
+
+    def fakeobjx(self, url) -> FakerResponsex:
+        return self.FakerResponsex
+
+    def test_success_erro(self, monkeypatch) -> None:
+        monkeypatch.setattr('requests.get', self.fakeobj)
+        assert check_api_status() == 'error' 
+
+    def test_success_success(self, monkeypatch) -> None:
+        monkeypatch.setattr('requests.get', self.fakeobjx)
+        assert check_api_status() == 'ok' 
+
+---------------- pytest  output ----------------
+main.py::TestCheckApiStatus::test_success_erro PASSED                                 [ 25%]
+main.py::TestCheckApiStatus::test_success_success PASSED                              [ 50%]
+main.py::TestCheckApiStatusModeTwo::test_success_erro PASSED                          [ 75%]
+main.py::TestCheckApiStatusModeTwo::test_success_success PASSED                       [100%]
+
+-------------- pytest-cov  output --------------
+```
+
+nao sei pq o chatgpt quando eu mando ele fazer uma funcao deificil ele faz uma 
+funcao que faz 100 coisas diferentes na mesma funcao kkkkkkk cade o SOLID...
+em cenarios reais concerteza vai ter funcoes GOD feitas por programadores ruims
+
 ## 67 -
 
 ```python
