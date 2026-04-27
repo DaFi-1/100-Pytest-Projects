@@ -2981,18 +2981,83 @@ nao sei pq o chatgpt quando eu mando ele fazer uma funcao deificil ele faz uma
 funcao que faz 100 coisas diferentes na mesma funcao kkkkkkk cade o SOLID...
 em cenarios reais concerteza vai ter funcoes GOD feitas por programadores ruims
 
-## 67 -
+## 67 - Simples teste so para mmostra pra um amigo como faz test
 
 ```python
+import pytest
+
+def media_ponderada(a, b, c, d):
+    total_pesos = (0.2 + 0.2 + 0.3 + 0.3)
+    resultado = ((a * 0.2) + (b * 0.2) + (c * 0.3) + (d * 0.3)) / total_pesos
+    if resultado >= 7:
+        return "Aprovado"
+    elif resultado >= 6 and resultado < 7:
+        return "Recuperação"
+    elif resultado < 6 and resultado > 5:
+        return "Final"
+     
+    return "Reprovado"
+
+class TestMediaPonderada:
+
+    @pytest.mark.parametrize('x, y, z, w',[
+        (10, 10, 10, 10),
+        (90, 90, 90, 90),
+    ])
+    def test_aprovado(self, x, y, z, w) -> None:
+        assert media_ponderada(x, y, z, w) == 'Aprovado'  
+
+    @pytest.mark.parametrize('x, y, z, w',[
+        (1, 1, 1, 1),
+        (2, 2, 2, 2),
+    ])
+    def test_reprovado(self, x, y, z, w) -> None:
+        assert media_ponderada(x, y, z, w) == 'Reprovado'  
+
 ---------------- pytest  output ----------------
+main.py::TestMediaPonderada::test_aprovado[10-10-10-10] PASSED                   
+main.py::TestMediaPonderada::test_aprovado[90-90-90-90] PASSED                   
+main.py::TestMediaPonderada::test_reprovado[1-1-1-1] PASSED                      
+main.py::TestMediaPonderada::test_reprovado[2-2-2-2] PASSED                      
 -------------- pytest-cov  output --------------
 ```
-## 68 -
+## 68 - builtins open() com monkeypatch
 
 ```python
+import pytest
+
+def open_file():
+    with open('sun.py', 'r', encoding='utf-8') as file:
+        return file.read()
+
+class TestOpenFile:
+
+    def fake_open(*args, **kwargs):
+
+        class FakeFile:
+            def read(self):
+                return 'fake'
+            def __enter__(self):
+                return self
+            def __exit__(self, *args):
+                pass
+
+        return FakeFile()
+
+    def testopenfile(self, monkeypatch) -> None:
+        monkeypatch.setattr('builtins.open', self.fake_open)
+        assert open_file() == 'fake'
+
 ---------------- pytest  output ----------------
+main.py::TestOpenFile::testopenfile PASSED
 -------------- pytest-cov  output --------------
 ```
+
+interessante para fazer um builtins.open() preciso de um objetos fake
+vou estudar mmasi detalhado esse method open() eee como ele fuciona 
+eu sei no fundo como ele fuciona no C, mas no python tem coisas como nameespace,
+escopos , etc, acho que ele tem macanicas bem unicas no python. 
+
 ## 69 -
 
 ```python
