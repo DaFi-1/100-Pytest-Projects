@@ -3058,36 +3058,123 @@ vou estudar mmasi detalhado esse method open() eee como ele fuciona
 eu sei no fundo como ele fuciona no C, mas no python tem coisas como nameespace,
 escopos , etc, acho que ele tem macanicas bem unicas no python. 
 
-## 69 -
+## 69 - criando um objeto fake para o builtins.open()
 
 ```python
+import pytest
+
+def ler_arquivo(caminho):
+    try:
+        arquivo = open(caminho, "r")  # modo leitura
+        conteudo = arquivo.read()
+        arquivo.close()
+        return conteudo
+    except:
+        return "Erro ao abrir o arquivo"
+
+class TestLerArquivo:
+
+    class FakeOpen:
+        def read(self) -> str:
+            return 'ok'
+        def close(self) -> str:
+            return 'ok'
+        def __enter__(self):
+            return self
+        def __exit__(self):
+            return None
+
+    def test_success(self, monkeypatch, ) -> None:
+        monkeypatch.setattr('builtins.open', lambda *args, **kwargs: self.FakeOpen())
+        assert ler_arquivo('x.py') == 'ok'
+
+    def test_error(self, monkeypatch, ) -> None:
+        monkeypatch.setattr('builtins.open', self.FakeOpen())
+        assert ler_arquivo('x.py') == "Erro ao abrir o arquivo"
+
+
+---------------- pytest  output ----------------
+main.py::TestLerArquivo::test_success PASSED
+main.py::TestLerArquivo::test_error PASSED  
+-------------- pytest-cov  output --------------
+```
+## 70 - tetando usar o .setitem, sendo que eu devia usar o .setenv
+
+```python
+import pytest
+import os
+
+def pegar_modo():
+    return os.environ["MODO"]
+
+class TestLerPegarModo:
+
+    def test_success(self, monkeypatch) -> None:
+        monkeypatch.setenv('MODO', 'inject variable')
+        assert pegar_modo() =='inject variable'
+
+--------------- pytest  output ----------------
+main.py::TestLerPegarModo::test_success PASSED
+-------------- pytest-cov  output --------------
+```
+percepa que o setitem precisa do primeiro argumento sendo um dicionaio
+ja no .setenv, nao ele injeta ate onde eu identi no name space
+
+## 71 - algums conceitos para decorar
+
+```python
+
+ Defina:
+     monkeypatch.setattr  ----- muda atributo de objeto/módulo
+     monkeypatch.setitem  ----- muda valor em dict
+     monkeypatch.setenv   ----- muda variável de ambiente
+
 ---------------- pytest  output ----------------
 -------------- pytest-cov  output --------------
 ```
-## 70 -
+
+## 72 - monkeypatch.setattr, ficiona com scopo global
 
 ```python
+import pytest
+
+egg = {'apple': 'tree'}
+
+def pegar_modo():
+    global egg
+    return egg['apple']
+
+class TestLerPegarModo:
+    def test_success(self, monkeypatch) -> None:
+        monkeypatch.setitem(egg, 'apple', 'tall')
+        assert pegar_modo() == 'tall'
+
 ---------------- pytest  output ----------------
--------------- pytest-cov  output --------------
+main.py::TestLerPegarModo::test_success PASSED                                                     [100%]
+------------- pytest-cov  output --------------
 ```
-## 71 -
+perceba que o monkeypatch.setattr fuciona com escopos accessiveis
+no meu exemplo eu usei o escopo global.
+
+## 73 - vamos utilizar o monkeypatch.setenv 
 
 ```python
----------------- pytest  output ----------------
--------------- pytest-cov  output --------------
-```
-## 72 -
+import pytest
+import os
 
-```python
----------------- pytest  output ----------------
--------------- pytest-cov  output --------------
-```
-## 73 -
+def pegar_api_key():
+    return os.getenv("API_KEY")
 
-```python
+class TestLerPegarModo:
+    def test_success(self, monkeypatch) -> None:
+        monkeypatch.setenv('API_KEY', 'y')
+        assert pegar_api_key() == 'y'
+
 ---------------- pytest  output ----------------
+main.py::TestLerPegarModo::test_success PASSED
 -------------- pytest-cov  output --------------
 ```
+
 ## 74 -
 
 ```python
@@ -3313,4 +3400,27 @@ das onde minha area vai comvergir no futuro,
         Como substituir uma função real por uma falsa             ------ usando mocker.patch()
         Com o plugin pytest-mock a função recebe o parâmetro      ------ mocker
         Os parâmetros mais usados em mocker.patch()               ------ return_value, side_effect, name,x,y 
+
+### CARD 5
+        O segundo argumento do monkeypatch.setattr() tem que ser um                     ----- uma função chamável
+        Assim como pytest-mock, devemos usar o monkeypatch se a função depender de algo ----- sim
+        O que eu uso para mudar variáveis de ambiente no monkeypatch                    ----- monkeypatch.setenv
+        O que eu uso para mudar objetos/method/mock com monkeypatch                     ----- monkeypatch.setattr
+        O que eu uso para mudar um valor de dict com monkeypatch                        ----- monkeypatch.setitem
+
+        Defina:
+            monkeypatch.setattr                                                         ----- muda atributo de objeto/módulo
+            monkeypatch.setitem                                                         ----- muda valor em dict
+            monkeypatch.setenv                                                          ----- muda variável de ambiente
+
+
+        O que o Python faz aqui internamente with open() as x:                          ----- open().__enter__()
+                                                                                              open().__exit__()
+
+        Faça um objeto fake do open() no Python                                         ----- class FakeFile:
+                                                                                              def __enter__(self):
+                                                                                                  return self
+                                                                                              def __exit__(self, exc_type, exc_value, traceback):
+                                                                                                  pass
+
 
