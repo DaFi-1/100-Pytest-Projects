@@ -3229,12 +3229,26 @@ class TestLerPegarModo:
 um exempl ocomo com monkeypatch , temos que criar uma clase fake   para mocala
 ou fucoes ou methods para mocker
 
-## 76 -
+## 76 - lazy mock
 
 ```python
+import pytest
+
+def openfile():
+    with open('./','r') as file:
+        file.read()
+
+class TestLerPegarModo:
+    def test_open(self, mocker) -> None:
+        mocker.patch('builtins.open', mocker.mock_open())
+        assert openfile() == None
+ 
 ---------------- pytest  output ----------------
+main.py::TestLerPegarModo::test_open PASSED
 -------------- pytest-cov  output --------------
 ```
+muito simples de mock com pytest-mock comparado com o monkeypatch
+
 ## 77 -
 
 ```python
