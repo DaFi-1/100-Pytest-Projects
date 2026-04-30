@@ -3175,18 +3175,60 @@ main.py::TestLerPegarModo::test_success PASSED
 -------------- pytest-cov  output --------------
 ```
 
-## 74 -
+## 74 - empty
 
 ```python
+import pytest
+
+def divide(a, b):
+    if b == 0:
+        raise ValueError("Não pode dividir por zero")
+    return a / b
+
+class TestLerPegarModo:
+    def test_success(self, monkeypatch) -> None:
+        assert divide(1,1) == 1/1 
+
+    def test_error(self, monkeypatch) -> None:
+        with pytest.raises(ValueError) as error: 
+            divide(1,0) 
+        assert str(error.value) == "Não pode dividir por zero"
+ 
+---------------- pytest  output ----------------
+main.py::TestLerPegarModo::test_success PASSED
+main.py::TestLerPegarModo::test_error PASSED
+-------------- pytest-cov  output --------------
+```
+## 75 - open() with monkeypatch
+
+```python
+import pytest
+
+def openfile():
+    with open('./','r') as file:
+        file.read()
+
+class TestLerPegarModo:
+
+    def fake_obj(self):
+        class FakeOpenFile:
+            def read(self) -> bool:
+                return True
+            def __enter__(self) -> FakeOpenFile:
+                return self
+            def __exit__(self, x, y, z) -> None:
+                pass
+        return self.FakeOpenFile
+
+    def test_open(self, monkeypatch, fake_obj) -> None:
+        monkeypatch.setattr('builtins.open', self.fake_obj())
+ 
 ---------------- pytest  output ----------------
 -------------- pytest-cov  output --------------
 ```
-## 75 -
+um exempl ocomo com monkeypatch , temos que criar uma clase fake   para mocala
+ou fucoes ou methods para mocker
 
-```python
----------------- pytest  output ----------------
--------------- pytest-cov  output --------------
-```
 ## 76 -
 
 ```python
