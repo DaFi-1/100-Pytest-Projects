@@ -120,7 +120,7 @@ main.py::TestSum::test_sum_succes[2-2-4] PASSED
 main.py::TestSum::test_sum_succes[10-10-20] PASSED
 main.py::TestSum::test_docstring_exist PASSED
 ```
-toda classe de test do pytest começa com **Test...** e todos os métodos dessa classe têm a própria instância da classe como argumento **self**. Ao criar uma classe de nome Test--- seguido do nome da função, para ajudar na legibilidade de outras pessoas ao ler os testes
+toda classe de teste do pytest começa com **Test...** e todos os métodos dessa classe têm a própria instância da classe como argumento **self**. Ao criar uma classe de nome Test--- seguido do nome da função, para ajudar na legibilidade de outras pessoas ao ler os testes
 
 veja que eu coloquei todos os testes anteriores em uma única classe que faz menção a uma única função para ser testada
 
@@ -146,7 +146,7 @@ class TestSumError:
 -------------- pytest  output --------------
 main.py::TestSumError::test_sum_error PASSED
 ```
-Devemos fazer uma cobertura de uma função, testando todos os aspectos dela para garantir que essa função não vai falhar em futuras implementações, sejam elas quais forem. Vamos fazer testes para que a função falhe e podemos implementar melhorias, refatorando a função original que está sendo testada. Vamos dar como argumento uma string; logo um erro será lançado. Podemos refatorar a função para uma situação mais geral de uso real ou de falhas no nosso software.
+Devemos fazer uma cobertura de uma função, testando todos os aspectos dela para garantir que essa função não vá falhar em futuras implementações, sejam elas quais forem. Vamos fazer testes para que a função falhe e podemos implementar melhorias, refatorando a função original que está sendo testada. Vamos dar como argumento uma string; logo um erro será lançado. Podemos refatorar a função para uma situação mais geral de uso real ou de falhas no nosso software.
 
 ## 7 - Fortalecendo o teste de validação de várias entradas
 
@@ -2570,7 +2570,7 @@ TOTAL        13      2    85%
 
 Achei muito interessante esse monkeypatch. Acredito que ele seja usado em uma função que o teste de comportamento não seja o ponto alvo. Ele serve muito bem para testes de estado ou coisas do tipo.
 
-## 58 - escopos com mokeyaptch
+## 58 - escopos com monkeypatch
 
 ```python
 import os
@@ -3111,7 +3111,7 @@ class TestLerPegarModo:
 main.py::TestLerPegarModo::test_success PASSED
 -------------- pytest-cov  output --------------
 ```
-percepa que o setitem precisa do primeiro argumento sendo um dicionaio
+perceba que o setitem precisa do primeiro argumento sendo um dicionário
 ja no .setenv, nao ele injeta ate onde eu identi no name space
 
 ## 71 - algums conceitos para decorar
@@ -3581,7 +3581,7 @@ das onde minha area vai comvergir no futuro,
         mocker.stub()                                             ------ cria uma função falsa (stub) que não executa lógica real, apenas registra chamadas
         mocker.patch()                                            ------ substitui uma função, método ou objeto real por um mock durante o teste
         mocker.spy()                                              ------ observa uma função real sem substituí-la, registrando chamadas feitas nela
-        Como fazer mock de funções built-in                       ------ mocker.patch("builtins.nome_da_funcao")
+        Como fazer mock de funções built-in                       ------ mocker.patch("builtins.nome_da_função")
         Como mockar open("arquivo", "a")                          ------ mocker.patch("builtins.open", mocker.mock_open())
 
     métodos de verificação de comportamento do mock
@@ -3608,7 +3608,7 @@ das onde minha area vai comvergir no futuro,
                                                                          side_effect=["x", "y", "z"]
                                                                      )
 ### CARD 4
-        Qual o primeiro argumento do mocker.patch()               ------ o caminho da funcao real
+        Qual o primeiro argumento do mocker.patch()               ------ o caminho da função real
         Qual o tipo de objeto retornado por mocker.patch()        ------ MagicMock
         O que isso faz mocker.patch()                             ------ substitui função real por fake 
         Como ter mock no pytest                                   ------ usando o plugin pytest-mock ou o unittest.mock.patch
