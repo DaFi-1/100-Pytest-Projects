@@ -1733,7 +1733,7 @@ main.py      20      0   100%
 ---------------------------------------
 TOTAL        20      0   100%
 ```
-## 42 - Testar soma com números negativos
+## 🧪 42 - Testar soma com números negativos
 
 ```python
 import os 
