@@ -2875,7 +2875,7 @@ main.py::TestCalcular::test_json_rresopnse PASSED
 -------------- pytest-cov output --------------
 ```
 
-## 65 - dois testes que fazem a mesma coisa
+## 🧪 65 - dois testes que fazem a mesma coisa
 
 ```python
 import pytest
