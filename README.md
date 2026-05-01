@@ -1890,7 +1890,7 @@ TOTAL        22      0   100%
 ```
 
 
-## 45 - Testar função com string vazia
+## 🧪 45 - Testar função com string vazia
 
 ```python
 import pytest
