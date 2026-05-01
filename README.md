@@ -48,7 +48,7 @@ def test_sum_succes() -> None:
     assert sun(10,10) == 20 
 ```
 
-veja que eu fiz um test unitario, todo test unitario eee unicamente unico nao depende de nada para fuciona apenas a propria funcao. 
+veja que eu fiz um teste unitário, todo teste unitário é unicamente único, não depende de nada para funcionar, apenas a própria função. 
 
 ## 2 - testando varios parametros em um unico test unitariio
 
@@ -87,7 +87,7 @@ def test_docstring_exist() -> None:
     assert sum.__doc__ is not None
 ```
 
-para pegar aaa docstring de uma funccao usamos **func.__doc__** , se nao tiver docstring retorna **None**
+para pegar a docstring de uma função usamos **func.__doc__**, se não tiver docstring retorna **None**
 
 ## 4 - Organizando varios test em uma unica classe
 
@@ -429,7 +429,7 @@ TOTAL        31      3    90%
 ```
 
 perceba que o cov cobriu apenas as linhas que eu testei e ainda faltam a continuação de um if e um return. 
-linhas 12-13, 16 , perceba que aaa linha 12 eee 13 nao foram testada mesmo fazend um if validar
+linhas 12-13, 16. Perceba que a linha 12 e 13 não foram testadas, mesmo fazendo um if validar.
 
 ## 15 - Dois mock em um mesmo test 
 
@@ -2533,9 +2533,7 @@ TOTAL        36      0   100%
 ```
 
 Nossa, em uma função de fatorial tem vários casos de erros em consideração a serem levantados.
-nao ee aa atoa que existe frame works pre pronta para nao ter que reiventar aaa roda toda vez 
-que for implemntar algo, se bem com aa minha visao sobre inteligencia artificial, projetos 
-de frame works podem ser criadas por empresas ou uma unica pessoa com conhecimento aaa
+Não é à toa que existem frameworks pré-prontos para não ter que reinventar a roda toda vez que for implementar algo. Se bem que, com minha visão sobre inteligência artificial, projetos de frameworks podem ser criados por empresas ou uma única pessoa com conhecimento.
 com o avando da ia isso fica cada vez mais acessivel grandes projetos que para uma unica pessoa
 antigamente era impossivel ee hoje se torna muito acessecivel
 
@@ -2877,7 +2875,7 @@ main.py::TestCalcular::test_json_rresopnse PASSED
 -------------- pytest-cov  output --------------
 ```
 
-## 65 - dois test que faz aaa mesma coisa
+## 65 - dois testes que fazem a mesma coisa
 
 ```python
 import pytest
