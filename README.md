@@ -2339,7 +2339,7 @@ TOTAL         8      0   100%
 
 O tmp_path do pytest é uma das fixtures mais úteis quando você precisa trabalhar com arquivos sem bagunçar seu sistema real. Ele cria um diretório temporário isolado para cada teste, que é automaticamente apagado depois.
 
-## 53 - para que serve isso "/", mecanicas do python
+## 🧪 53 - para que serve isso "/", mecanicas do python
 
 ```python
 import pytest
