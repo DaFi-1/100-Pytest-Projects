@@ -1169,7 +1169,7 @@ TOTAL         8      0   100%
 observando o comportamento do @pytest.mark.xfail, ele serve para aceitar a falha de um teste, é uma tag para esse teste.
 ele impede que a execução dos testes pare em um teste com bug ou falha conhecida.
 
-## 30 - testando errro parte 1
+## 🧪 30 - testando errro parte 1
 
 ```python
 import pytest
