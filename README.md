@@ -265,7 +265,7 @@ main.py::TestCreateDir::test_strin_phone PASSED                                 
 
 Agora, como testar uma função que depende de outra função? Podemos simplesmente fazer um teste normal, criando uma pasta e logo em seguida testar se o diretório foi criado e apagá-lo logo em seguida, como o código acima.
 
-## 11 - como usar mock 
+## 🧪 11 - como usar mock
 
 ```python
 import os
@@ -290,7 +290,7 @@ main.py::TestCreateDir::test_strin_phone PASSED                                 
 podemos usar o conceito de mock para trocar a função de dentro por um retorno conhecido e simular o comportamento desejado ou conhecido.
 vou usar o plugin do pytest **pytest-mock**
 
-## 12 - plugin pytest-mock 
+## 🧪 12 - plugin pytest-mock
 
 ```python
 import os
@@ -309,7 +309,7 @@ def test_unix_fs(mocker):
 
 Veja o exemplo que o pytest-mock dá na sua documentação. O pytest-mock também tem coisas como **spy**, **stub**. Em um venv do Python você pode instalar o pytest-mock com `pip install pytest-mock`.
 
-## 13 - pytest-cov 
+## 🧪 13 - pytest-cov 
 
 ```python
 import os
