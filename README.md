@@ -3246,7 +3246,7 @@ main.py::TestLerPegarModo::test_open PASSED
 ```
 muito simples de mock com pytest-mock comparado com o monkeypatch
 
-## 77 - implementando aa funcao de cima com monkeypatch 
+## 77 - implementando a função de cima com monkeypatch 
 
 ```python
 import pytest
