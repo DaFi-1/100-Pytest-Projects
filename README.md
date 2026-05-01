@@ -3223,7 +3223,7 @@ class TestLerPegarModo:
 ---------------- pytest  output ----------------
 -------------- pytest-cov  output --------------
 ```
-um exempl ocomo com monkeypatch , temos que criar uma clase fake   para mocala
+um exemplo com monkeypatch, temos que criar uma classe fake para mockar.
 ou fucoes ou methods para mocker
 
 ## 76 - lazy mock
