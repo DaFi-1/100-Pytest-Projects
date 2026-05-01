@@ -2915,7 +2915,7 @@ e o monker, plugin do pytest. Tenho que aprender em qual cenário usar cada um d
 ate agorta eu uso eles , para ... o monkeypatch para testar chaadas simples o mocker
 para testar o comportamento da função.
 
-## 66 - so mais um para treino
+## 🧪 66 - so mais um para treino
 
 ```python
 import pytest
