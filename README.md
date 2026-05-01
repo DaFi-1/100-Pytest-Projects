@@ -497,7 +497,7 @@ TOTAL        31      3    90%
 perceba que eu fiz dois mocks em um único teste para validar o teste unitário sem dependências externas ou de IO.
 veja que a linha do return 'DENIED' passa sem nem mesmo testar o código ou eu testar esse retorno. Vou fazer isso logo em seguida.
 
-## 16 - Testando retornos do access_system
+## 🧪 16 - Testando retornos do access_system
 
 ```python
 import os
@@ -569,7 +569,7 @@ TOTAL        35      1    97%
 
 veja que para irmos para o segundo if precisamos que o primeiro if venha a falhar. 
 
-## 17 - Testando a linha faltante de access_system
+## 🧪 17 - Testando a linha faltante de access_system
 
 ```python
 import os
