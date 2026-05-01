@@ -1428,7 +1428,7 @@ TOTAL        14      0   100%
 ```
 
 
-## 36 - testando errro parte 7
+## 🧪 36 - testando errro parte 7
 
 ```python
 import pytest
