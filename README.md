@@ -1034,7 +1034,7 @@ TOTAL        17      0   100%
 ```
 nada de novo aqui.
 
-## 26 - Exemplo um da doc do pytest
+## 🧪 26 - Exemplo um da doc do pytest
 
 ```python
 def inc(x):
@@ -1050,7 +1050,7 @@ def test_answer():
 Um simples teste. Estou lendo agora a documentação do pytest. Eu estava treinando mock, mas a doc acabou.
 então vou ler a documentação do pytest, fazendo os testes da doc do pytest.
 
-## 27 - Exemplo dois da doc do pytest
+## 🧪 27 - Exemplo dois da doc do pytest
 
 ```python
 import pytest
