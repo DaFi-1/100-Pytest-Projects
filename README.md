@@ -676,7 +676,7 @@ class TestStartServer:
         fake2.assert_called_once()
 ```
 
-## 19 -  toggle_server 
+## 🧪 19 -  toggle_server
 
 ```python
 def toggle_server(sender, app_data, user_data):
