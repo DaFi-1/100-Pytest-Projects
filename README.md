@@ -1208,7 +1208,7 @@ main.py      13      0   100%
 TOTAL        13      0   100%
 ```
 
-## 31 - testando errro parte 2
+## 🧪 31 - testando errro parte 2
 
 ```python
 import pytest
