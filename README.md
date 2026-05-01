@@ -2371,7 +2371,7 @@ TOTAL        10      0   100%
 
 perceba que o Python redefine o operador / para concatenar a string. Poderia usar também o `origem = tmp_path.joinpath("origem.txt")`.
 
-## 54 - marcando uma função como lenta, @pytest.mark.slow
+## 🧪 54 - marcando uma função como lenta, @pytest.mark.slow
 
 ```python
 import pytest
