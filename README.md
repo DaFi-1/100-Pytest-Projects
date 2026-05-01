@@ -2648,7 +2648,7 @@ main.py      18      0   100%
 TOTAL        18      0   100%
 ```
 
-diferente o mocker do pytest-mocker , eu tive que criar minha propria funcao de mocker
+Diferente do mocker do pytest-mock, eu tive que criar minha própria função de mock.
 como descrito na documentacao essa api eee de baixo nivel, eu considero muito mais
 maleavel do que o pytest-mocker, achei melhor, me sinto livre nela
 
