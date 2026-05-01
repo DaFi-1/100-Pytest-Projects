@@ -938,7 +938,7 @@ TOTAL        24      0   100%
 vamos mockar uma função que faz uma chamada à API gratuita https://jsonplaceholder.typicode.com/. 
 essa API nos devolve dados. Vamos comparar o retorno no final.
 
-## 24 -  testando outras possibilidadas
+## 🧪 24 -  testando outras possibilidadas
 
 ```python
 import pytest
