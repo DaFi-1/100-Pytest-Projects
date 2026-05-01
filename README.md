@@ -2449,7 +2449,7 @@ main.py      17      0   100%
 ---------------------------------------
 TOTAL        17      0   100%
 ```
-## 56 - fatorial
+## 56 - Fatorial
 
 ```python
 import pytest
