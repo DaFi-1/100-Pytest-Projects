@@ -2726,7 +2726,7 @@ main.py      13      0   100%
 ---------------------------------------
 TOTAL        13      0   100%
 ```
-percepa que nao deu erro chamei uma funcao que tem uma variavel uva que nao foi declarada, como esse test roda?
+perceba que não deu erro. Chamei uma função que tem uma variável uva que não foi declarada. Como esse teste roda?
 simplesmente o monkeypatch faz aa injecao de coisas em modulo, venv, path,objetos, ee foi assim que o teste passou
 
 ## 62 - Primeiro comite depois de muito tempo
