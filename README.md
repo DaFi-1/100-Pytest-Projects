@@ -353,7 +353,7 @@ main.py::TestIsValidUser::test_is_admin PASSED
 main.py::TestIsValidUser::test_is_not_admin PASSED
 main.py::TestLogAcess::test_acess PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
@@ -420,7 +420,7 @@ main.py::TestLogAcess::test_acess PASSED
 main.py::TestAcessSystem::test_access_is_valid_user PASSED
 
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      31      3    90%   12-13, 16
@@ -486,7 +486,7 @@ main.py::TestIsValidUser::test_is_not_admin PASSED
 main.py::TestLogAcess::test_acess PASSED
 main.py::TestAcessSystem::test_access_is_valid_user PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      31      3    90%   15-18
@@ -559,7 +559,7 @@ main.py::TestLogAcess::test_acess PASSED
 main.py::TestAcessSystem::test_access_is_valid_user PASSED
 main.py::TestAcessSystem::test_file_exist PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      35      1    97%   18
@@ -638,7 +638,7 @@ main.py::TestAcessSystem::test_access_is_valid_user PASSED
 main.py::TestAcessSystem::test_file_exist PASSED
 main.py::TestAcessSystem::test_finally_return PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      40      0   100%
@@ -800,7 +800,7 @@ class TestAdd:
 main.py::TestAdd::test_true_add PASSED
 main.py::TestAdd::test_add_error_msg PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover
 -----------------------------
 main.py      12      0   100%
@@ -836,7 +836,7 @@ class TestAdd:
 main.py::TestSub::test_true_sub PASSED
 main.py::TestSub::test_sub_error_msg PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover
 -----------------------------
 main.py      12      0   100%
@@ -871,7 +871,7 @@ class Testmult:
 main.py::Testmult::test_true_mult PASSED
 main.py::Testmult::test_mult_error_msg PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover
 -----------------------------
 main.py      12      0   100%
@@ -927,7 +927,7 @@ class TestGetUserName:
 main.py::TestGetUserName::test_reponse_error PASSED
 main.py::TestGetUserName::test_reponse_200 PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      24      0   100%
@@ -981,7 +981,7 @@ class TestGetUserPostsTitles:
 main.py::TestGetUserPostsTitles::test_error PASSED
 main.py::TestGetUserPostsTitles::test_not_data PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      26      1    96%   17
@@ -1025,7 +1025,7 @@ class TestEviarMesagem:
 main.py::TestEviarMesagem::test_not_user PASSED
 main.py::TestEviarMesagem::test_user_check PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      17      0   100%
@@ -1044,7 +1044,7 @@ def test_answer():
     assert inc(3) == 5
 
 ---------------- pytest  output ----------------
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 
 Um simples teste. Estou lendo agora a documentação do pytest. Eu estava treinando mock, mas a doc acabou.
@@ -1063,7 +1063,7 @@ def test_mytest():
         f()
 
 ---------------- pytest  output ----------------
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 
 veja nesse pequeno exemplo a doc do pytest me ensina a como capturar um erro para testá-lo. Afinal, um erro também é um teste válido.
@@ -1129,7 +1129,7 @@ main.py::test_soma_8 SKIPPED (unconditional skip)
 main.py::test_soma_9 SKIPPED (unconditional skip)
 main.py::test_soma_10 SKIPPED (unconditional skip)
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      33     11    67%   7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47
@@ -1158,7 +1158,7 @@ def test_soma_quebrada():
 main.py::test_soma_normal PASSED
 main.py::test_soma_quebrada XFAIL (bug simulado: soma está quebrada propositalmente)
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py       8      0   100%
@@ -1200,7 +1200,7 @@ main.py::TestDividir::test_dividir_success[1-1-1.0] PASSED
 main.py::TestDividir::test_dividir_success[1-10-0.1] PASSED
 main.py::TestDividir::test_dividir_success[10-10-1.0] PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      13      0   100%
@@ -1242,7 +1242,7 @@ main.py::TestAcessarLista::test_error[-1.0] PASSED
 main.py::TestAcessarLista::test_success[0-1] PASSED
 main.py::TestAcessarLista::test_success[1-1] PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      14      0   100%
@@ -1286,7 +1286,7 @@ main.py::TestAcessarLista::test_error[-1.0] PASSED
 main.py::TestAcessarLista::test_success[0-1] PASSED
 main.py::TestAcessarLista::test_success[1-1] PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      14      0   100%
@@ -1332,7 +1332,7 @@ main.py::TestSacar::test_success[2-1] PASSED
 main.py::TestSacar::test_success[3-2] PASSED
 main.py::TestSacar::test_success[8-4] PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      14      0   100%
@@ -1381,7 +1381,7 @@ main.py::TestLogin::test_string_enpty_error[-] PASSED
 main.py::TestLogin::test_pass_invalid_error[uva-1233] PASSED
 main.py::TestLogin::test_success[orange-123] PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      21      0   100%
@@ -1419,7 +1419,7 @@ class TestDividirLista:
 main.py::TestDividirLista::test_empty_list_error[x0] PASSED
 main.py::TestDividirLista::test_success[x0-1.0] PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      14      0   100%
@@ -1452,7 +1452,7 @@ class TestAbrirArquivo:
 main.py::TestAbrirArquivo::test_error_invalid_file PASSED
 main.py::TestAbrirArquivo::test_successd_file PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      12      0   100%
@@ -1485,7 +1485,7 @@ class TestCalcularDesconto:
 main.py::TestCalcularDesconto::test_error PASSED
 main.py::TestCalcularDesconto::test_success PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      12      0   100%
@@ -1518,7 +1518,7 @@ class TestProcessarId:
 main.py::TestProcessarId::test_error PASSED
 main.py::TestProcessarId::test_success PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      12      0   100%
@@ -1596,7 +1596,7 @@ main.py::TestGetTemperature::test_error_status_code_error PASSED
 main.py::TestGetTemperature::test_error_resonse_json PASSED
 main.py::TestGetTemperature::test_success PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      45      0   100%
@@ -1678,7 +1678,7 @@ main.py::TestGetTemperature::test_error_status_code_error PASSED
 main.py::TestGetTemperature::test_error_resonse_json PASSED
 main.py::TestGetTemperature::test_success PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      46      0   100%
@@ -1726,7 +1726,7 @@ main.py::TestEviarDados::test_empty_key_error PASSED
 main.py::TestEviarDados::test_empty_data_error PASSED
 main.py::TestEviarDados::test_success PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      20      0   100%
@@ -1793,7 +1793,7 @@ main.py::TestSomaNegativos::test_menor_q_1 PASSED
 main.py::TestSomaNegativos::test_maior_q_1 PASSED
 main.py::TestSomaNegativos::test_forcar_runtime PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      31      0   100%
@@ -1832,7 +1832,7 @@ main.py::TestDiv::test_div_error PASSED
 main.py::TestDiv::test_return_none PASSED
 
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      16      0   100%
@@ -1881,7 +1881,7 @@ class TestReturnNone:
 main.py::TestReturnNone::test_if PASSED
 main.py::TestReturnNone::test_return_none PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      22      0   100%
@@ -1929,7 +1929,7 @@ class TestReturnNone:
 main.py::TestReturnNone::test_stirng_none PASSED
 main.py::TestReturnNone::test_error_loop PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      22      1    95%   14
@@ -1960,7 +1960,7 @@ class TestSomaLista:
 main.py::TestSomaLista::test_list_empty PASSED
 main.py::TestSomaLista::test_list_success PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      13      0   100%
@@ -2023,7 +2023,7 @@ main.py::TestObterUsuario::test_staus_code_error PASSED
 main.py::TestObterUsuario::test_data_error PASSED
 main.py::TestObterUsuario::test_success_return_dict PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      29      0   100%
@@ -2050,7 +2050,7 @@ class TestObterUsuario:
 ---------------- pytest  output ----------------
 main.py::TestObterUsuario::test_doc_string_exists PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py       6      1    83%   5
@@ -2120,7 +2120,7 @@ main.py::TestAplicarDesconto::test_return_false PASSED
 main.py::TestAplicarDesconto::test_aplica_limite_minimo PASSED
 main.py::TestAplicarDesconto::test_success PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      29      0   100%
@@ -2292,7 +2292,7 @@ main.py::TestProcessarArquivo::test_json_empty PASSED
 main.py::TestProcessarArquivo::test_valoar_menor_que_0 PASSED
 main.py::TestProcessarArquivo::test_time_time PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      80     15    81%   40, 47-70, 76
@@ -2310,7 +2310,7 @@ Parece um juninho quando eu não especifico boas práticas.
 
 ---------------- pytest  output ----------------
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 ## 52 - endendtendo o tmp_path do pytest
 
@@ -2329,7 +2329,7 @@ class TestSalvarDado:
 ---------------- pytest  output ----------------
 main.py::TestSalvarDado::test_cria_arquivo P
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py       8      0   100%
@@ -2361,7 +2361,7 @@ def test_copiar_arquivo(tmp_path):
 ---------------- pytest  output ----------------
 main.py::test_copiar_arquivo PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      10      0   100%
@@ -2389,7 +2389,7 @@ def test_copiar_arquivo(tmp_path):
     assert destino.read_text() == "dados importantes"#PYTHON
 
 ---------------- pytest  output ----------------
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 
 Usando a função anterior, note que eu coloquei o decorador @pytest.mark.slow. Isso marca a função para uma função lenta ou um tipo específico de tag da sua escolha. Você também pode ignorar funções com esse decorador.
@@ -2442,7 +2442,7 @@ main.py::TestEhPar::test_error_not_int[x7] PASSED
 main.py::TestEhPar::test_not_par PASSED
 main.py::TestEhPar::test_impar PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      17      0   100%
@@ -2524,7 +2524,7 @@ main.py::TestFatorial::test_check_success[3-6] PASSED
 main.py::TestFatorial::test_check_success[4-24] PASSED
 main.py::TestFatorial::test_check_success[7-5040] PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      36      0   100%
@@ -2560,7 +2560,7 @@ class TestProcessar:
 ---------------- pytest  output ----------------
 main.py::TestProcessar::test_processar_success PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      13      2    85%   4, 15
@@ -2599,7 +2599,7 @@ class TestTemperature:
 main.py::TestTemperature::test_api_key_error PASSED
 main.py::TestTemperature::test_api_key_sucess PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      18      0   100%
@@ -2638,7 +2638,7 @@ def test_pegar_dados(monkeypatch):
 ---------------- pytest  output ----------------
 main.py::test_pegar_dados PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      18      0   100%
@@ -2688,7 +2688,7 @@ class TestFinalizarVenda:
 
 ---------------- pytest  output ----------------
 None
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 None
 ```
 ## 61 - usando monkeypatch.setattr( )
@@ -2715,7 +2715,7 @@ class TestUva:
 main.py::TestUva::test_cria_variavel PASSED
 main.py::TestUva::test_error PASSED
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
 ---------------------------------------
 main.py      13      0   100%
@@ -2783,7 +2783,7 @@ main.py::TestCalcular::test_divisao_error PASSED                                
 main.py::TestCalcular::test_not_case PASSED                                                                                 [100%]
 
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 ## 63 - mocker de pseudo api
 
@@ -2821,7 +2821,7 @@ class TestCalcular:
 ---------------- pytest  output ----------------
 main.py::TestCalcular::test_response_error PASSED
 main.py::TestCalcular::test_response_success PASSED
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 
 
@@ -2872,7 +2872,7 @@ class TestCalcular:
 ---------------- pytest  output ----------------
 main.py::TestCalcular::test_response_error PASSED
 main.py::TestCalcular::test_json_rresopnse PASSED
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 
 ## 65 - dois testes que fazem a mesma coisa
@@ -2908,7 +2908,7 @@ class TestGetUserTwo:
 ---------------- pytest  output ----------------
 main.py::TestGetUser::test_success_one PASSED                                         [ 50%]
 main.py::TestGetUserTwo::test_success_two PASSED                                      [100%]
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 apartir de agora eu vou fazer os test usando os dois tipo com monkeypatch do pytest
 e o monker, plugin do pytest. Tenho que aprender em qual cenário usar cada um deles.
@@ -2969,7 +2969,7 @@ main.py::TestCheckApiStatus::test_success_success PASSED                        
 main.py::TestCheckApiStatusModeTwo::test_success_erro PASSED                          [ 75%]
 main.py::TestCheckApiStatusModeTwo::test_success_success PASSED                       [100%]
 
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 
 não sei por que o chatgpt quando eu mando ele fazer uma função difícil ele faz uma 
@@ -3014,7 +3014,7 @@ main.py::TestMediaPonderada::test_aprovado[10-10-10-10] PASSED
 main.py::TestMediaPonderada::test_aprovado[90-90-90-90] PASSED                   
 main.py::TestMediaPonderada::test_reprovado[1-1-1-1] PASSED                      
 main.py::TestMediaPonderada::test_reprovado[2-2-2-2] PASSED                      
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 ## 68 - builtins open() com monkeypatch
 
@@ -3045,7 +3045,7 @@ class TestOpenFile:
 
 ---------------- pytest  output ----------------
 main.py::TestOpenFile::testopenfile PASSED
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 
 interessante para fazer um builtins.open() preciso de um objetos fake
@@ -3090,7 +3090,7 @@ class TestLerArquivo:
 ---------------- pytest  output ----------------
 main.py::TestLerArquivo::test_success PASSED
 main.py::TestLerArquivo::test_error PASSED  
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 ## 70 - tetando usar o .setitem, sendo que eu devia usar o .setenv
 
@@ -3109,7 +3109,7 @@ class TestLerPegarModo:
 
 --------------- pytest  output ----------------
 main.py::TestLerPegarModo::test_success PASSED
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 perceba que o setitem precisa do primeiro argumento sendo um dicionário
 ja no .setenv, nao ele injeta ate onde eu identi no name space
@@ -3124,7 +3124,7 @@ ja no .setenv, nao ele injeta ate onde eu identi no name space
      monkeypatch.setenv   ----- muda variável de ambiente
 
 ---------------- pytest  output ----------------
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 
 ## 72 - monkeypatch.setattr, ficiona com scopo global
@@ -3166,7 +3166,7 @@ class TestLerPegarModo:
 
 ---------------- pytest  output ----------------
 main.py::TestLerPegarModo::test_success PASSED
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 
 ## 74 - empty
@@ -3191,7 +3191,7 @@ class TestLerPegarModo:
 ---------------- pytest  output ----------------
 main.py::TestLerPegarModo::test_success PASSED
 main.py::TestLerPegarModo::test_error PASSED
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 ## 75 - open() with monkeypatch
 
@@ -3218,7 +3218,7 @@ class TestLerPegarModo:
         monkeypatch.setattr('builtins.open', self.fake_obj())
  
 ---------------- pytest  output ----------------
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 um exemplo com monkeypatch, temos que criar uma classe fake para mockar.
 ou fucoes ou methods para mocker
@@ -3239,7 +3239,7 @@ class TestLerPegarModo:
  
 ---------------- pytest  output ----------------
 main.py::TestLerPegarModo::test_open PASSED
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 muito simples de mock com pytest-mock comparado com o monkeypatch
 
@@ -3271,7 +3271,7 @@ class TestOpenfileMonkeypatch:
 main.py::TestLerPegarModo::test_open PASSED
 main.py::TestOpenfileMonkeypatch::test_open_two PASSED
 main.py::TestOpenfileMonkeypatch::test_open_two PASSED
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 
 ## 78 - tenho que fixar esse open com monkeypatch
@@ -3296,7 +3296,7 @@ class TestOpenfileMonkeypatch:
 
 ---------------- pytest  output ----------------
 main.py::TestOpenfileMonkeypatch::test_open_two PASSED
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 ## 79 - mais um open() com monkeypatch
 
@@ -3339,7 +3339,7 @@ class TestLerConfig:
 ---------------- pytest  output ----------------
 main.py::TestLerConfig::test_error PASSED
 main.py::TestLerConfig::test_success PASSED
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 perceba que eu fiz duas classes mock para cada teste, não é a maneira mais ideal. 
 
@@ -3380,7 +3380,7 @@ class TestBuscarUsuario:
 ---------------- pytest  output ----------------
 main.py::TestBuscarUsuario::test_error PASSED
 main.py::TestBuscarUsuario::test_success PASSED
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 
 usando monkeypatch para resolver uma função de API.
@@ -3419,7 +3419,7 @@ class TestBuscarUsuario:
         assert buscar_usuario('uva') == "success"
 
 ---------------- pytest  output ----------------
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 
 poderia fazer assim para escolher o tipo de retorno.
@@ -3439,7 +3439,7 @@ class TestUvaVariable:
         monkeypatch.setattr(__name__, 'uva', 'xxx')
         assert xxx() is False
 ---------------- pytest  output ----------------
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 
 poderi se feito assim caso eu executasse o arquivo como modulo
@@ -3448,109 +3448,109 @@ poderi se feito assim caso eu executasse o arquivo como modulo
 ```python
 
 ---------------- pytest  output ----------------
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 ## 84 - Seção vazia
 
 ```python
 ---------------- pytest  output ----------------
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 ## 85 - Seção vazia
 
 ```python
 ---------------- pytest  output ----------------
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 ## 86 -
 
 ```python
 ---------------- pytest  output ----------------
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 ## 87 - Seção vazia
 
 ```python
 ---------------- pytest  output ----------------
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 ## 88 - Seção vazia
 
 ```python
 ---------------- pytest  output ----------------
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 ## 89 - Seção vazia
 
 ```python
 ---------------- pytest  output ----------------
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 ## 90 - Seção vazia Seção vazia
 
 ```python
 ---------------- pytest  output ----------------
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 ## 91 - Seção vazia
 
 ```python
 ---------------- pytest  output ----------------
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 ## 92 - Seção vazia
 
 ```python
 ---------------- pytest  output ----------------
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 ## 93 - Seção vazia
 
 ```python
 ---------------- pytest  output ----------------
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 ## 94 - Seção vazia
 
 ```python
 ---------------- pytest  output ----------------
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 ## 95 - Seção vazia
 
 ```python
 ---------------- pytest  output ----------------
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 ## 96 - Seção vazia
 
 ```python
 ---------------- pytest  output ----------------
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 ## 97 - Seção vazia
 
 ```python
 ---------------- pytest  output ----------------
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 ## 98 - Seção vazia
 
 ```python
 ---------------- pytest  output ----------------
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 ## 99 - Seção vazia
 
 ```python
 ---------------- pytest  output ----------------
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 ## 100 - Seção vazia
 
 ```python
 ---------------- pytest  output ----------------
--------------- pytest-cov  output --------------
+-------------- pytest-cov output --------------
 ```
 
 
