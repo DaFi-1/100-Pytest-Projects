@@ -3427,7 +3427,7 @@ class TestBuscarUsuario:
 -------------- pytest-cov  output --------------
 ```
 
-poderia fazer assim para escolher o tipo de retorno
+poderia fazer assim para escolher o tipo de retorno.
 
 ## 82 -  __name__
 ```python
