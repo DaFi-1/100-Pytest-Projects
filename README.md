@@ -50,7 +50,7 @@ def test_sum_succes() -> None:
 
 veja que eu fiz um teste unitário, todo teste unitário é unicamente único, não depende de nada para funcionar, apenas a própria função. 
 
-## 2 - testando vários parâmetros em um único teste unitário
+## 🧪 2 - testando vários parâmetros em um único teste unitário
 
 ```python
 import pytest
