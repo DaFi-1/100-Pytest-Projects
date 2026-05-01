@@ -1139,7 +1139,7 @@ TOTAL        33     11    67%
 
 nessa parte eu aprendi como pular testes com @pytest.mark.skip
 
-## 29 - usando @pytest.mark.xfail
+## 🧪 29 - usando @pytest.mark.xfail
 
 ```python
 import pytest
