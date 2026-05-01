@@ -2058,7 +2058,7 @@ main.py       6      1    83%   5
 TOTAL         6      1    83%
 ```
 
-## 49 - Testes da função aplicar_desconto 
+## 🧪 49 - Testes da função aplicar_desconto
 
 ```python
 import pytest
