@@ -2033,7 +2033,7 @@ TOTAL        29      0   100%
 
 mocando e testando um simples retorno de dict do python comparando o dict interno. 
 
-## 48 - verificando se uma função tem docstring
+## 🧪 48 - verificando se uma função tem docstring
 
 ```python
 import pytest
