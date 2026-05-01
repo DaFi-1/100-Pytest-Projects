@@ -2785,7 +2785,7 @@ main.py::TestCalcular::test_not_case PASSED                                     
 
 -------------- pytest-cov output --------------
 ```
-## 63 - mocker de pseudo api
+## 🧪 63 - mocker de pseudo api
 
 ```python
 import pytest
