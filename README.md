@@ -3444,7 +3444,7 @@ class TestUvaVariable:
 
 poderi se feito assim caso eu executasse o arquivo como modulo
 
-## 83 - Seção vazia
+## 🧪 83 - Seção vazia
 ```python
 
 ---------------- pytest  output ----------------
