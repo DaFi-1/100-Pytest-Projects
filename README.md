@@ -2537,7 +2537,7 @@ Não é à toa que existem frameworks pré-prontos para não ter que reinventar 
 com o avando da ia isso fica cada vez mais acessivel grandes projetos que para uma unica pessoa
 antigamente era impossivel ee hoje se torna muito acessecivel
 
-## 57 - usando monkeypatch
+## 🧪 57 - usando monkeypatch
 
 ```python
 import pytest
