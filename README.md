@@ -3563,7 +3563,7 @@ poderi se feito assim caso eu executasse o arquivo como modulo
 
 # Flash cards
 
-essa parte deee dedicadaaaa aa os flacasrds craidos ao decorrer do estudo 
+essa parte é dedicada aos flashcards criados ao decorrer do estudo. 
 de flash cards com o anki, todos os flash cards foram revisados ao decorrer
 do estudo desse projetos, algums vao ser mantidos ou nao vai depender muito 
 das onde minha area vai comvergir no futuro,
