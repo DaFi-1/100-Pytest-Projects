@@ -881,7 +881,7 @@ TOTAL        12      0   100%
 
 só mais um proposto no capítulo 26 do livro que eu testei usando como base nos estudos de pytest.
 
-## 23 - Testando uma api 
+## 🧪 23 - Testando uma api 
 
 ```python
 import requests
