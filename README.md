@@ -1389,7 +1389,7 @@ main.py      21      0   100%
 TOTAL        21      0   100%
 ```
 
-## 35 - testando errro parte 6
+## 🧪 35 - testando errro parte 6
 
 ```python
 import pytest
