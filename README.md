@@ -2649,8 +2649,8 @@ TOTAL        18      0   100%
 ```
 
 Diferente do mocker do pytest-mock, eu tive que criar minha própria função de mock.
-como descrito na documentacao essa api eee de baixo nivel, eu considero muito mais
-maleavel do que o pytest-mocker, achei melhor, me sinto livre nela
+Como descrito na documentação, essa API é de baixo nível. Eu considero muito mais
+maleável do que o pytest-mock. Achei melhor, me sinto livre nela.
 
 ## 60 - apredendo  mais sobre o monkeypatch
 
@@ -3150,7 +3150,7 @@ class TestLerPegarModo:
 main.py::TestLerPegarModo::test_success PASSED                                                     [100%]
 ------------- pytest-cov  output --------------
 ```
-perceba que o monkeypatch.setattr fuciona com escopos accessiveis
+perceba que o monkeypatch.setattr funciona com escopos acessíveis
 no meu exemplo eu usei o escopo global.
 
 ## 73 - vamos utilizar o monkeypatch.setenv 
