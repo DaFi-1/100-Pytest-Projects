@@ -8,7 +8,7 @@
   <img src="https://docs.pytest.org/en/stable/_static/pytest1.png" width="400" style="display:inline-block;"/>
 </p>
  
-### nao foi usado ia neste reposiitorio, este repositorio dedicado ao estudo de pytest ee aplicacos do TDD
+### Não foi usada IA neste repositório. Este repositório é dedicado ao estudo de pytest e aplicações do TDD.
 
 Este repositório foi criado com base no estudo do livro  **Test-Driven Development: By Example**, de Kent Beck, com o objetivo de aplicar na prática os conceitos de **Desenvolvimento Guiado por Testes (TDD)** utilizando pytest.
 
@@ -120,11 +120,11 @@ main.py::TestSum::test_sum_succes[2-2-4] PASSED
 main.py::TestSum::test_sum_succes[10-10-20] PASSED
 main.py::TestSum::test_docstring_exist PASSED
 ```
-toda classe de test do pytest comeca ccom **Test...** ee todos os methhodos dessa clase tem aaa propria instaccia da ccalsse como argumento **self**, ao criar uma clase de o nommme Test--- seguido do nome da funcao, para ajudar na legibilidade de outras pessoas ao ler os test
+toda classe de test do pytest começa com **Test...** e todos os métodos dessa classe têm a própria instância da classe como argumento **self**. Ao criar uma classe de nome Test--- seguido do nome da função, para ajudar na legibilidade de outras pessoas ao ler os testes
 
-veja que eu coloquei todos os test ateriores em uma unica cclasse que faz mencao aaa uma unica fuccao par a ser testada
+veja que eu coloquei todos os testes anteriores em uma única classe que faz menção a uma única função para ser testada
 
-## 6 - Refatorando aaa funcao para aceitar entradas diferentes
+## 6 - Refatorando a função para aceitar entradas diferentes
 
 ```python
 import pytest
@@ -146,9 +146,9 @@ class TestSumError:
 -------------- pytest  output --------------
 main.py::TestSumError::test_sum_error PASSED
 ```
-Devemos fazer uma cobertura de uma funcao , testando todos os aspectos dela para garantir que essa funcao nao vai subir um erro em futuras implementaacoes seija la quais sejanm.vamos fazer test para que aaa funcao falhe eee podemos implementar melhorias refatorando aaa funcao original que estar sendo tesssstada., vamos da como argumentot uma string , logo erro vai subir , podemos refatorar aaa funcao para um situacao mais geral de uso real ou de falhas no nosso software.
+Devemos fazer uma cobertura de uma função, testando todos os aspectos dela para garantir que essa função não vai falhar em futuras implementações, sejam elas quais forem. Vamos fazer testes para que a função falhe e podemos implementar melhorias, refatorando a função original que está sendo testada. Vamos dar como argumento uma string; logo um erro será lançado. Podemos refatorar a função para uma situação mais geral de uso real ou de falhas no nosso software.
 
-## 7 - fortificando  o test de validadcao de varias entradas
+## 7 - Fortalecendo o teste de validação de várias entradas
 
 ```python
 def sum(x: int, y: int) -> int | None:
@@ -184,9 +184,9 @@ main.py::TestSumError::test_sum_error[int-int-None] PASSED
 main.py::TestSumError::test_sum_error[bool-bool-None] PASSED
 ```
 
-Vamos aogra fazer aaa Parametrizaçãon para garantir que nao vai da erro com diferentes entrasas
+Vamos agora fazer a Parametrização para garantir que não vai dar erro com diferentes entradas
 
-## 8 - funcao de emviar uma messagem
+## 8 - Função de enviar uma mensagem
 
 ```python
 import pytest
@@ -206,9 +206,9 @@ main.py::TestSendMessage::test_strin_phone send OK
 PASSED
 ```
 
-agora vamos fazer uma funcao que envia uma messagem para um string coom um simples test se aaa funcao enviou uma message, veja que nossa funcao retorna sempre treue pos nao aaa test que induza o erro ee por conseguenica aaa refatoracao para melhorar o codigo
+agora vamos fazer uma função que envia uma mensagem para uma string com um simples teste se a função enviou uma mensagem. Veja que nossa função retorna sempre True pois não há um teste que induza o erro e, por consequência, a refatoração para melhorar o código.
 
-## 9 - Refatorando a funcao de messagem
+## 9 - Refatorando a função de mensagem
 
 ```python
 import pytest
@@ -238,9 +238,9 @@ main.py .send OK
 .
 ```
 
-percepa que eu regatorei aa funcao conforme aa necessidade dos test, por isso chamamos de Desenvolvimento orientado por test, isso minnimizar vizitar o codig omais targe ee melhora  aaa confiabilidade eee legibilidade para outras pessoas
+perceba que eu refatorei a função conforme a necessidade dos testes. Por isso chamamos de Desenvolvimento orientado por testes, isso minimiza visitar o código mais tarde e melhora a confiabilidade e legibilidade para outras pessoas.
 
-## 10 - Refatorando a funcao de messagem
+## 10 - Criando um diretório
 
 ```python
 import os
@@ -263,7 +263,7 @@ class TestCreateDir:
 main.py::TestCreateDir::test_strin_phone PASSED                                                                                                         [100%]
 ```
 
-Agora como testar uma fucao que depende de outar funcao ?, podemos simplismete usar fazer um test normal, criando u[] pasta eee logo em seguida testar se o dir foi criado  eee apagalo logo em seguida como o cogigo aaa cima 
+Agora, como testar uma função que depende de outra função? Podemos simplesmente fazer um teste normal, criando uma pasta e logo em seguida testar se o diretório foi criado e apagá-lo logo em seguida, como o código acima.
 
 ## 11 - como usar mock 
 
@@ -287,7 +287,7 @@ class TestCreateDir:
 main.py::TestCreateDir::test_strin_phone PASSED                                                                                                         [100%]
 ```
 
-podemos usar o conceito de mock para trocar aa funcao dee dentor poooooooor um retorno conheciddo eee simular oo conportamento desejado ou conhecido.
+podemos usar o conceito de mock para trocar a função de dentro por um retorno conhecido e simular o comportamento desejado ou conhecido.
 vou usar o plugin do pytest **pytest-mock**
 
 ## 12 - plugin pytest-mock 
@@ -307,7 +307,7 @@ def test_unix_fs(mocker):
     os.remove.assert_called_once_with('file')
 ```
 
-Veja o exemplo que o pytest-mock da na sua documentacao, o pytest-mock tambem tem coiasas como  **spy**, **stub**. em uma vennv do pythonn voce poode iiiinstalar o pytest-moc com pip install pytest-mock
+Veja o exemplo que o pytest-mock dá na sua documentação. O pytest-mock também tem coisas como **spy**, **stub**. Em um venv do Python você pode instalar o pytest-mock com `pip install pytest-mock`.
 
 ## 13 - pytest-cov 
 
@@ -363,8 +363,8 @@ TOTAL        24      6    75%
 
 ```
 
-podemos usar o pytest-cov para ver  aaa corbertura de test da nossa aplicacao para melhor legibilidade
-veja que falta testar aaa linha 10 aa 18 , essa linha ou esse trecho de codig ainda nnao foi feito uma tesssssst aaa respeito
+podemos usar o pytest-cov para ver a cobertura de testes da nossa aplicação para melhor legibilidade.
+veja que falta testar a linha 11 a 18. Esse trecho de código ainda não foi testado.
 
 ## 14 - pytest-cov pesistente 
 
@@ -428,7 +428,7 @@ main.py      31      3    90%   12-13, 16
 TOTAL        31      3    90%
 ```
 
-perceba que o cov cobriu so aass linhas que eu testei eee ainda falta aa continuacao de um if ee um return 
+perceba que o cov cobriu apenas as linhas que eu testei e ainda faltam a continuação de um if e um return. 
 linhas 12-13, 16 , perceba que aaa linha 12 eee 13 nao foram testada mesmo fazend um if validar
 
 ## 15 - Dois mock em um mesmo test 
@@ -494,8 +494,8 @@ main.py      31      3    90%   15-18
 TOTAL        31      3    90%
 ```
 
-perceba que eu fiz dois mocks em um unico test para validar o test unitraio sem dependências externas ou de IO
-veja que aa linha do return 'DENIED' passa sem nem mosmo testala no codigo ou eu testar esse retorno, vou fazer isso logo em seguida
+perceba que eu fiz dois mocks em um único teste para validar o teste unitário sem dependências externas ou de IO.
+veja que a linha do return 'DENIED' passa sem nem mesmo testar o código ou eu testar esse retorno. Vou fazer isso logo em seguida.
 
 ## 16 -  
 
@@ -567,7 +567,7 @@ main.py      35      1    97%   18
 TOTAL        35      1    97%
 ```
 
-veja que para irmos para o segundo if precisamoos que o primeiro if venha aaa falhar 
+veja que para irmos para o segundo if precisamos que o primeiro if venha a falhar. 
 
 ## 17 -  falta apenas Uma unica linha
 
@@ -646,7 +646,7 @@ main.py      40      0   100%
 TOTAL        40      0   100%
 ```
 
-para validar essa unica linha precisamoos que os dois primeiros if venha aa falhar  
+para validar essa única linha precisamos que os dois primeiros if venham a falhar.  
 
 ## 18 -  
 
@@ -772,8 +772,8 @@ class TestToggleServer:
 
 ```
 
-achei bem confuso testarr isso nao identi muit bem o pq do import toolbox.tools.addnumber as mod, sendo que foi recomendaacao do LLM
-sera que eu poderai usar um mocker.Mock() ee atribuir esses method eee esse testt passsaria? fica essa duvida que posteriomente eu voou tirar
+achei bem confuso testar isso, não entendi bem o porquê do import `toolbox.tools.addnumber as mod`, sendo que foi recomendação do LLM.
+será que eu poderia usar um `mocker.Mock()` e atribuir esses métodos e esse teste passaria? Fica essa dúvida que posteriormente eu vou tirar.
 
 
 ## 20 - tratando erros  
@@ -808,9 +808,9 @@ main.py      12      0   100%
 TOTAL        12      0   100%
 ```
 
-vemos nesse test que temos dois test apra validar todos os casos da funcao eee suas unicas possiveis solucoes ou saidas, entao um erro tambem ee uma saida
-sim, o erro tabem &uma saida valida ele nos dis como aaa funcao se comporta caso nao for passao os argumentos desejados um  erro
-vai saltar na tela do Desenvolvedor eee ajudalo aaa progredir no godigo 
+vemos nesse teste que temos dois testes para validar todos os casos da função e suas únicas possíveis soluções ou saídas. Um erro também é uma saída.
+Sim, o erro também é uma saída válida. Ele nos diz como a função se comporta caso não sejam passados os argumentos desejados.
+Um erro será exibido na tela do desenvolvedor e ajudará a progredir no código. 
 
 ## 21 - proposto pelo livro Tdd de estudo 
 
@@ -844,7 +844,7 @@ main.py      12      0   100%
 TOTAL        12      0   100%
 ```
 
-este segue aa mesma ideia do de cima, foi proprosto pelo livro tambem como exerciio.
+este segue a mesma ideia do de cima, foi proposto pelo livro também como exercício.
 
 ## 22 - mais um proposto pelo livro 
 
@@ -879,7 +879,7 @@ main.py      12      0   100%
 TOTAL        12      0   100%
 ```
 
-so mais um proproto no capilo 26 do livro que eu setou usando como basse nos estudos de pytest
+só mais um proposto no capítulo 26 do livro que eu testei usando como base nos estudos de pytest.
 
 ## 23 - Testando uma api 
 
@@ -935,8 +935,8 @@ main.py      24      0   100%
 TOTAL        24      0   100%
 ```
 
-vamos mocar uma funcao que faz uma chamda aaa API gratuira https://jsonplaceholder.typicode.com/ 
-estar api nos devolve dados vamos comparar o retorno no final
+vamos mockar uma função que faz uma chamada à API gratuita https://jsonplaceholder.typicode.com/. 
+essa API nos devolve dados. Vamos comparar o retorno no final.
 
 ## 24 -  testando outras possibilidadas
 
@@ -989,8 +989,8 @@ main.py      26      1    96%   17
 TOTAL        26      1    96%
 ```
 
-mesmo test do outro, posrem fique atendo aa ao cov do pytest ele mostra aaa linha 17 como uma linha que nao foi testada
-uma bom plugin do pytest para termos uma corbertura geral do nosso projeto 
+mesmo test do outro, mesmo teste do outro. Fique atento à cov do pytest: ela mostra a linha 17 como uma linha que não foi testada.
+um bom plugin do pytest para termos uma cobertura geral do nosso projeto. 
 
 ## 25 - testando uma fake API
 
@@ -1032,7 +1032,7 @@ main.py      17      0   100%
 ---------------------------------------
 TOTAL        17      0   100%
 ```
-nada de novo aqui
+nada de novo aqui.
 
 ## 26 - Exemplo um da doc do pytest
 
@@ -1047,8 +1047,8 @@ def test_answer():
 -------------- pytest-cov  output --------------
 ```
 
-Um simples test, estou lendo agora aaa documentacao do pytest, eu tava trreinando mock, mais aaa dock acabou,
-entao eu vou ler aaa dock do pytest ir ir fazendo os tests da doc do pytest
+Um simples teste. Estou lendo agora a documentação do pytest. Eu estava treinando mock, mas a doc acabou.
+então vou ler a documentação do pytest, fazendo os testes da doc do pytest.
 
 ## 27 - Exemplo dois da doc do pytest
 
@@ -1066,7 +1066,7 @@ def test_mytest():
 -------------- pytest-cov  output --------------
 ```
 
-veja nesse pequeno exemplo aa doc do pytest me ensina aaa como capturar um erro para testalo, afinal um erro tambem eee um test valido
+veja nesse pequeno exemplo a doc do pytest me ensina a como capturar um erro para testá-lo. Afinal, um erro também é um teste válido.
 
 ## 28 - ussndo @pytest.mark.skip
 
@@ -1137,7 +1137,7 @@ main.py      33     11    67%   7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47
 TOTAL        33     11    67%
 ```
 
-nessa parte eu aprendi como pular test com @pytest.mark.skip
+nessa parte eu aprendi como pular testes com @pytest.mark.skip
 
 ## 29 - usando @pytest.mark.xfail
 
@@ -1166,8 +1166,8 @@ main.py       8      0   100%
 TOTAL         8      0   100%
 ```
 
-observanod o comportamento do @pytest.mark.xfail, ele serve para aceitar aaa falha de um test, ta uma tag para esse test
-ele empede que aaa execucaos dos test pare em um test com bug ou falha conhecida
+observando o comportamento do @pytest.mark.xfail, ele serve para aceitar a falha de um teste, é uma tag para esse teste.
+ele impede que a execução dos testes pare em um teste com bug ou falha conhecida.
 
 ## 30 - testando errro parte 1
 
@@ -1604,9 +1604,9 @@ main.py      45      0   100%
 TOTAL        45      0   100%
 ```
 
-nesse test ai eu tentei fazer um fixture para diminuir aaaa repeticao de codigo, uma fixture de um mock de response que atribui coiass aaa
-ele dependendo do que o test precissa, ate agorra minha compreencao com fixture do pytest ee mais para impedir erpeticao de codigo nos test
-gostei , deixa bem verboso parra outras pessoas..
+nesse teste aqui eu tentei fazer um fixture para diminuir a repetição de código, um fixture de um mock de response que atribui coisas.
+ele dependendo do que o teste precisa. Até agora minha compreensão com fixture do pytest é mais para impedir repetição de código nos testes.
+Gostei, deixa bem verboso para outras pessoas.
 
 ## 40 - assert str(error.value.) == 'Resposta inválida'
 
@@ -1686,10 +1686,10 @@ main.py      46      0   100%
 TOTAL        46      0   100%
 ```
 
-um ponto para resaltaarr assert str(error.value.) == 'Resposta inválida' isso falha pq o python trada essa execao diferernte, 
-todas ate agora foram normais pq essa levanta errro
+um ponto para ressaltar: `assert str(error.value.) == 'Resposta inválida'` falha pq o Python trata essa exceção diferente. 
+Todas até agora foram normais porque essa levanta erro.
 
-## 41 - poderia ter usado um spy
+Poderia ter usado um spy.
 
 ```python
 import os
@@ -2031,9 +2031,9 @@ main.py      29      0   100%
 TOTAL        29      0   100%
 ```
 
-mocanod ee testaando um simples retorno de dict do python comparando o dict interio 
+mocando e testando um simples retorno de dict do python comparando o dict interno. 
 
-## 48 - verificanod se uma funcao tem docstring
+## 48 - verificando se uma função tem docstring
 
 ```python
 import pytest
@@ -2300,9 +2300,9 @@ main.py      80     15    81%   40, 47-70, 76
 TOTAL        80     15    81%
 ```
 
-Engracado que o proprio agente de codigo escreve uma fucao bosta que faz 10 mill coisas ao mesmo tempo hahaha 
-esse tempo todo usando um agente de ia fixo , eu tenho que dizer para ele nao criar funcoes com mal praticas 
-parece um junitor quanto eu nao especifico boas praticas
+Engraçado que o próprio agente de código escreve uma função bosta que faz 10 mil coisas ao mesmo tempo hahaha. 
+Esse tempo todo usando um agente de IA fixo. Eu tenho que dizer para ele não criar funções com más práticas. 
+Parece um juninho quando eu não especifico boas práticas.
 
 ## 51 -
 
@@ -2369,7 +2369,7 @@ main.py      10      0   100%
 TOTAL        10      0   100%
 ```
 
-percepa que o python redefine o operador / para concatenar aa string poderia usar tambem o origem = tmp_path.joinpath("origem.txt")
+perceba que o Python redefine o operador / para concatenar a string. Poderia usar também o `origem = tmp_path.joinpath("origem.txt")`.
 
 ## 54 - marcando uma fucao como lenta, @pytest.mark.slow
 
@@ -2392,9 +2392,8 @@ def test_copiar_arquivo(tmp_path):
 -------------- pytest-cov  output --------------
 ```
 
-Usando aaa funcao anterior,note que eu coloquei o decorador @pytest.mark.slow, isso marca aaa funao para uma funcao lenta ou um tipo 
-especifico de tag da sua escolha, voce tambem pode ignoraaaar funcoes com esse decorador
-com pytest -m "not slow", ou executar de maneira exclusiva com  pytest -m "slow".
+Usando a função anterior, note que eu coloquei o decorador @pytest.mark.slow. Isso marca a função para uma função lenta ou um tipo específico de tag da sua escolha. Você também pode ignorar funções com esse decorador.
+Com `pytest -m "not slow"`, ou executar de maneira exclusiva com `pytest -m "slow"`.
 
 ## 55 - funcao que verifica se eee par
 
