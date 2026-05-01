@@ -1068,7 +1068,7 @@ def test_mytest():
 
 veja nesse pequeno exemplo a doc do pytest me ensina a como capturar um erro para testá-lo. Afinal, um erro também é um teste válido.
 
-## 28 - ussndo @pytest.mark.skip
+## 🧪 28 - ussndo @pytest.mark.skip
 
 ```python
 
