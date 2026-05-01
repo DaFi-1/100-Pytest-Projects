@@ -148,7 +148,7 @@ main.py::TestSumError::test_sum_error PASSED
 ```
 Devemos fazer uma cobertura de uma função, testando todos os aspectos dela para garantir que essa função não vá falhar em futuras implementações, sejam elas quais forem. Vamos fazer testes para que a função falhe e podemos implementar melhorias, refatorando a função original que está sendo testada. Vamos dar como argumento uma string; logo um erro será lançado. Podemos refatorar a função para uma situação mais geral de uso real ou de falhas no nosso software.
 
-## 7 - Fortalecendo o teste de validação de várias entradas
+## 🧪 7 - Fortalecendo o teste de validação de várias entradas
 
 ```python
 def sum(x: int, y: int) -> int | None:
@@ -186,7 +186,7 @@ main.py::TestSumError::test_sum_error[bool-bool-None] PASSED
 
 Vamos agora fazer a Parametrização para garantir que não vai dar erro com diferentes entradas
 
-## 8 - Função de enviar uma mensagem
+## 🧪 8 - Função de enviar uma mensagem
 
 ```python
 import pytest
@@ -208,7 +208,7 @@ PASSED
 
 agora vamos fazer uma função que envia uma mensagem para uma string com um simples teste se a função enviou uma mensagem. Veja que nossa função retorna sempre True pois não há um teste que induza o erro e, por consequência, a refatoração para melhorar o código.
 
-## 9 - Refatorando a função de mensagem
+## 🧪 9 - Refatorando a função de mensagem
 
 ```python
 import pytest
@@ -240,7 +240,7 @@ main.py .send OK
 
 perceba que eu refatorei a função conforme a necessidade dos testes. Por isso chamamos de Desenvolvimento orientado por testes, isso minimiza visitar o código mais tarde e melhora a confiabilidade e legibilidade para outras pessoas.
 
-## 10 - Criando um diretório
+## 🧪 10 - Criando um diretório
 
 ```python
 import os
