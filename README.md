@@ -1608,7 +1608,7 @@ nesse teste aqui eu tentei fazer um fixture para diminuir a repetição de códi
 ele dependendo do que o teste precisa. Até agora minha compreensão com fixture do pytest é mais para impedir repetição de código nos testes.
 Gostei, deixa bem verboso para outras pessoas.
 
-## 40 - assert str(error.value.) == 'Resposta inválida'
+## 🧪 40 - assert str(error.value.) == 'Resposta inválida'
 
 ```python
 import os
