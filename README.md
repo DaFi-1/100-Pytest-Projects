@@ -2911,9 +2911,9 @@ main.py::TestGetUserTwo::test_success_two PASSED                                
 -------------- pytest-cov  output --------------
 ```
 apartir de agora eu vou fazer os test usando os dois tipo com monkeypatch do pytest
-eee o monker , plugin do pytest, tenho que aprender em qual senario usar cada um deles
+e o monker, plugin do pytest. Tenho que aprender em qual cenário usar cada um deles.
 ate agorta eu uso eles , para ... o monkeypatch para testar chaadas simples o mocker
-para testar o comportamento daaaaa funcao
+para testar o comportamento da função.
 
 ## 66 - so mais um para treino
 
@@ -2976,7 +2976,7 @@ nao sei pq o chatgpt quando eu mando ele fazer uma funcao deificil ele faz uma
 funcao que faz 100 coisas diferentes na mesma funcao kkkkkkk cade o SOLID...
 em cenarios reais concerteza vai ter funcoes GOD feitas por programadores ruims
 
-## 67 - Simples teste so para mmostra pra um amigo como faz test
+Simples teste só para mostrar para um amigo como se faz teste.
 
 ```python
 import pytest
@@ -3049,9 +3049,8 @@ main.py::TestOpenFile::testopenfile PASSED
 ```
 
 interessante para fazer um builtins.open() preciso de um objetos fake
-vou estudar mmasi detalhado esse method open() eee como ele fuciona 
-eu sei no fundo como ele fuciona no C, mas no python tem coisas como nameespace,
-escopos , etc, acho que ele tem macanicas bem unicas no python. 
+vou estudar mais detalhado esse método open() e como ele funciona. 
+Eu sei no fundo como ele funciona em C, mas no Python tem coisas como namespaces, escopos, etc. Acho que ele tem mecânicas bem únicas no Python. 
 
 ## 69 - criando um objeto fake para o builtins.open()
 
