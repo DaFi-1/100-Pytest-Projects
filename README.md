@@ -74,7 +74,7 @@ main.py::test_sum_succes[10-10-20] PASSED
 
 com o decorador **@pytest.mark.parametrize()** podemos simular várias chamadas de um mesmo teste com vários argumentos diferentes
 
-## 3 - testando a existência de docstring na função sum
+## 🧪 3 - testando a existência de docstring na função sum
 
 ```python
 import pytest
@@ -89,7 +89,7 @@ def test_docstring_exist() -> None:
 
 para pegar a docstring de uma função usamos **func.__doc__**, se não tiver docstring retorna **None**
 
-## 4 - Organizando vários testes em uma única classe
+## 🧪 4 - Organizando vários testes em uma única classe
 
 ```python
 import pytest
@@ -124,7 +124,7 @@ toda classe de teste do pytest começa com **Test...** e todos os métodos dessa
 
 veja que eu coloquei todos os testes anteriores em uma única classe que faz menção a uma única função para ser testada
 
-## 6 - Refatorando a função para aceitar entradas diferentes
+## 🧪 6 - Refatorando a função para aceitar entradas diferentes
 
 ```python
 import pytest
