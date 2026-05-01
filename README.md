@@ -1967,7 +1967,7 @@ main.py      13      0   100%
 ---------------------------------------
 TOTAL        13      0   100%
 ```
-## 47 - mock de um dict do python
+## 🧪 47 - mock de um dict do python
 
 ```python
 import requests
