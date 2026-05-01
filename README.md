@@ -3346,7 +3346,7 @@ main.py::TestLerConfig::test_error PASSED
 main.py::TestLerConfig::test_success PASSED
 -------------- pytest-cov  output --------------
 ```
-perceba que eu fiz duas classe mock para cada test, nao ee aaa maneria mais ideal 
+perceba que eu fiz duas classes mock para cada teste, não é a maneira mais ideal. 
 
 ## 80 - api com monkeypatch
 
