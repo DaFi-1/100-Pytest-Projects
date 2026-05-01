@@ -2128,7 +2128,7 @@ main.py      29      0   100%
 TOTAL        29      0   100%
 ```
 
-## 50 - validando uma função ridícula feita por agente
+## 🧪 50 - validando uma função ridícula feita por agente
 
 ```python
 import json
