@@ -3249,36 +3249,187 @@ main.py::TestLerPegarModo::test_open PASSED
 ```
 muito simples de mock com pytest-mock comparado com o monkeypatch
 
-## 77 -
+## 77 - implementando aa funcao de cima com monkeypatch 
 
 ```python
+import pytest
+
+def openfile():
+    with open('./','r') as file:
+        file.read()
+
+class TestLerPegarModo:
+    def test_open(self, mocker) -> None:
+        mocker.patch('builtins.open', mocker.mock_open())
+        assert openfile() == None
+
+class TestOpenfileMonkeypatch:
+    def fake_obj(self):
+        class FakeOpen:
+            def read(self):      return 'ok'
+            def __enter__(self): return self
+            def __exit__():      pass
+        return FakeOpen()
+    def test_open_two(self, monkeypatch) -> None:
+        monkeypatch.setattr('builtins.open', self.fake_obj)
+
+---------------- pytest  output ----------------
+main.py::TestLerPegarModo::test_open PASSED
+main.py::TestOpenfileMonkeypatch::test_open_two PASSED
+main.py::TestOpenfileMonkeypatch::test_open_two PASSED
+-------------- pytest-cov  output --------------
+```
+
+## 78 - tenho que fixar esse open com monkeypatch
+
+```python
+import pytest
+
+def openfile():
+    with open('./','r') as file:
+        file.read()
+
+class TestOpenfileMonkeypatch:
+    def fake_obj(self, *args, **kwargs):
+        class FakeOpen:
+            def read(self):      return 'ok'
+            def __enter__(self): return self
+            def __exit__(self, exc_type, exc, tb): pass
+        return FakeOpen()
+    def test_open_two(self, monkeypatch) -> None:
+        monkeypatch.setattr('builtins.open', self.fake_obj)
+        assert openfile() == None
+
+---------------- pytest  output ----------------
+main.py::TestOpenfileMonkeypatch::test_open_two PASSED
+-------------- pytest-cov  output --------------
+```
+## 79 - mais um open() com monkeypatch
+
+```python
+import pytest
+
+def ler_config(caminho):
+    with open(caminho, 'r') as f:
+        linhas = f.readlines()
+    if not linhas:
+        raise ValueError("Empty File!")
+    return "Success"
+
+class TestLerConfig:
+
+    def faker_response(self, pathfile, mode):
+        class FakeOpen:
+            def readlines(self):return ''
+            def __enter__(self):return self
+            def __exit__(self, xxx, value, traceback):pass
+        return FakeOpen()
+
+    def faker_success(self, pathfile, mode):
+        class FakeOpen:
+            def readlines(self):return 'ok'
+            def __enter__(self):return self
+            def __exit__(self, xxx, value, traceback):pass
+        return FakeOpen()
+
+    def test_error(self, monkeypatch):
+        monkeypatch.setattr('builtins.open', self.faker_response)
+        with pytest.raises(ValueError) as error:
+            ler_config('./file.txt')
+        assert str(error.value) == "Empty File!"
+
+    def test_success(self, monkeypatch):
+        monkeypatch.setattr('builtins.open', self.faker_success)
+        assert ler_config('./file.txt') == "Success"
+
+---------------- pytest  output ----------------
+main.py::TestLerConfig::test_error PASSED
+main.py::TestLerConfig::test_success PASSED
+-------------- pytest-cov  output --------------
+```
+perceba que eu fiz duas classe mock para cada test, nao ee aaa maneria mais ideal 
+
+## 80 - api com monkeypatch
+
+```python
+import pytest
+import requests
+
+def buscar_usuario(user_id):
+    response = requests.get(f"https://api.exemplo.com/users/{user_id}")
+    if response.status_code != 200:
+        raise ValueError("Usuário não encontrado")
+    return "success" 
+
+class TestBuscarUsuario:
+
+    def fakeobj(self, user_id):
+        class FakeResponse:
+            status_code = 300
+        return FakeResponse()
+
+    def fakeobjj(self, user_id):
+        class FakeResponse:
+            status_code = 200
+        return FakeResponse()
+
+    def test_error(self, monkeypatch):
+        monkeypatch.setattr('main.requests.get', self.fakeobj)
+        with pytest.raises(ValueError) as error:
+            buscar_usuario('uva')
+        assert str(error.value) == "Usuário não encontrado"
+
+    def test_success(self, monkeypatch):
+        monkeypatch.setattr('main.requests.get', self.fakeobjj)
+        assert buscar_usuario('uva') == "success"
+
+---------------- pytest  output ----------------
+main.py::TestBuscarUsuario::test_error PASSED
+main.py::TestBuscarUsuario::test_success PASSED
+-------------- pytest-cov  output --------------
+```
+
+usando monkeypatch para resolver uma funcao de api
+
+## 81 - podria fazer essa mecanica assim no mock
+
+```python
+import pytest
+import requests
+
+def buscar_usuario(user_id):
+    response = requests.get(f"https://api.exemplo.com/users/{user_id}")
+    if response.status_code != 200:
+        raise ValueError("Usuário não encontrado")
+    return "success" 
+
+
+class TestBuscarUsuario:
+
+    class FakeResponse:
+        def __init__(self, status_code):
+            self.status_code = status_code
+
+    def type_set(value):
+        def fakeobj(self, user_id):
+            return FakeResponse(value)
+
+    def test_error(self, monkeypatch):
+        monkeypatch.setattr('main.requests.get', self.type_set(300))
+        with pytest.raises(ValueError) as error:
+            buscar_usuario('uva')
+        assert str(error.value) == "Usuário não encontrado"
+
+    def test_success(self, monkeypatch):
+        monkeypatch.setattr('main.requests.get',self.type_set(200))
+        assert buscar_usuario('uva') == "success"
+
 ---------------- pytest  output ----------------
 -------------- pytest-cov  output --------------
 ```
-## 78 -
 
-```python
----------------- pytest  output ----------------
--------------- pytest-cov  output --------------
-```
-## 79 -
+poderia fazer assim para escolher o tipo de retorno
 
-```python
----------------- pytest  output ----------------
--------------- pytest-cov  output --------------
-```
-## 80 -
-
-```python
----------------- pytest  output ----------------
--------------- pytest-cov  output --------------
-```
-## 81 -
-
-```python
----------------- pytest  output ----------------
--------------- pytest-cov  output --------------
-```
 ## 82 -
 
 ```python
