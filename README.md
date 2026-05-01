@@ -1936,7 +1936,7 @@ main.py      22      1    95%   14
 ---------------------------------------
 TOTAL        22      1    95%
 ```
-## 46 - Testar função com lista vazia
+## 🧪 46 - Testar função com lista vazia
 
 ```python
 import pytest
