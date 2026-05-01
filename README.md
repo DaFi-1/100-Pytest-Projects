@@ -3016,7 +3016,7 @@ main.py::TestMediaPonderada::test_reprovado[1-1-1-1] PASSED
 main.py::TestMediaPonderada::test_reprovado[2-2-2-2] PASSED                      
 -------------- pytest-cov output --------------
 ```
-## 68 - builtins open() com monkeypatch
+## 🧪 68 - builtins open() com monkeypatch
 
 ```python
 import pytest
