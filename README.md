@@ -2395,7 +2395,7 @@ def test_copiar_arquivo(tmp_path):
 Usando a função anterior, note que eu coloquei o decorador @pytest.mark.slow. Isso marca a função para uma função lenta ou um tipo específico de tag da sua escolha. Você também pode ignorar funções com esse decorador.
 Com `pytest -m "not slow"`, ou executar de maneira exclusiva com `pytest -m "slow"`.
 
-## 55 - funcao que verifica se eee par
+## 55 - função que verifica se é par
 
 ```python
 import pytest
