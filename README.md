@@ -3456,13 +3456,13 @@ poderi se feito assim caso eu executasse o arquivo como modulo
 ---------------- pytest  output ----------------
 -------------- pytest-cov output --------------
 ```
-## 85 - Seção vazia
+## 🧪 85 - Seção vazia
 
 ```python
 ---------------- pytest  output ----------------
 -------------- pytest-cov output --------------
 ```
-## 86 -
+## 🧪 86 - Seção vazia
 
 ```python
 ---------------- pytest  output ----------------
