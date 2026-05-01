@@ -3431,7 +3431,6 @@ class TestBuscarUsuario:
 poderia fazer assim para escolher o tipo de retorno
 
 ## 82 -
-
 ```python
 ---------------- pytest  output ----------------
 -------------- pytest-cov  output --------------
