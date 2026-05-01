@@ -846,7 +846,7 @@ TOTAL        12      0   100%
 
 este segue a mesma ideia do de cima, foi proposto pelo livro também como exercício.
 
-## 22 - mais um proposto pelo livro 
+## 🧪 22 - mais um proposto pelo livro
 
 ```python
 import pytest 
