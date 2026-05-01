@@ -2825,7 +2825,7 @@ main.py::TestCalcular::test_response_success PASSED
 ```
 
 
-## 64 - usando mokeyaptch com a funcao de cima
+## 64 - usando monkeypatch com a função de cima
 
 
 ```python
@@ -2972,8 +2972,8 @@ main.py::TestCheckApiStatusModeTwo::test_success_success PASSED                 
 -------------- pytest-cov  output --------------
 ```
 
-nao sei pq o chatgpt quando eu mando ele fazer uma funcao deificil ele faz uma 
-funcao que faz 100 coisas diferentes na mesma funcao kkkkkkk cade o SOLID...
+não sei por que o chatgpt quando eu mando ele fazer uma função difícil ele faz uma 
+função que faz 100 coisas diferentes na mesma função kkkkkkk cadê o SOLID...
 em cenarios reais concerteza vai ter funcoes GOD feitas por programadores ruims
 
 Simples teste só para mostrar para um amigo como se faz teste.
