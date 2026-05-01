@@ -2691,7 +2691,7 @@ None
 -------------- pytest-cov output --------------
 None
 ```
-## 61 - usando monkeypatch.setattr( )
+## 🧪 61 - usando monkeypatch.setattr( )
 
 ```python
 import pytest
