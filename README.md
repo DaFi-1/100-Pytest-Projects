@@ -35,7 +35,7 @@ Este projeto funciona tanto como laboratório de aprendizado quanto como portfó
 > This repository is a TDD study project using pytest.  
 > AI tools were used exclusively to generate the functions under test in order to speed up scenario creation.  
 > All test cases and development following the Red-Green-Refactor cycle were written manually.
-## 1 - Teste unitário de uma função de soma
+## 🧪 1 - Teste unitário de uma função de soma
 
 
 ```python
