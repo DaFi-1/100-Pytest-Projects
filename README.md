@@ -992,7 +992,7 @@ TOTAL        26      1    96%
 mesmo test do outro, mesmo teste do outro. Fique atento à cov do pytest: ela mostra a linha 17 como uma linha que não foi testada.
 um bom plugin do pytest para termos uma cobertura geral do nosso projeto. 
 
-## 25 - testando uma fake API
+## 🧪 25 - testando uma fake API
 
 ```python
 import pytest
