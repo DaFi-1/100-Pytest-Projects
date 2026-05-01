@@ -3052,7 +3052,7 @@ interessante para fazer um builtins.open() preciso de um objetos fake
 vou estudar mais detalhado esse método open() e como ele funciona. 
 Eu sei no fundo como ele funciona em C, mas no Python tem coisas como namespaces, escopos, etc. Acho que ele tem mecânicas bem únicas no Python. 
 
-## 69 - criando um objeto fake para o builtins.open()
+## 🧪 69 - criando um objeto fake para o builtins.open()
 
 ```python
 import pytest
@@ -3092,7 +3092,7 @@ main.py::TestLerArquivo::test_success PASSED
 main.py::TestLerArquivo::test_error PASSED  
 -------------- pytest-cov output --------------
 ```
-## 70 - tetando usar o .setitem, sendo que eu devia usar o .setenv
+## 🧪 70 - tetando usar o .setitem, sendo que eu devia usar o .setenv
 
 ```python
 import pytest
@@ -3114,7 +3114,7 @@ main.py::TestLerPegarModo::test_success PASSED
 perceba que o setitem precisa do primeiro argumento sendo um dicionário
 ja no .setenv, nao ele injeta ate onde eu identi no name space
 
-## 71 - algums conceitos para decorar
+## 🧪 71 - algums conceitos para decorar
 
 ```python
 
@@ -3127,7 +3127,7 @@ ja no .setenv, nao ele injeta ate onde eu identi no name space
 -------------- pytest-cov output --------------
 ```
 
-## 72 - monkeypatch.setattr, ficiona com scopo global
+## 🧪 72 - monkeypatch.setattr, ficiona com scopo global
 
 ```python
 import pytest
@@ -3150,7 +3150,7 @@ main.py::TestLerPegarModo::test_success PASSED                                  
 perceba que o monkeypatch.setattr funciona com escopos acessíveis
 No meu exemplo eu usei o escopo global.
 
-## 73 - vamos utilizar o monkeypatch.setenv 
+## 🧪 73 - vamos utilizar o monkeypatch.setenv 
 
 ```python
 import pytest
@@ -3169,7 +3169,7 @@ main.py::TestLerPegarModo::test_success PASSED
 -------------- pytest-cov output --------------
 ```
 
-## 74 - empty
+## 🧪 74 - empty
 
 ```python
 import pytest
@@ -3193,7 +3193,7 @@ main.py::TestLerPegarModo::test_success PASSED
 main.py::TestLerPegarModo::test_error PASSED
 -------------- pytest-cov output --------------
 ```
-## 75 - open() with monkeypatch
+## 🧪 75 - open() with monkeypatch
 
 ```python
 import pytest
@@ -3223,7 +3223,7 @@ class TestLerPegarModo:
 um exemplo com monkeypatch, temos que criar uma classe fake para mockar.
 ou fucoes ou methods para mocker
 
-## 76 - lazy mock
+## 🧪 76 - lazy mock
 
 ```python
 import pytest
@@ -3243,7 +3243,7 @@ main.py::TestLerPegarModo::test_open PASSED
 ```
 muito simples de mock com pytest-mock comparado com o monkeypatch
 
-## 77 - implementando a função de cima com monkeypatch 
+## 🧪 77 - implementando a função de cima com monkeypatch 
 
 ```python
 import pytest
@@ -3274,7 +3274,7 @@ main.py::TestOpenfileMonkeypatch::test_open_two PASSED
 -------------- pytest-cov output --------------
 ```
 
-## 78 - tenho que fixar esse open com monkeypatch
+## 🧪 78 - tenho que fixar esse open com monkeypatch
 
 ```python
 import pytest
@@ -3298,7 +3298,7 @@ class TestOpenfileMonkeypatch:
 main.py::TestOpenfileMonkeypatch::test_open_two PASSED
 -------------- pytest-cov output --------------
 ```
-## 79 - mais um open() com monkeypatch
+## 🧪 79 - mais um open() com monkeypatch
 
 ```python
 import pytest
@@ -3343,7 +3343,7 @@ main.py::TestLerConfig::test_success PASSED
 ```
 perceba que eu fiz duas classes mock para cada teste, não é a maneira mais ideal. 
 
-## 80 - api com monkeypatch
+## 🧪 80 - api com monkeypatch
 
 ```python
 import pytest
@@ -3385,7 +3385,7 @@ main.py::TestBuscarUsuario::test_success PASSED
 
 usando monkeypatch para resolver uma função de API.
 
-## 81 - podria fazer essa mecanica assim no mock
+## 🧪 81 - podria fazer essa mecanica assim no mock
 
 ```python
 import pytest
@@ -3424,7 +3424,7 @@ class TestBuscarUsuario:
 
 poderia fazer assim para escolher o tipo de retorno.
 
-## 82 -  __name__
+## 🧪 82 -  __name__
 ```python
 import pytest
 
