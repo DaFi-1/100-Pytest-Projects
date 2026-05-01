@@ -648,7 +648,7 @@ TOTAL        40      0   100%
 
 para validar essa única linha precisamos que os dois primeiros if venham a falhar.  
 
-## 18 - Testando toggle_server
+## 🧪 18 - Testando toggle_server
 
 ```python
 
