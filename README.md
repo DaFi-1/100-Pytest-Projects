@@ -3564,7 +3564,7 @@ do estudo deste projeto, alguns vão ser mantidos ou não vai depender muito
 das onde minha area vai comvergir no futuro,
 
 ### CARD 1
-        O que eu uso para inventar atributos e métodos            ------ mocker.Mock()
+        O que eu uso para inventar atributos e métodos.            ------ mocker.Mock()
         Como capturar um erro para teste no pytest                ------ pytest.raises()
         pytest.raises() usa junto com                             ------ with
         Para que serve o pytest.raises()                          ------ capturar um erro
