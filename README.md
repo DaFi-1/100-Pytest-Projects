@@ -2570,7 +2570,7 @@ TOTAL        13      2    85%
 
 Achei muito interessante esse monkeypatch. Acredito que ele seja usado em uma função que o teste de comportamento não seja o ponto alvo. Ele serve muito bem para testes de estado ou coisas do tipo.
 
-## 58 - escopos com monkeypatch
+## 🧪 58 - escopos com monkeypatch
 
 ```python
 import os
