@@ -2532,7 +2532,7 @@ main.py      36      0   100%
 TOTAL        36      0   100%
 ```
 
-nossa em uma funcao de fatorial tem varios cassos de erros em cosideracao aa ser levantado
+Nossa, em uma função de fatorial tem vários casos de erros em consideração a serem levantados.
 nao ee aa atoa que existe frame works pre pronta para nao ter que reiventar aaa roda toda vez 
 que for implemntar algo, se bem com aa minha visao sobre inteligencia artificial, projetos 
 de frame works podem ser criadas por empresas ou uma unica pessoa com conhecimento aaa
@@ -2570,9 +2570,7 @@ main.py      13      2    85%   4, 15
 TOTAL        13      2    85%
 ```
 
-achei muit interessante esse mokeyaptch, acretido que ele seja usado em uma fucao que o 
-test de comportamento nao seja o ponto alvo , ele serve muito bem para tests de estado ou
-coiasas do tipo.
+Achei muito interessante esse monkeypatch. Acredito que ele seja usado em uma função que o teste de comportamento não seja o ponto alvo. Ele serve muito bem para testes de estado ou coisas do tipo.
 
 ## 58 - escopos com mokeyaptch
 
