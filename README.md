@@ -3480,7 +3480,7 @@ poderi se feito assim caso eu executasse o arquivo como modulo
 ---------------- pytest  output ----------------
 -------------- pytest-cov output --------------
 ```
-## 89 - Seção vazia
+## 🧪 89 - Seção vazia
 
 ```python
 ---------------- pytest  output ----------------
