@@ -3430,13 +3430,29 @@ class TestBuscarUsuario:
 
 poderia fazer assim para escolher o tipo de retorno
 
-## 82 -
+## 82 -  __name__
 ```python
+import pytest
+
+uva = 'uva'
+
+def xxx():
+    return uva == 'uva' 
+
+
+class TestUvaVariable:
+    def test_uva_variable(self, monkeypatch):
+        monkeypatch.setattr(__name__, 'uva', 'xxx')
+        assert xxx() is False
 ---------------- pytest  output ----------------
 -------------- pytest-cov  output --------------
 ```
+
+poderi se feito assim caso eu executasse o arquivo como modulo
+
 ## 83 -
 ```python
+
 ---------------- pytest  output ----------------
 -------------- pytest-cov  output --------------
 ```
