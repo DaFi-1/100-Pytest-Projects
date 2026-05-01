@@ -2650,7 +2650,7 @@ Diferente do mocker do pytest-mock, eu tive que criar minha própria função de
 Como descrito na documentação, essa API é de baixo nível. Eu considero muito mais
 maleável do que o pytest-mock. Achei melhor, me sinto livre nela.
 
-## 60 - aprendendo mais sobre o monkeypatch
+## 🧪 60 - aprendendo mais sobre o monkeypatch
 
 ```python
 import os
