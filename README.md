@@ -1840,7 +1840,7 @@ main.py      16      0   100%
 TOTAL        16      0   100%
 ```
 
-## 44 - Testar função que retorna None
+## 🧪 44 - Testar função que retorna None
 
 ```python
 import pytest
