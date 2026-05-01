@@ -812,7 +812,7 @@ vemos nesse teste que temos dois testes para validar todos os casos da função 
 Sim, o erro também é uma saída válida. Ele nos diz como a função se comporta caso não sejam passados os argumentos desejados.
 Um erro será exibido na tela do desenvolvedor e ajudará a progredir no código. 
 
-## 21 - proposto pelo livro Tdd de estudo 
+## 🧪 21 - proposto pelo livro Tdd de estudo
 
 ```python
 import pytest 
