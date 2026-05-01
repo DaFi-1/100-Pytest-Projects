@@ -3436,7 +3436,6 @@ poderia fazer assim para escolher o tipo de retorno
 -------------- pytest-cov  output --------------
 ```
 ## 83 -
-
 ```python
 ---------------- pytest  output ----------------
 -------------- pytest-cov  output --------------
