@@ -3388,7 +3388,7 @@ main.py::TestBuscarUsuario::test_success PASSED
 -------------- pytest-cov  output --------------
 ```
 
-usando monkeypatch para resolver uma funcao de api
+usando monkeypatch para resolver uma função de API.
 
 ## 81 - podria fazer essa mecanica assim no mock
 
