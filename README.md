@@ -3565,7 +3565,7 @@ poderi se feito assim caso eu executasse o arquivo como modulo
 
 essa parte é dedicada aos flashcards criados ao decorrer do estudo. 
 de flash cards com o anki, todos os flash cards foram revisados ao decorrer
-do estudo desse projetos, algums vao ser mantidos ou nao vai depender muito 
+do estudo deste projeto, alguns vão ser mantidos ou não vai depender muito 
 das onde minha area vai comvergir no futuro,
 
 ### CARD 1
