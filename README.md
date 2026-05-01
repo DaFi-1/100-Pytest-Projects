@@ -72,9 +72,9 @@ main.py::test_sum_succes[2-2-4] PASSED
 main.py::test_sum_succes[10-10-20] PASSED
 ```
 
-com o decorador **@pytest.mark.parametrize()** podemos simular varias chamadas de um mesmo test com varios argumentos diferentes
+com o decorador **@pytest.mark.parametrize()** podemos simular várias chamadas de um mesmo teste com vários argumentos diferentes
 
-## 3 - testando a existencia de docstring na funcao sum
+## 3 - testando a existência de docstring na função sum
 
 ```python
 import pytest
@@ -277,7 +277,7 @@ def create_dir(pathdir: str) -> None:
 class TestCreateDir:
 
     def test_strin_phone(self, mocker) -> None:
-        # objeto fake da funcao sobrescrita
+        # objeto fake da função sobrescrita
         fake = mocker.patch('main.os.makedirs')
         create_dir('./FakeDir')
         #verifica se create_dir chamou os.makedirs corretamente
@@ -784,7 +784,7 @@ import pytest
 def add(x: int, y: int) -> int:
     if isinstance(x, int) and isinstance(y, int):
         return x + y
-    raise Exception ('Esta funcao so aceita valores inteiros..')
+    raise Exception ('Esta função só aceita valores inteiros..')
 
 class TestAdd:
 
@@ -794,7 +794,7 @@ class TestAdd:
     def test_add_error_msg(self) -> None:
         with pytest.raises(Exception) as error:
             add(1.0,1.0)
-        assert str(error.value) == 'Esta funcao so aceita valores inteiros..'
+        assert str(error.value) == 'Esta função só aceita valores inteiros..'
 
 ---------------- pytest  output ----------------
 main.py::TestAdd::test_true_add PASSED
@@ -820,7 +820,7 @@ import pytest
 def add(x: int, y: int) -> int:
     if isinstance(x, int) and isinstance(y, int):
         return x - y
-    raise Exception ('Esta funcao so aceita valores inteiros..')
+    raise Exception ('Esta função só aceita valores inteiros..')
 
 class TestAdd:
 
@@ -830,7 +830,7 @@ class TestAdd:
     def test_sub_error_msg(self) -> None:
         with pytest.raises(Exception) as error:
             sub(1.0,1.0)
-        assert str(error.value) == 'Esta funcao so aceita valores inteiros..'
+        assert str(error.value) == 'Esta função só aceita valores inteiros..'
 
 ---------------- pytest  output ----------------
 main.py::TestSub::test_true_sub PASSED
@@ -2128,7 +2128,7 @@ main.py      29      0   100%
 TOTAL        29      0   100%
 ```
 
-## 50 - validando uma funcao ridicula feita por agente
+## 50 - validando uma função ridícula feita por agente
 
 ```python
 import json
