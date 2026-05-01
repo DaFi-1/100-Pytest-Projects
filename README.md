@@ -1801,7 +1801,7 @@ main.py      31      0   100%
 TOTAL        31      0   100%
 ```
 
-## 43 - Testar divisão por zero
+## 🧪 43 - Testar divisão por zero
 
 ```python
 import pytest
