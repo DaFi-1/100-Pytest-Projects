@@ -366,7 +366,7 @@ TOTAL        24      6    75%
 podemos usar o pytest-cov para ver a cobertura de testes da nossa aplicação para melhor legibilidade.
 veja que falta testar a linha 11 a 18. Esse trecho de código ainda não foi testado.
 
-## 14 - pytest-cov pesistente 
+## 🧪 14 - pytest-cov pesistente
 
 ```python
 import os
@@ -431,7 +431,7 @@ TOTAL        31      3    90%
 perceba que o cov cobriu apenas as linhas que eu testei e ainda faltam a continuação de um if e um return. 
 linhas 12-13, 16. Perceba que a linha 12 e 13 não foram testadas, mesmo fazendo um if validar.
 
-## 15 - Dois mock em um mesmo test 
+## 🧪 15 - Dois mock em um mesmo test
 
 ```python
 import os
