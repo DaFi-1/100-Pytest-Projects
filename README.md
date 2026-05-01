@@ -3151,7 +3151,7 @@ main.py::TestLerPegarModo::test_success PASSED                                  
 ------------- pytest-cov  output --------------
 ```
 perceba que o monkeypatch.setattr funciona com escopos acessíveis
-no meu exemplo eu usei o escopo global.
+No meu exemplo eu usei o escopo global.
 
 ## 73 - vamos utilizar o monkeypatch.setenv 
 
