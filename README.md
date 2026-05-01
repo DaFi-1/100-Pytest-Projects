@@ -2312,7 +2312,7 @@ Parece um juninho quando eu não especifico boas práticas.
 
 -------------- pytest-cov output --------------
 ```
-## 52 - endendtendo o tmp_path do pytest
+## 🧪 52 - endendtendo o tmp_path do pytest
 
 ```python
 import pytest
