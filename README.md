@@ -2725,7 +2725,7 @@ TOTAL        13      0   100%
 perceba que não deu erro. Chamei uma função que tem uma variável uva que não foi declarada. Como esse teste roda?
 Simplesmente o monkeypatch faz a injeção de coisas em módulo, venv, path, objetos. É assim que o teste passou.
 
-## 62 - Primeiro commit depois de muito tempo
+## 🧪 62 - Primeiro commit depois de muito tempo
 
 ```python
 import pytest
