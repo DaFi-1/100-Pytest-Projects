@@ -776,7 +776,7 @@ achei bem confuso testar isso, não entendi bem o porquê do import `toolbox.too
 será que eu poderia usar um `mocker.Mock()` e atribuir esses métodos e esse teste passaria? Fica essa dúvida que posteriormente eu vou tirar.
 
 
-## 20 - tratando erros  
+## 🧪 20 - tratando erros  
 
 ```python
 import pytest 
