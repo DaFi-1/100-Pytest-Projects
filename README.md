@@ -89,7 +89,7 @@ def test_docstring_exist() -> None:
 
 para pegar a docstring de uma função usamos **func.__doc__**, se não tiver docstring retorna **None**
 
-## 4 - Organizando varios test em uma unica classe
+## 4 - Organizando vários testes em uma única classe
 
 ```python
 import pytest
