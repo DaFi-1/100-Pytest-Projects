@@ -3504,10 +3504,42 @@ class TestReadFile:
 ---------------- pytest  output ----------------
 -------------- pytest-cov output --------------
 ```
-## 🧪 85 - Seção vazia
+## 🧪 85 - com menos se faz muito, nao se esqueca 
 
 ```python
+import pytest
+
+def safe_sum(a, b):
+    if not isinstance(a, (int, float)):
+        raise ValueError("a must be number")
+    if not isinstance(b, (int, float)):
+        raise ValueError("b must be number")
+    return a + b
+
+class TestReadFile:
+
+    def test_sucess_a(self):
+        with pytest.raises(ValueError) as error:
+            assert safe_sum('',1) == 'ok_len'
+        assert str(error.value) == 'a must be number'
+
+    def test_sucess_b(self):
+        with pytest.raises(ValueError) as error:
+            assert safe_sum(1,'') == 'ok_len'
+        assert str(error.value) == 'b must be number'
+
+    @pytest.mark.parametrize('x, y, result',[
+        (1,1,2),
+        (2,3,5),
+    ])
+    def test_sucess(self, x, y, result):
+        assert safe_sum(x, y) == result 
+
 ---------------- pytest  output ----------------
+main.py::TestReadFile::test_sucess_a PASSED     
+main.py::TestReadFile::test_sucess_b PASSED     
+main.py::TestReadFile::test_sucess[1-1-2] PASSED
+main.py::TestReadFile::test_sucess[2-3-5] PASSED
 -------------- pytest-cov output --------------
 ```
 ## 🧪 86 - Seção vazia
