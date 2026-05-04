@@ -3444,10 +3444,38 @@ class TestUvaVariable:
 
 poderi se feito assim caso eu executasse o arquivo como modulo
 
-## 🧪 83 - Seção vazia
+## 🧪 83 - test open file, fixed 
 ```python
+import pytest
+
+def read_file(filename):
+    with open(filename, 'r') as file:
+        return file.read()
+
+class TestReadFile:
+
+    def fakeresponse(self, filename, mode='r'):
+        class FakeOpen:
+            def read(self): return 'ok' 
+            def __enter__(self): return self
+            def __exit__(self, exc_type, value, traceback): pass 
+        return FakeOpen()
+
+    def test_sucess(self, monkeypatch):
+        monkeypatch.setattr('builtins.open', self.fakeresponse)
+        assert read_file('x.py') == 'ok'
+
+class TestReadFileTwo:
+
+    def test_sucess_two(self, mocker):
+        fakeOBJ = mocker.Mock()
+        fakeOBJ.read.return_value = 'ok'
+        mocker.patch('builtins.open', mocker.mock_open())
+        assert read_file('x.py') == ''
 
 ---------------- pytest  output ----------------
+main.py::TestReadFile::test_sucess PASSED       
+main.py::TestReadFileTwo::test_sucess_two PASSED
 -------------- pytest-cov output --------------
 ```
 ## 🧪 84 - Seção vazia
