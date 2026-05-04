@@ -3542,18 +3542,41 @@ main.py::TestReadFile::test_sucess[1-1-2] PASSED
 main.py::TestReadFile::test_sucess[2-3-5] PASSED
 -------------- pytest-cov output --------------
 ```
-## 🧪 86 - Seção vazia
+## 🧪 86 - um unico mock para todas as chamadas 
 
 ```python
 ---------------- pytest  output ----------------
+main.py::TestReadFile::test_sucess_side_effect PASSED 
+main.py::TestReadFile::test_sucess_return_value PASSED
 -------------- pytest-cov output --------------
 ```
-## 🧪 87 - Seção vazia
+perceba que eu fiz 3 chamadas uma com side_effect de retorrno, que vai
+reotrnar valores diferentes para cada chamda soamdno 6 como estar no test eee
+o return_value vai um mesmo return_value para todas asss chamadas somando 3
+
+## 🧪 87 - fazendo sem nada so para ve como fuciona 
 
 ```python
+import pytest
+
+def get_number() -> None: pass
+
+def sum_five_times():
+    total = 0
+    for _ in range(3):
+        total += get_number()
+    return total 
+
+class TestReadFile:
+    def test_sucess_side_effect(self, mocker):
+        assert sum_five_times() == 3
+
 ---------------- pytest  output ----------------
 -------------- pytest-cov output --------------
 ```
+pensei em faze so com python puro, eu eu tinha que injetarr com escopos
+assim que fizer aa chamada da funcao.
+
 ## 🧪 88 - Seção vazia
 
 ```python
