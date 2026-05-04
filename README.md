@@ -3478,9 +3478,29 @@ main.py::TestReadFile::test_sucess PASSED
 main.py::TestReadFileTwo::test_sucess_two PASSED
 -------------- pytest-cov output --------------
 ```
-## 🧪 84 - Seção vazia
+## 🧪 84 - assim da errro 
 
 ```python
+import pytest
+def count_lines(filename):
+    with open(filename, 'r') as file:
+        return len(file.readlines())
+
+class TestReadFile:
+
+    def fakeresponse(self, filename, mode='r'):
+        class FakeOpen:
+            def read(self): return 'ok' 
+            def readlines(self): return 'ok' 
+            def __enter__(self): return self
+            def __exit__(self, exc_type, value, traceback): pass 
+        return FakeOpen()
+
+    def test_sucess(self, monkeypatch):
+        monkeypatch.setattr('builtins.open', self.fakeresponse)
+        monkeypatch.setattr('builtins.len', return_value='ok_len')
+        assert read_file('x.py') == 'ok_len'
+
 ---------------- pytest  output ----------------
 -------------- pytest-cov output --------------
 ```
