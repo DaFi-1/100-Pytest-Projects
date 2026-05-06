@@ -878,7 +878,7 @@ main.py      12      0   100%
 TOTAL        12      0   100%
 ```
 
-Mais um proposto no capítulo 26 do livro, testado com base nos estudos de pytest.
+Mais um, proposto no capítulo 26 do livro, testado com base nos estudos de pytest.
 
 ## 🧪 23 - Testando uma api 
 
@@ -934,10 +934,10 @@ main.py      24      0   100%
 TOTAL        24      0   100%
 ```
 
-vamos mockar uma função que faz uma chamada à API gratuita https://jsonplaceholder.typicode.com/. 
-essa API nos devolve dados. Vamos comparar o retorno no final.
+Vamos mockar uma função que faz uma chamada à API gratuita https://jsonplaceholder.typicode.com/. 
+Essa API nos devolve dados; vamos comparar o retorno no final.
 
-## 🧪 24 -  testando outras possibilidadas
+## 🧪 24 - Testando outras possibilidades
 
 ```python
 import pytest
@@ -988,8 +988,8 @@ main.py      26      1    96%   17
 TOTAL        26      1    96%
 ```
 
-mesmo test do outro, mesmo teste do outro. Fique atento à cov do pytest: ela mostra a linha 17 como uma linha que não foi testada.
-um bom plugin do pytest para termos uma cobertura geral do nosso projeto. 
+Mesmo teste do outro. Fique atento à cobertura do pytest: ela mostra a linha 17 como uma linha não testada.
+Um bom plugin do pytest para termos uma cobertura geral do nosso projeto. 
 
 ## 🧪 25 - testando uma fake API
 
@@ -1031,9 +1031,9 @@ main.py      17      0   100%
 ---------------------------------------
 TOTAL        17      0   100%
 ```
-nada de novo aqui.
+Nada de novo aqui.
 
-## 🧪 26 - Exemplo um da doc do pytest
+## 🧪 26 - Exemplo um da documentação do pytest
 
 ```python
 def inc(x):
@@ -1046,10 +1046,10 @@ def test_answer():
 -------------- pytest-cov output --------------
 ```
 
-Um simples teste. Estou lendo agora a documentação do pytest. Eu estava treinando mock, mas a doc acabou.
-então vou ler a documentação do pytest, fazendo os testes da doc do pytest.
+Um simples teste. Estou lendo agora a documentação do pytest. Eu estava treinando mock, mas a documentação acabou.
+Então vou ler a documentação do pytest, fazendo os testes da documentação.
 
-## 🧪 27 - Exemplo dois da doc do pytest
+## 🧪 27 - Exemplo dois da documentação do pytest
 
 ```python
 import pytest
@@ -1065,9 +1065,9 @@ def test_mytest():
 -------------- pytest-cov output --------------
 ```
 
-veja nesse pequeno exemplo a doc do pytest me ensina a como capturar um erro para testá-lo. Afinal, um erro também é um teste válido.
+Veja neste pequeno exemplo: a documentação do pytest ensina como capturar um erro para testá-lo. Afinal, um erro também é um teste válido.
 
-## 🧪 28 - ussndo @pytest.mark.skip
+## 🧪 28 - Usando @pytest.mark.skip
 
 ```python
 
@@ -1136,7 +1136,7 @@ main.py      33     11    67%   7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47
 TOTAL        33     11    67%
 ```
 
-nessa parte eu aprendi como pular testes com @pytest.mark.skip
+Nesta parte, aprendi a pular testes com @pytest.mark.skip
 
 ## 🧪 29 - usando @pytest.mark.xfail
 
@@ -1165,10 +1165,10 @@ main.py       8      0   100%
 TOTAL         8      0   100%
 ```
 
-observando o comportamento do @pytest.mark.xfail, ele serve para aceitar a falha de um teste, é uma tag para esse teste.
-ele impede que a execução dos testes pare em um teste com bug ou falha conhecida.
+Observando o comportamento do @pytest.mark.xfail, ele serve para aceitar a falha de um teste; é uma marcação para esse teste.
+Ele impede que a execução dos testes pare em um teste com bug ou falha conhecida.
 
-## 🧪 30 - testando errro parte 1
+## 🧪 30 - Testando erro parte 1
 
 ```python
 import pytest
@@ -1207,7 +1207,7 @@ main.py      13      0   100%
 TOTAL        13      0   100%
 ```
 
-## 🧪 31 - testando errro parte 2
+## 🧪 31 - Testando erro parte 2
 
 ```python
 import pytest
@@ -1249,7 +1249,7 @@ main.py      14      0   100%
 TOTAL        14      0   100%
 ```
 
-## 🧪 32 - testando errro parte 3
+## 🧪 32 - Testando erro parte 3
 
 ```python
 import pytest
@@ -1293,7 +1293,7 @@ main.py      14      0   100%
 TOTAL        14      0   100%
 ```
 
-## 🧪 33 - testando errro parte 4
+## 🧪 33 - Testando erro parte 4
 
 ```python
 import pytest
@@ -1339,7 +1339,7 @@ main.py      14      0   100%
 TOTAL        14      0   100%
 ```
 
-## 🧪 34 - testando errro parte 5
+## 🧪 34 - Testando erro parte 5
 
 ```python
 import pytest
@@ -1388,7 +1388,7 @@ main.py      21      0   100%
 TOTAL        21      0   100%
 ```
 
-## 🧪 35 - testando errro parte 6
+## 🧪 35 - Testando erro parte 6
 
 ```python
 import pytest
@@ -1427,7 +1427,7 @@ TOTAL        14      0   100%
 ```
 
 
-## 🧪 36 - testando errro parte 7
+## 🧪 36 - Testando erro parte 7
 
 ```python
 import pytest
@@ -1460,7 +1460,7 @@ TOTAL        12      0   100%
 ```
 
 
-## 🧪 37 - testando errro parte 8
+## 🧪 37 - Testando erro parte 8
 
 ```python
 import pytest
