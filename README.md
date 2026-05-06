@@ -3620,12 +3620,49 @@ main.py::TestFibonacci::test_one_and_zero[0-0] PASSED
 main.py::TestFibonacci::test_real_success PASSED     
 -------------- pytest-cov output --------------
 ```
-## 🧪 89 - Seção vazia
+## 🧪 89 - testando com ambos, mocker e monkeypatch 
 
 ```python
+import pytest
+
+def buscar_usuario_api(user_id):
+    raise NotImplementedError("Chamada real da API")
+
+def obter_nome_usuario(user_id):
+    usuario = buscar_usuario_api(user_id)
+    return usuario["nome"]
+
+class TestBuscarUsuarioApi:
+
+    def test_error(self):
+        with pytest.raises(NotImplementedError) as error:
+            buscar_usuario_api(0)
+        assert str(error.value) == 'Chamada real da API' 
+
+class TestObterNomeUsuario:
+
+    def test_user(self, mocker):
+        fakeOBJ = mocker.patch('main.buscar_usuario_api', return_value={'nome': 'orange'})
+        assert obter_nome_usuario('orange') == 'orange'
+        fakeOBJ.assert_called_once()
+        fakeOBJ.assert_called_once_with('orange')
+ 
+class TestObterNomeUsuarioMonkeypatch:
+
+    def fake_dict(self, user_id_fake):
+        return {'nome': 'orange'}
+
+    def test_user_with_monkeypath(self, monkeypatch):
+        monkeypatch.setattr('main.buscar_usuario_api', self.fake_dict)
+        assert obter_nome_usuario('orange') == 'orange'
+
 ---------------- pytest  output ----------------
+main.py::TestBuscarUsuarioApi::test_error PASSED                          
+main.py::TestObterNomeUsuario::test_user PASSED                           
+main.py::TestObterNomeUsuarioMonkeypatch::test_user_with_monkeypath PASSED
 -------------- pytest-cov output --------------
 ```
+
 ## 🧪 90 - Seção vazia
 
 ```python
