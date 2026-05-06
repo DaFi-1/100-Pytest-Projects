@@ -3577,11 +3577,47 @@ class TestReadFile:
 pensei em faze so com python puro, eu eu tinha que injetarr com escopos
 assim que fizer aa chamada da funcao.
 
-## 🧪 88 - Seção vazia
+## 🧪 88 - fibonacci 
 
 ```python
+import pytest
+
+def fibonacci(n):
+
+    if n < 0:
+        raise ValueError("n tem que ser >= 0")
+
+    if n in (0, 1):
+        return n
+    
+    a, b = 0, 1
+
+    for _ in range(2, n + 1):
+        a, b = b, a + b
+    return b
+
+class TestFibonacci:
+
+    def test_error(self):
+        with pytest.raises(ValueError) as error:
+            fibonacci(-1)
+        assert str(error.value) == 'n tem que ser >= 0'
+
+    @pytest.mark.parametrize('x, y', [
+        (1,1),
+        (0,0),
+    ])
+    def test_one_and_zero(self, x, y):
+        assert fibonacci(x) == y
+
+    def test_real_success(self):
+        assert fibonacci(5) == 5
 
 ---------------- pytest  output ----------------
+main.py::TestFibonacci::test_error PASSED            
+main.py::TestFibonacci::test_one_and_zero[1-1] PASSED
+main.py::TestFibonacci::test_one_and_zero[0-0] PASSED
+main.py::TestFibonacci::test_real_success PASSED     
 -------------- pytest-cov output --------------
 ```
 ## 🧪 89 - Seção vazia
