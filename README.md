@@ -8,7 +8,7 @@
   <img src="https://docs.pytest.org/en/stable/_static/pytest1.png" width="400" style="display:inline-block;"/>
 </p>
  
-### Não foi usada IA neste repositório. Este repositório é dedicado ao estudo de pytest e aplicações do TDD.
+### Nenhuma IA foi usada neste repositório. Este repositório é dedicado ao estudo de pytest e aplicações do TDD.
 
 Este repositório foi criado com base no estudo do livro  **Test-Driven Development: By Example**, de Kent Beck, com o objetivo de aplicar na prática os conceitos de **Desenvolvimento Guiado por Testes (TDD)** utilizando pytest.
 
@@ -48,7 +48,7 @@ def test_sum_succes() -> None:
     assert sun(10,10) == 20 
 ```
 
-veja que eu fiz um teste unitário, todo teste unitário é unicamente único, não depende de nada para funcionar, apenas a própria função. 
+Veja que fiz um teste unitário: todo teste unitário é único, não depende de nada para funcionar, apenas da própria função. 
 
 ## 🧪 2 - testando vários parâmetros em um único teste unitário
 
@@ -72,7 +72,7 @@ main.py::test_sum_succes[2-2-4] PASSED
 main.py::test_sum_succes[10-10-20] PASSED
 ```
 
-com o decorador **@pytest.mark.parametrize()** podemos simular várias chamadas de um mesmo teste com vários argumentos diferentes
+Com o decorador **@pytest.mark.parametrize()** podemos simular várias chamadas ao mesmo teste com diversos argumentos
 
 ## 🧪 3 - testando a existência de docstring na função sum
 
@@ -120,9 +120,9 @@ main.py::TestSum::test_sum_succes[2-2-4] PASSED
 main.py::TestSum::test_sum_succes[10-10-20] PASSED
 main.py::TestSum::test_docstring_exist PASSED
 ```
-toda classe de teste do pytest começa com **Test...** e todos os métodos dessa classe têm a própria instância da classe como argumento **self**. Ao criar uma classe de nome Test--- seguido do nome da função, para ajudar na legibilidade de outras pessoas ao ler os testes
+Toda classe de teste do pytest começa com **Test...**, e todos os seus métodos recebem a instância da classe como argumento **self**. Ao criar uma classe com nome Test--- seguido do nome da função, melhora-se a legibilidade para outras pessoas ao lerem os testes
 
-veja que eu coloquei todos os testes anteriores em uma única classe que faz menção a uma única função para ser testada
+Veja que todos os testes anteriores foram agrupados em uma única classe referente a uma função específica
 
 ## 🧪 6 - Refatorando a função para aceitar entradas diferentes
 
@@ -146,7 +146,7 @@ class TestSumError:
 -------------- pytest  output --------------
 main.py::TestSumError::test_sum_error PASSED
 ```
-Devemos fazer uma cobertura de uma função, testando todos os aspectos dela para garantir que essa função não vá falhar em futuras implementações, sejam elas quais forem. Vamos fazer testes para que a função falhe e podemos implementar melhorias, refatorando a função original que está sendo testada. Vamos dar como argumento uma string; logo um erro será lançado. Podemos refatorar a função para uma situação mais geral de uso real ou de falhas no nosso software.
+Devemos cobrir todos os aspectos de uma função com testes, garantindo que ela não falhe em futuras implementações. Vamos criar testes que induzam erros para possibilitar melhorias e refatoração. Passamos uma string como argumento; um erro será lançado. A função pode ser refatorada para cenários reais ou de tratamento de falhas.
 
 ## 🧪 7 - Fortalecendo o teste de validação de várias entradas
 
@@ -206,7 +206,7 @@ main.py::TestSendMessage::test_strin_phone send OK
 PASSED
 ```
 
-agora vamos fazer uma função que envia uma mensagem para uma string com um simples teste se a função enviou uma mensagem. Veja que nossa função retorna sempre True pois não há um teste que induza o erro e, por consequência, a refatoração para melhorar o código.
+Agora vamos criar uma função que envia mensagens e testá-la com um caso simples. Veja que a função retorna sempre True, pois não há testes que induzam erros, o que impediria a refatoração para melhorar o código.
 
 ## 🧪 9 - Refatorando a função de mensagem
 
@@ -238,7 +238,7 @@ main.py .send OK
 .
 ```
 
-perceba que eu refatorei a função conforme a necessidade dos testes. Por isso chamamos de Desenvolvimento orientado por testes, isso minimiza visitar o código mais tarde e melhora a confiabilidade e legibilidade para outras pessoas.
+Perceba que refatorei a função conforme as necessidades dos testes. Isso ilustra o Desenvolvimento Orientado por Testes, que reduz a necessidade de revisitar o código futuramente, melhorando a confiabilidade e legibilidade para outras pessoas.
 
 ## 🧪 10 - Criando um diretório
 
@@ -263,7 +263,7 @@ class TestCreateDir:
 main.py::TestCreateDir::test_strin_phone PASSED                                                                                                         [100%]
 ```
 
-Agora, como testar uma função que depende de outra função? Podemos simplesmente fazer um teste normal, criando uma pasta e logo em seguida testar se o diretório foi criado e apagá-lo logo em seguida, como o código acima.
+Agora, como testar uma função que depende de outra? Podemos criar um diretório, verificar sua existência e removê-lo em seguida, como no código acima.
 
 ## 🧪 11 - como usar mock
 
@@ -287,8 +287,8 @@ class TestCreateDir:
 main.py::TestCreateDir::test_strin_phone PASSED                                                                                                         [100%]
 ```
 
-podemos usar o conceito de mock para trocar a função de dentro por um retorno conhecido e simular o comportamento desejado ou conhecido.
-vou usar o plugin do pytest **pytest-mock**
+Podemos usar o conceito de mock para substituir funções por retornos conhecidos e simular comportamentos desejados.
+Vou usar o plugin do pytest **pytest-mock**
 
 ## 🧪 12 - plugin pytest-mock
 
@@ -307,7 +307,7 @@ def test_unix_fs(mocker):
     os.remove.assert_called_once_with('file')
 ```
 
-Veja o exemplo que o pytest-mock dá na sua documentação. O pytest-mock também tem coisas como **spy**, **stub**. Em um venv do Python você pode instalar o pytest-mock com `pip install pytest-mock`.
+Veja o exemplo que o pytest-mock fornece em sua documentação. O pytest-mock também possui recursos como **spy** e **stub**. Em um ambiente virtual do Python, você pode instalar o pytest-mock com `pip install pytest-mock`.
 
 ## 🧪 13 - pytest-cov 
 
@@ -363,8 +363,8 @@ TOTAL        24      6    75%
 
 ```
 
-podemos usar o pytest-cov para ver a cobertura de testes da nossa aplicação para melhor legibilidade.
-veja que falta testar a linha 11 a 18. Esse trecho de código ainda não foi testado.
+Podemos usar o pytest-cov para verificar a cobertura de testes da aplicação, melhorando a legibilidade.
+Veja que faltam testes para as linhas 11 a 18. Esse trecho de código ainda não foi testado.
 
 ## 🧪 14 - pytest-cov pesistente
 
@@ -428,8 +428,8 @@ main.py      31      3    90%   12-13, 16
 TOTAL        31      3    90%
 ```
 
-perceba que o cov cobriu apenas as linhas que eu testei e ainda faltam a continuação de um if e um return. 
-linhas 12-13, 16. Perceba que a linha 12 e 13 não foram testadas, mesmo fazendo um if validar.
+Perceba que a cobertura incluiu apenas as linhas que testamos, restando a continuação de um if e um return.
+Linhas 12-13 e 16. Perceba que as linhas 12 e 13 não foram testadas, mesmo com a validação do if.
 
 ## 🧪 15 - Dois mock em um mesmo test
 
@@ -494,8 +494,8 @@ main.py      31      3    90%   15-18
 TOTAL        31      3    90%
 ```
 
-perceba que eu fiz dois mocks em um único teste para validar o teste unitário sem dependências externas ou de IO.
-veja que a linha do return 'DENIED' passa sem nem mesmo testar o código ou eu testar esse retorno. Vou fazer isso logo em seguida.
+Perceba que fiz dois mocks em um único teste para validar o teste unitário sem dependências externas ou de E/S.
+Veja que a linha do return 'DENIED' passa sem testar o código ou o retorno. Farei isso na sequência.
 
 ## 🧪 16 - Testando retornos do access_system
 
@@ -567,7 +567,7 @@ main.py      35      1    97%   18
 TOTAL        35      1    97%
 ```
 
-veja que para irmos para o segundo if precisamos que o primeiro if venha a falhar. 
+Veja que, para chegarmos ao segundo if, precisamos que o primeiro if falhe. 
 
 ## 🧪 17 - Testando a linha faltante de access_system
 
