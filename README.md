@@ -3698,60 +3698,60 @@ Duas formas de fazer mocker de funções builtins do python, embora eu prefira
 utilizar o unittest do python que segue uma arquitetura legal e bem sólida.
 Até onde eu sei, originalmente criada em Java, e virou padrão para todas linguagens.
 
-## 🧪 91 - Seção vazia
+## 🧪 91 - Seção vazia (vazia)
 ```python
 ---------------- pytest  output ----------------
 -------------- pytest-cov output --------------
 ```
-## 🧪 92 - Seção vazia
+## 🧪 92 - Seção vazia (vazia)
 
 ```python
 ---------------- pytest  output ----------------
 -------------- pytest-cov output --------------
 ```
-## 🧪 93 - Seção vazia
+## 🧪 93 - Seção vazia (vazia)
 
 ```python
 ---------------- pytest  output ----------------
 -------------- pytest-cov output --------------
 ```
-## 🧪 94 - Seção vazia
+## 🧪 94 - Seção vazia (vazia)
 
 ```python
 ---------------- pytest  output ----------------
 -------------- pytest-cov output --------------
 ```
-## 🧪 95 - Seção vazia
+## 🧪 95 - Seção vazia (vazia)
 
 ```python
 ---------------- pytest  output ----------------
 -------------- pytest-cov output --------------
 ```
-## 🧪 96 - Seção vazia
+## 🧪 96 - Seção vazia (vazia)
 
 ```python
 ---------------- pytest  output ----------------
 -------------- pytest-cov output --------------
 ```
-## 🧪 97 - Seção vazia
+## 🧪 97 - Seção vazia (vazia)
 
 ```python
 ---------------- pytest  output ----------------
 -------------- pytest-cov output --------------
 ```
-## 🧪 98 - Seção vazia
+## 🧪 98 - Seção vazia (vazia)
 
 ```python
 ---------------- pytest  output ----------------
 -------------- pytest-cov output --------------
 ```
-## 🧪 99 - Seção vazia
+## 🧪 99 - Seção vazia (vazia)
 
 ```python
 ---------------- pytest  output ----------------
 -------------- pytest-cov output --------------
 ```
-## 🧪 100 - Seção vazia
+## 🧪 100 - Seção vazia (vazia)
 
 ```python
 ---------------- pytest  output ----------------
