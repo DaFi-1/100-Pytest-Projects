@@ -3091,7 +3091,7 @@ main.py::TestLerArquivo::test_success PASSED
 main.py::TestLerArquivo::test_error PASSED  
 -------------- pytest-cov output --------------
 ```
-## 🧪 70 - tetando usar o .setitem, sendo que eu devia usar o .setenv
+## 🧪 70 - Testando o .setitem, sendo que devia usar o .setenv
 
 ```python
 import pytest
@@ -3110,10 +3110,10 @@ class TestLerPegarModo:
 main.py::TestLerPegarModo::test_success PASSED
 -------------- pytest-cov output --------------
 ```
-perceba que o setitem precisa do primeiro argumento sendo um dicionário
-ja no .setenv, nao ele injeta ate onde eu identi no name space
+Perceba que o setitem precisa do primeiro argumento sendo um dicionário.
+Já no .setenv, ele injeta até onde identifiquei no namespace.
 
-## 🧪 71 - algums conceitos para decorar
+## 🧪 71 - Alguns conceitos para decorar
 
 ```python
 
@@ -3126,7 +3126,7 @@ ja no .setenv, nao ele injeta ate onde eu identi no name space
 -------------- pytest-cov output --------------
 ```
 
-## 🧪 72 - monkeypatch.setattr, ficiona com scopo global
+## 🧪 72 - monkeypatch.setattr, funciona com escopo global
 
 ```python
 import pytest
@@ -3146,10 +3146,10 @@ class TestLerPegarModo:
 main.py::TestLerPegarModo::test_success PASSED                                                     [100%]
 ------------- pytest-cov  output --------------
 ```
-perceba que o monkeypatch.setattr funciona com escopos acessíveis
-No meu exemplo eu usei o escopo global.
+Perceba que o monkeypatch.setattr funciona com escopos acessíveis.
+No meu exemplo, usei o escopo global.
 
-## 🧪 73 - vamos utilizar o monkeypatch.setenv 
+## 🧪 73 - Vamos utilizar o monkeypatch.setenv 
 
 ```python
 import pytest
@@ -3340,7 +3340,7 @@ main.py::TestLerConfig::test_error PASSED
 main.py::TestLerConfig::test_success PASSED
 -------------- pytest-cov output --------------
 ```
-perceba que eu fiz duas classes mock para cada teste, não é a maneira mais ideal. 
+Perceba que fiz duas classes mock para cada teste; não é a maneira mais ideal. 
 
 ## 🧪 80 - api com monkeypatch
 
@@ -3382,9 +3382,9 @@ main.py::TestBuscarUsuario::test_success PASSED
 -------------- pytest-cov output --------------
 ```
 
-usando monkeypatch para resolver uma função de API.
+Usando monkeypatch para resolver uma função de API.
 
-## 🧪 81 - podria fazer essa mecanica assim no mock
+## 🧪 81 - Poderia fazer essa mecânica assim no mock
 
 ```python
 import pytest
@@ -3421,7 +3421,7 @@ class TestBuscarUsuario:
 -------------- pytest-cov output --------------
 ```
 
-poderia fazer assim para escolher o tipo de retorno.
+Poderia fazer assim para escolher o tipo de retorno.
 
 ## 🧪 82 -  __name__
 ```python
@@ -3441,9 +3441,9 @@ class TestUvaVariable:
 -------------- pytest-cov output --------------
 ```
 
-poderi se feito assim caso eu executasse o arquivo como modulo
+Poderia ser feito assim caso executasse o arquivo como módulo.
 
-## 🧪 83 - test open file, fixed 
+## 🧪 83 - Test open file, fixed 
 ```python
 import pytest
 
@@ -3466,7 +3466,7 @@ class TestReadFile:
 
 class TestReadFileTwo:
 
-    def test_sucess_two(self, mocker):
+    def test_sucesso_two(self, mocker):
         fakeOBJ = mocker.Mock()
         fakeOBJ.read.return_value = 'ok'
         mocker.patch('builtins.open', mocker.mock_open())
@@ -3477,7 +3477,7 @@ main.py::TestReadFile::test_sucess PASSED
 main.py::TestReadFileTwo::test_sucess_two PASSED
 -------------- pytest-cov output --------------
 ```
-## 🧪 84 - assim da errro 
+## 🧪 84 - Assim dá erro 
 
 ```python
 import pytest
@@ -3503,7 +3503,7 @@ class TestReadFile:
 ---------------- pytest  output ----------------
 -------------- pytest-cov output --------------
 ```
-## 🧪 85 - com menos se faz muito, nao se esqueca 
+## 🧪 85 - Com menos se faz muito, não se esqueça 
 
 ```python
 import pytest
@@ -3517,12 +3517,12 @@ def safe_sum(a, b):
 
 class TestReadFile:
 
-    def test_sucess_a(self):
+    def test_erro_a(self):
         with pytest.raises(ValueError) as error:
             assert safe_sum('',1) == 'ok_len'
         assert str(error.value) == 'a must be number'
 
-    def test_sucess_b(self):
+    def test_erro_b(self):
         with pytest.raises(ValueError) as error:
             assert safe_sum(1,'') == 'ok_len'
         assert str(error.value) == 'b must be number'
@@ -3531,7 +3531,7 @@ class TestReadFile:
         (1,1,2),
         (2,3,5),
     ])
-    def test_sucess(self, x, y, result):
+    def test_sucesso(self, x, y, result):
         assert safe_sum(x, y) == result 
 
 ---------------- pytest  output ----------------
@@ -3541,7 +3541,7 @@ main.py::TestReadFile::test_sucess[1-1-2] PASSED
 main.py::TestReadFile::test_sucess[2-3-5] PASSED
 -------------- pytest-cov output --------------
 ```
-## 🧪 86 - um unico mock para todas as chamadas 
+## 🧪 86 - Um único mock para todas as chamadas 
 
 ```python
 ---------------- pytest  output ----------------
@@ -3553,7 +3553,7 @@ perceba que eu fiz 3 chamadas uma com side_effect de retorrno, que vai
 reotrnar valores diferentes para cada chamda soamdno 6 como estar no test eee
 o return_value vai um mesmo return_value para todas asss chamadas somando 3
 
-## 🧪 87 - fazendo sem nada so para ve como fuciona 
+## 🧪 87 - Fazendo sem nada só para ver como funciona 
 
 ```python
 import pytest
@@ -3576,7 +3576,7 @@ class TestReadFile:
 pensei em faze so com python puro, eu eu tinha que injetarr com escopos
 assim que fizer aa chamada da funcao.
 
-## 🧪 88 - fibonacci 
+## 🧪 88 - Fibonacci 
 
 ```python
 import pytest
@@ -3619,7 +3619,7 @@ main.py::TestFibonacci::test_one_and_zero[0-0] PASSED
 main.py::TestFibonacci::test_real_success PASSED     
 -------------- pytest-cov output --------------
 ```
-## 🧪 89 - testando com ambos, mocker e monkeypatch 
+## 🧪 89 - Testando com ambos, mocker e monkeypatch 
 
 ```python
 import pytest
