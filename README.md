@@ -1732,7 +1732,7 @@ main.py      20      0   100%
 ---------------------------------------
 TOTAL        20      0   100%
 ```
-## 🧪 42 - Testar soma com números negativos
+## 🧪 42 - Testando soma com números negativos
 
 ```python
 import os 
@@ -1800,7 +1800,7 @@ main.py      31      0   100%
 TOTAL        31      0   100%
 ```
 
-## 🧪 43 - Testar divisão por zero
+## 🧪 43 - Testando divisão por zero
 
 ```python
 import pytest
@@ -1839,7 +1839,7 @@ main.py      16      0   100%
 TOTAL        16      0   100%
 ```
 
-## 🧪 44 - Testar função que retorna None
+## 🧪 44 - Testando função que retorna None
 
 ```python
 import pytest
@@ -1889,7 +1889,7 @@ TOTAL        22      0   100%
 ```
 
 
-## 🧪 45 - Testar função com string vazia
+## 🧪 45 - Testando função com string vazia
 
 ```python
 import pytest
@@ -1916,7 +1916,7 @@ def tamanho_string(s):
 
 class TestReturnNone:
 
-    def test_stirng_none(self) -> None:
+    def test_string_none(self) -> None:
         with pytest.raises(ValueError) as error:
             tamanho_string(None)
         assert str(error.value) == 'inválido'
@@ -1925,7 +1925,7 @@ class TestReturnNone:
         assert tamanho_string('alksdf') == 6
 
 ---------------- pytest  output ----------------
-main.py::TestReturnNone::test_stirng_none PASSED
+main.py::TestReturnNone::test_string_none PASSED
 main.py::TestReturnNone::test_error_loop PASSED
 
 -------------- pytest-cov output --------------
@@ -1935,7 +1935,7 @@ main.py      22      1    95%   14
 ---------------------------------------
 TOTAL        22      1    95%
 ```
-## 🧪 46 - Testar função com lista vazia
+## 🧪 46 - Testando função com lista vazia
 
 ```python
 import pytest
@@ -1966,7 +1966,7 @@ main.py      13      0   100%
 ---------------------------------------
 TOTAL        13      0   100%
 ```
-## 🧪 47 - mock de um dict do python
+## 🧪 47 - Mock de um dict do Python
 
 ```python
 import requests
@@ -1978,7 +1978,7 @@ def obter_usuario(user_id: int) -> dict:
     response = requests.get(url)
 
     if response.status_code != 200:
-        return {"erro": "usuario nao encontrado"}
+        return {"erro": "usuário não encontrado"}
 
     data = response.json()
 
@@ -2032,7 +2032,7 @@ TOTAL        29      0   100%
 
 mocando e testando um simples retorno de dict do python comparando o dict interno. 
 
-## 🧪 48 - verificando se uma função tem docstring
+## 🧪 48 - Testando se uma função tem docstring
 
 ```python
 import pytest
@@ -2057,7 +2057,7 @@ main.py       6      1    83%   5
 TOTAL         6      1    83%
 ```
 
-## 🧪 49 - Testes da função aplicar_desconto
+## 🧪 49 - Testando a função aplicar_desconto
 
 ```python
 import pytest
@@ -2127,7 +2127,7 @@ main.py      29      0   100%
 TOTAL        29      0   100%
 ```
 
-## 🧪 50 - validando uma função ridícula feita por agente
+## 🧪 50 - Testando uma função ridícula feita por agente
 
 ```python
 import json
