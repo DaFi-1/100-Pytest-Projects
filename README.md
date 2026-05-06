@@ -3580,6 +3580,7 @@ assim que fizer aa chamada da funcao.
 ## 🧪 88 - Seção vazia
 
 ```python
+
 ---------------- pytest  output ----------------
 -------------- pytest-cov output --------------
 ```
