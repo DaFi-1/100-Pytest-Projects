@@ -2249,7 +2249,7 @@ class TestProcessarArquivo:
             processar_arquivo('./uva')
         assert str(error.value) == 'Dados incompletos'   
 
-    def test_valoar_menor_que_0(self, mocker) -> None:
+    def test_valor_menor_que_0(self, mocker) -> None:
         fake1 = mocker.patch(
             'builtins.open',
             mocker.mock_open()
@@ -2303,7 +2303,7 @@ Engraçado que o próprio agente de código escreve uma função bosta que faz 1
 Esse tempo todo usando um agente de IA fixo. Eu tenho que dizer para ele não criar funções com más práticas. 
 Parece um juninho quando eu não especifico boas práticas.
 
-## 🧪 51 - Seção vazia
+## 🧪 51 - Seção vazia (vazia)
 
 ```python
 
@@ -2311,7 +2311,7 @@ Parece um juninho quando eu não especifico boas práticas.
 
 -------------- pytest-cov output --------------
 ```
-## 🧪 52 - endendtendo o tmp_path do pytest
+## 🧪 52 - Entendendo o tmp_path do pytest
 
 ```python
 import pytest
@@ -2320,7 +2320,7 @@ def salvar_dado(path, data):
 
 class TestSalvarDado:
 
-    def test_cria_arquivo(self,tmp_path):
+    def test_cria_arquivo(self, tmp_path):
         arquivo = tmp_path / "teste.txt"
         salvar_dado(arquivo,"PYTHON.PY")
         assert arquivo.read_text() == "PYTHON.PY"
@@ -2338,7 +2338,7 @@ TOTAL         8      0   100%
 
 O tmp_path do pytest é uma das fixtures mais úteis quando você precisa trabalhar com arquivos sem bagunçar seu sistema real. Ele cria um diretório temporário isolado para cada teste, que é automaticamente apagado depois.
 
-## 🧪 53 - para que serve isso "/", mecanicas do python
+## 🧪 53 - Para que serve o "/", mecânicas do Python
 
 ```python
 import pytest
@@ -2368,9 +2368,9 @@ main.py      10      0   100%
 TOTAL        10      0   100%
 ```
 
-perceba que o Python redefine o operador / para concatenar a string. Poderia usar também o `origem = tmp_path.joinpath("origem.txt")`.
+Perceba que o Python redefine o operador / para concatenar a string. Poderia usar também o `origem = tmp_path.joinpath("origem.txt")`.
 
-## 🧪 54 - marcando uma função como lenta, @pytest.mark.slow
+## 🧪 54 - Marcando uma função como lenta, @pytest.mark.slow
 
 ```python
 import pytest
@@ -2391,10 +2391,10 @@ def test_copiar_arquivo(tmp_path):
 -------------- pytest-cov output --------------
 ```
 
-Usando a função anterior, note que eu coloquei o decorador @pytest.mark.slow. Isso marca a função para uma função lenta ou um tipo específico de tag da sua escolha. Você também pode ignorar funções com esse decorador.
+Usando a função anterior, note que eu coloquei o decorador @pytest.mark.slow. Isso marca a função como lenta ou um tipo específico de tag da sua escolha. Você também pode ignorar funções com esse decorador.
 Com `pytest -m "not slow"`, ou executar de maneira exclusiva com `pytest -m "slow"`.
 
-## 🧪 55 - função que verifica se é par
+## 🧪 55 - Função que verifica se é par
 
 ```python
 import pytest
