@@ -3423,7 +3423,7 @@ class TestBuscarUsuario:
 
 Poderia fazer assim para escolher o tipo de retorno.
 
-## 🧪 82 -  __name__
+## 🧪 82 - __name__
 ```python
 import pytest
 
@@ -3662,7 +3662,7 @@ main.py::TestObterNomeUsuarioMonkeypatch::test_user_with_monkeypath PASSED
 -------------- pytest-cov output --------------
 ```
 
-## 🧪 90 - vou fazer varios open ate aprender essa poha 
+## 🧪 90 - Vou fazer vários open até aprender essa poha 
 
 ```python
 import pytest
@@ -3694,9 +3694,9 @@ main.py::TestLerPrimeriaLinhaMocker::test_success PASSED
 -------------- pytest-cov output --------------
 ```
 
-duas formas de fazer mocker de funcoes builtins do python,  embora eu prefire
-utilizar o unittest do python que segue uma arquitetura legal ee bem solida
-ate onde eu sei originalmente criada em java, ee virou padrao para todas linguagems
+Duas formas de fazer mocker de funções builtins do python, embora eu prefira
+utilizar o unittest do python que segue uma arquitetura legal e bem sólida.
+Até onde eu sei, originalmente criada em Java, e virou padrão para todas linguagens.
 
 ## 🧪 91 - Seção vazia
 ```python
