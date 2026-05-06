@@ -1493,7 +1493,7 @@ TOTAL        12      0   100%
 ```
 
 
-## 🧪 38 - testando errro parte 9
+## 🧪 38 - Testando erro parte 9
 
 ```python
 import pytest
@@ -1526,7 +1526,7 @@ TOTAL        12      0   100%
 ```
 
 
-## 🧪 39 -  Fixture com mock
+## 🧪 39 - Fixture com mock
 
 ```python
 import os
@@ -1603,11 +1603,11 @@ main.py      45      0   100%
 TOTAL        45      0   100%
 ```
 
-nesse teste aqui eu tentei fazer um fixture para diminuir a repetição de código, um fixture de um mock de response que atribui coisas.
-ele dependendo do que o teste precisa. Até agora minha compreensão com fixture do pytest é mais para impedir repetição de código nos testes.
-Gostei, deixa bem verboso para outras pessoas.
+Neste teste, tentei criar uma fixture para reduzir a repetição de código: uma fixture com um mock de response que atribui valores conforme necessário.
+Ela depende do que o teste precisa. Até agora, minha compreensão sobre fixtures do pytest é que elas servem para evitar repetição de código nos testes.
+Gostei; isso deixa o código bem descritivo para outras pessoas.
 
-## 🧪 40 - assert str(error.value.) == 'Resposta inválida'
+## 🧪 40 - Testando assert de KeyError
 
 ```python
 import os
@@ -1685,8 +1685,8 @@ main.py      46      0   100%
 TOTAL        46      0   100%
 ```
 
-um ponto para ressaltar: `assert str(error.value.) == 'Resposta inválida'` falha pq o Python trata essa exceção diferente. 
-Todas até agora foram normais porque essa levanta erro.
+Um ponto a ressaltar: `assert str(error.value)` falha pois o Python trata essa exceção de forma diferente.
+Até agora, todos os testes foram normais porque as exceções eram lançadas diretamente.
 
 Poderia ter usado um spy.
 
