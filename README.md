@@ -3663,14 +3663,43 @@ main.py::TestObterNomeUsuarioMonkeypatch::test_user_with_monkeypath PASSED
 -------------- pytest-cov output --------------
 ```
 
-## 🧪 90 - Seção vazia
+## 🧪 90 - vou fazer varios open ate aprender essa poha 
 
 ```python
+import pytest
+
+def ler_primeira_linha(caminho, mode='r'):
+    with open(caminho, mode) as f:
+        return f.readline()
+
+class TestLerPrimeriaLinha:
+
+    def fakeobj(self, path, mode):
+        class FakeOpen:
+            def readline(self): return 'open ok'
+            def __enter__(self): return self
+            def __exit__(self, typee, value, callback): pass 
+        return FakeOpen()
+
+    def test_success(self, monkeypatch):
+        monkeypatch.setattr('builtins.open', self.fakeobj)
+        assert ler_primeira_linha('./file.py') == 'open ok'
+
+class TestLerPrimeriaLinhaMocker:
+    def test_success(self, mocker):
+        fakeobj = mocker.patch('builtins.open', mocker.mock_open())
+        
 ---------------- pytest  output ----------------
+main.py::TestLerPrimeriaLinha::test_success PASSED      
+main.py::TestLerPrimeriaLinhaMocker::test_success PASSED
 -------------- pytest-cov output --------------
 ```
-## 🧪 91 - Seção vazia
 
+duas formas de fazer mocker de funcoes builtins do python,  embora eu prefire
+utilizar o unittest do python que segue uma arquitetura legal ee bem solida
+ate onde eu sei originalmente criada em java, ee virou padrao para todas linguagems
+
+## 🧪 91 - Seção vazia
 ```python
 ---------------- pytest  output ----------------
 -------------- pytest-cov output --------------
