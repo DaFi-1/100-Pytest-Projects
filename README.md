@@ -363,10 +363,10 @@ TOTAL        24      6    75%
 
 ```
 
-Podemos usar o pytest-cov para verificar a cobertura de testes da aplicação, melhorando a legibilidade.
-Veja que faltam testes para as linhas 11 a 18. Esse trecho de código ainda não foi testado.
+Podemos usar o pytest-cov para verificar a cobertura de testes da aplicação e melhorar a legibilidade.
+Veja que faltam testes para as linhas 11 a 18; esse trecho de código ainda não foi testado.
 
-## 🧪 14 - pytest-cov pesistente
+## 🧪 14 - pytest-cov persistente
 
 ```python
 import os
@@ -428,10 +428,10 @@ main.py      31      3    90%   12-13, 16
 TOTAL        31      3    90%
 ```
 
-Perceba que a cobertura incluiu apenas as linhas que testamos, restando a continuação de um if e um return.
-Linhas 12-13 e 16. Perceba que as linhas 12 e 13 não foram testadas, mesmo com a validação do if.
+Perceba que a cobertura inclui apenas as linhas testadas, restando a continuação de um if e um return.
+Linhas 12-13 e 16. Perceba que as linhas 12 e 13 não foram testadas, mesmo ao validar o if.
 
-## 🧪 15 - Dois mock em um mesmo test
+## 🧪 15 - Dois mocks no mesmo teste
 
 ```python
 import os
@@ -495,7 +495,7 @@ TOTAL        31      3    90%
 ```
 
 Perceba que fiz dois mocks em um único teste para validar o teste unitário sem dependências externas ou de E/S.
-Veja que a linha do return 'DENIED' passa sem testar o código ou o retorno. Farei isso na sequência.
+Veja que a linha do return 'DENIED' passa sem testar o código ou o retorno; farei isso na sequência.
 
 ## 🧪 16 - Testando retornos do access_system
 
@@ -646,7 +646,7 @@ main.py      40      0   100%
 TOTAL        40      0   100%
 ```
 
-para validar essa única linha precisamos que os dois primeiros if venham a falhar.  
+Para validar essa única linha, precisamos que os dois primeiros if falhem.
 
 ## 🧪 18 - Testando toggle_server
 
@@ -772,11 +772,11 @@ class TestToggleServer:
 
 ```
 
-achei bem confuso testar isso, não entendi bem o porquê do import `toolbox.tools.addnumber as mod`, sendo que foi recomendação do LLM.
-será que eu poderia usar um `mocker.Mock()` e atribuir esses métodos e esse teste passaria? Fica essa dúvida que posteriormente eu vou tirar.
+Achei confuso testar isso; não entendi bem o motivo do import `toolbox.tools.addnumber as mod`, já que foi recomendação do LLM.
+Talvez eu pudesse usar um `mocker.Mock()` e atribuir esses métodos para que o teste passasse. Fica essa dúvida que posteriormente irei resolver.
 
 
-## 🧪 20 - tratando erros  
+## 🧪 20 - Tratando erros  
 
 ```python
 import pytest 
@@ -808,11 +808,10 @@ main.py      12      0   100%
 TOTAL        12      0   100%
 ```
 
-vemos nesse teste que temos dois testes para validar todos os casos da função e suas únicas possíveis soluções ou saídas. Um erro também é uma saída.
-Sim, o erro também é uma saída válida. Ele nos diz como a função se comporta caso não sejam passados os argumentos desejados.
-Um erro será exibido na tela do desenvolvedor e ajudará a progredir no código. 
+Vemos nesse teste que temos dois casos para validar todos os cenários da função e suas possíveis saídas. Um erro também é uma saída válida, pois indica como a função se comporta ao receber argumentos inesperados.
+O erro exibido auxilia o desenvolvedor a progredir no desenvolvimento. 
 
-## 🧪 21 - proposto pelo livro Tdd de estudo
+## 🧪 21 - Proposto pelo livro TDD de estudo
 
 ```python
 import pytest 
@@ -844,7 +843,7 @@ main.py      12      0   100%
 TOTAL        12      0   100%
 ```
 
-este segue a mesma ideia do de cima, foi proposto pelo livro também como exercício.
+Este segue a mesma ideia do anterior, proposto pelo livro como exercício.
 
 ## 🧪 22 - mais um proposto pelo livro
 
@@ -879,7 +878,7 @@ main.py      12      0   100%
 TOTAL        12      0   100%
 ```
 
-só mais um proposto no capítulo 26 do livro que eu testei usando como base nos estudos de pytest.
+Mais um proposto no capítulo 26 do livro, testado com base nos estudos de pytest.
 
 ## 🧪 23 - Testando uma api 
 
