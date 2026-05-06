@@ -2531,12 +2531,12 @@ main.py      36      0   100%
 TOTAL        36      0   100%
 ```
 
-Nossa, em uma função de fatorial tem vários casos de erros em consideração a serem levantados.
-Não é à toa que existem frameworks pré-prontos para não ter que reinventar a roda toda vez que for implementar algo. Se bem que, com minha visão sobre inteligência artificial, projetos de frameworks podem ser criados por empresas ou uma única pessoa com conhecimento.
-com o avando da ia isso fica cada vez mais acessivel grandes projetos que para uma unica pessoa
-antigamente era impossivel ee hoje se torna muito acessecivel
+Nossa, em uma função de fatorial há vários casos de erro a considerar.
+Não é à toa que existem frameworks pré-prontos para não reinventar a roda toda vez que for implementar algo. Com a evolução da inteligência artificial, projetos de frameworks podem ser criados por empresas ou uma única pessoa com conhecimento.
+Com o avanço da IA, grandes projetos tornam-se cada vez mais acessíveis para uma única pessoa.
+Antigamente era impossível, e hoje se torna muito acessível.
 
-## 🧪 57 - usando monkeypatch
+## 🧪 57 - Usando monkeypatch
 
 ```python
 import pytest
@@ -2567,9 +2567,9 @@ main.py      13      2    85%   4, 15
 TOTAL        13      2    85%
 ```
 
-Achei muito interessante esse monkeypatch. Acredito que ele seja usado em uma função que o teste de comportamento não seja o ponto alvo. Ele serve muito bem para testes de estado ou coisas do tipo.
+Achei muito interessante esse monkeypatch. Acredito que ele seja usado em uma função cujo teste de comportamento não seja o foco. Ele serve muito bem para testes de estado ou situações semelhantes.
 
-## 🧪 58 - escopos com monkeypatch
+## 🧪 58 - Escopos com monkeypatch
 
 ```python
 import os
@@ -2646,10 +2646,10 @@ TOTAL        18      0   100%
 ```
 
 Diferente do mocker do pytest-mock, eu tive que criar minha própria função de mock.
-Como descrito na documentação, essa API é de baixo nível. Eu considero muito mais
-maleável do que o pytest-mock. Achei melhor, me sinto livre nela.
+Como descrito na documentação, essa API é de baixo nível. Eu a considero muito mais
+maleável do que o pytest-mock. Achei melhor; sinto-me mais livre nela.
 
-## 🧪 60 - aprendendo mais sobre o monkeypatch
+## 🧪 60 - Aprendendo mais sobre o monkeypatch
 
 ```python
 import os
@@ -2690,7 +2690,7 @@ None
 -------------- pytest-cov output --------------
 None
 ```
-## 🧪 61 - usando monkeypatch.setattr( )
+## 🧪 61 - Usando monkeypatch.setattr()
 
 ```python
 import pytest
@@ -2702,11 +2702,11 @@ def hello() -> bool:
 
 class TestUva:
 
-    def test_cria_variavel(self,monkeypatch):
+    def test_cria_variavel(self, monkeypatch):
         monkeypatch.setattr("main.uva", True, raising=False)
         assert hello() is True
 
-    def test_error(self,monkeypatch):
+    def test_error(self, monkeypatch):
         monkeypatch.setattr("main.uva", False, raising=False)
         assert hello() is False 
 
@@ -2721,10 +2721,10 @@ main.py      13      0   100%
 ---------------------------------------
 TOTAL        13      0   100%
 ```
-perceba que não deu erro. Chamei uma função que tem uma variável uva que não foi declarada. Como esse teste roda?
-Simplesmente o monkeypatch faz a injeção de coisas em módulo, venv, path, objetos. É assim que o teste passou.
+Perceba que não deu erro. Chamei uma função que tem uma variável uva não declarada. Como esse teste roda?
+Simplesmente o monkeypatch faz a injeção de valores em módulo, venv, path e objetos. É assim que o teste passou.
 
-## 🧪 62 - Primeiro commit depois de muito tempo
+## 🧪 62 - Primeiro commit após muito tempo
 
 ```python
 import pytest
@@ -2733,13 +2733,13 @@ def calcular(a, b, operacao):
     if operacao == "soma":
         return a + b
 
-    elif operacao == "subtracao":
+    elif operacao == "subtração":
         return a - b
 
-    elif operacao == "multiplicacao":
+    elif operacao == "multiplicação":
         return a * b
 
-    elif operacao == "divisao":
+    elif operacao == "divisão":
         if b == 0:
             raise ValueError("Divisão por zero não é permitida")
         return a / b
@@ -2753,21 +2753,21 @@ class TestCalcular:
     def test_soma(self) -> None:
         assert calcular(1,1,'soma') == 2
 
-    def test_subtracao(self) -> None:
-        assert calcular(1,1,'subtracao') == 0
+    def test_subtração(self) -> None:
+        assert calcular(1,1,'subtração') == 0
 
-    def test_multiplicacao(self) -> None:
-        assert calcular(1,1,'multiplicacao') == 1
+    def test_multiplicação(self) -> None:
+        assert calcular(1,1,'multiplicação') == 1
 
-    def test_divisao(self) -> None:
-        assert calcular(1,1,'divisao') == 1
+    def test_divisão(self) -> None:
+        assert calcular(1,1,'divisão') == 1
 
-    def test_divisao_error(self) -> None:
+    def test_divisão_error(self) -> None:
         with pytest.raises(ValueError) as error:
-            calcular(1,0,'divisao')
+            calcular(1,0,'divisão')
         assert str(error.value) == "Divisão por zero não é permitida"
 
-    def test_not_case(self) -> None:
+    def test_operação_inválida(self) -> None:
         with pytest.raises(ValueError) as error:
             calcular(1,0,'')
         assert str(error.value) == "Operação inválida"
@@ -2784,7 +2784,7 @@ main.py::TestCalcular::test_not_case PASSED                                     
 
 -------------- pytest-cov output --------------
 ```
-## 🧪 63 - mocker de pseudo api
+## 🧪 63 - Mock de pseudo API
 
 ```python
 import pytest
@@ -2824,7 +2824,7 @@ main.py::TestCalcular::test_response_success PASSED
 ```
 
 
-## 🧪 64 - usando monkeypatch com a função de cima
+## 🧪 64 - Usando monkeypatch com a função de cima
 
 
 ```python
@@ -2874,7 +2874,7 @@ main.py::TestCalcular::test_json_rresopnse PASSED
 -------------- pytest-cov output --------------
 ```
 
-## 🧪 65 - dois testes que fazem a mesma coisa
+## 🧪 65 - Dois testes que fazem a mesma coisa
 
 ```python
 import pytest
@@ -2909,12 +2909,12 @@ main.py::TestGetUser::test_success_one PASSED                                   
 main.py::TestGetUserTwo::test_success_two PASSED                                      [100%]
 -------------- pytest-cov output --------------
 ```
-apartir de agora eu vou fazer os test usando os dois tipo com monkeypatch do pytest
-e o monker, plugin do pytest. Tenho que aprender em qual cenário usar cada um deles.
-ate agorta eu uso eles , para ... o monkeypatch para testar chaadas simples o mocker
+A partir de agora vou fazer os testes usando os dois tipos: monkeypatch do pytest
+e o mocker, plugin do pytest. Tenho que aprender em qual cenário usar cada um deles.
+Até agora uso eles para... o monkeypatch para testar chamadas simples, o mocker
 para testar o comportamento da função.
 
-## 🧪 66 - so mais um para treino
+## 🧪 66 - Só mais um para treino
 
 ```python
 import pytest
@@ -2975,7 +2975,7 @@ não sei por que o chatgpt quando eu mando ele fazer uma função difícil ele f
 função que faz 100 coisas diferentes na mesma função kkkkkkk cadê o SOLID...
 em cenarios reais concerteza vai ter funcoes GOD feitas por programadores ruims
 
-Simples teste só para mostrar para um amigo como se faz teste.
+Simples teste para mostrar a um amigo como se faz teste.
 
 ```python
 import pytest
