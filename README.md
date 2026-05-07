@@ -3698,11 +3698,60 @@ Duas formas de fazer mocker de funções builtins do python, embora eu prefira
 utilizar o unittest do python que segue uma arquitetura legal e bem sólida.
 Até onde eu sei, originalmente criada em Java, e virou padrão para todas linguagens.
 
-## 🧪 91 - Seção vazia (vazia)
+## 🧪 91 - main um de fake open() 
 ```python
+import pytest
+
+def salvar_usuario(nome: str, idade: int) -> bool:
+    if not nome:
+        raise ValueError("Nome não pode ser vazio")
+
+    if idade < 0:
+        raise ValueError("Idade inválida")
+
+    with open("usuarios.txt", "a", encoding='utf-8') as arquivo:
+        arquivo.write(f"{nome},{idade}\n")
+    return True
+
+class TestSavarUsuarioMonkeypatch:
+
+    def fake(self, x, y, encoding='utf-8'):
+        class FakeOpen:
+            def write(self, texto): return None 
+            def __enter__(self): return self
+            def __exit__(self, exc_typee, exc_value, exc_callback): pass 
+        return FakeOpen()
+
+    def test_open(self, monkeypatch) -> None:
+        monkeypatch.setattr('builtins.open', self.fake)
+        assert salvar_usuario('tree', 1) == True
+
+class TestSavarUsuarioMocker:
+
+    def test_open(self, mocker) -> None:
+        fakeobj = mocker.patch('builtins.open', mocker.mock_open())
+        assert salvar_usuario('tree', 1) == True
+        fakeobj.assert_called_once()
+        fakeobj.assert_called_once_with("usuarios.txt", "a", encoding="utf-8")
+
+    def test_nome_is_none(self) -> None:
+        with pytest.raises(ValueError) as  error:
+            salvar_usuario(None,1)
+        assert str(error.value) == "Nome não pode ser vazio"
+
+    def test_idade_negative(self) -> None:
+        with pytest.raises(ValueError) as  error:
+            salvar_usuario('tree',-1)
+        assert str(error.value) == "Idade inválida"
+
 ---------------- pytest  output ----------------
+main.py::TestSavarUsuarioMonkeypatch::test_open PASSED      
+main.py::TestSavarUsuarioMocker::test_open PASSED           
+main.py::TestSavarUsuarioMocker::test_nome_is_none PASSED   
+main.py::TestSavarUsuarioMocker::test_idade_negative PASSED 
 -------------- pytest-cov output --------------
 ```
+
 ## 🧪 92 - Seção vazia (vazia)
 
 ```python
