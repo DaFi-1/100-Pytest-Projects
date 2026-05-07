@@ -3878,32 +3878,61 @@ main.py::TestVerificarParidade::test_impar PASSED
 -------------- pytest-cov output --------------
 ```
 
-## 🧪 96 - Seção vazia (vazia)
-
+## 🧪 96 - mesma coisa 
 
 ```python
+import pytest
+
+def fatorial(n: int) -> int:
+    if not isinstance(n, int):
+        raise TypeError("n precisa ser inteiro")
+
+    if n < 0:
+        raise ValueError("n não pode ser negativo")
+
+    resultado = 1
+    for i in range(2, n + 1):
+        resultado *= i
+
+    return resultado
+
+class TestFatorial:
+
+    def test_error(self):
+        with pytest.raises(TypeError) as error:
+            fatorial('')
+        assert str(error.value) == "n precisa ser inteiro"
+
 ---------------- pytest  output ----------------
+main.py::TestFatorial::test_error PASSED
 -------------- pytest-cov output --------------
 ```
+
 ## 🧪 97 - Seção vazia (vazia)
 
-```python
----------------- pytest  output ----------------
--------------- pytest-cov output --------------
-```
-## 🧪 98 - Seção vazia (vazia)
 
 ```python
 ---------------- pytest  output ----------------
 -------------- pytest-cov output --------------
 ```
+
+## 🧪 98 - Seção vazia (vazia)
+
+
+```python
+---------------- pytest  output ----------------
+-------------- pytest-cov output --------------
+```
+
 ## 🧪 99 - Seção vazia (vazia)
 
 ```python
 ---------------- pytest  output ----------------
 -------------- pytest-cov output --------------
 ```
+
 ## 🧪 100 - Seção vazia (vazia)
+
 
 ```python
 ---------------- pytest  output ----------------
