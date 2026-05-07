@@ -3823,12 +3823,29 @@ main.py::TestCalcularMedia::test_error_note_zero PASSED
 main.py::TestCalcularMedia::test_error_note_success PASSED
 -------------- pytest-cov output --------------
 ```
-## 🧪 94 - Seção vazia (vazia)
+
+## 🧪 94 - Simple function 
 
 ```python
+import pytest
+
+def contar_letras(texto: str) -> int:
+    if not texto:
+        raise ValueError("Texto vazio")
+    return len(texto.replace(" ", ""))
+
+class TestContarLetras:
+
+    def test_error_empty(self) -> None:
+        with pytest.raises(ValueError) as error:
+            contar_letras('') 
+        assert str(error.value) == "Texto vazio"
+
 ---------------- pytest  output ----------------
+main.py::TestContarLetras::test_error_empty PASSED
 -------------- pytest-cov output --------------
 ```
+
 ## 🧪 95 - Seção vazia (vazia)
 
 ```python
