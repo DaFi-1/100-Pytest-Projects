@@ -3846,13 +3846,40 @@ main.py::TestContarLetras::test_error_empty PASSED
 -------------- pytest-cov output --------------
 ```
 
-## 🧪 95 - Seção vazia (vazia)
+## 🧪 95 - podira usar parametrize para nao duplicar uma funcao 
 
 ```python
+import pytest
+
+def verificar_paridade(numero: int) -> str:
+    if not isinstance(numero, int):
+        raise TypeError("O valor precisa ser inteiro")
+    if numero % 2 == 0:
+        return "par"
+    return "ímpar"
+
+class TestVerificarParidade:
+
+    def test_error(self) -> None:
+        with pytest.raises(TypeError) as error:
+            verificar_paridade('')
+        assert str(error.value) == 'O valor precisa ser inteiro'
+
+    def test_par(self) -> None:
+        verificar_paridade(2) == 'par'
+
+    def test_impar(self) -> None:
+        verificar_paridade(2) == 'impar'
+
 ---------------- pytest  output ----------------
+main.py::TestVerificarParidade::test_error PASSED
+main.py::TestVerificarParidade::test_par PASSED  
+main.py::TestVerificarParidade::test_impar PASSED
 -------------- pytest-cov output --------------
 ```
+
 ## 🧪 96 - Seção vazia (vazia)
+
 
 ```python
 ---------------- pytest  output ----------------
