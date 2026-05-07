@@ -3789,10 +3789,38 @@ main.py::TestMultiplicar::test_success[2-5-10] PASSED
 main.py::TestMultiplicar::test_success[2-50-100] PASSED
 -------------- pytest-cov output --------------
 ```
-## 🧪 93 - Seção vazia (vazia)
+## 🧪 93 - calcular_media 
 
 ```python
+import pytest
+
+def calcular_media(notas: list[float]) -> float:
+    if not notas:
+        raise ValueError("A lista de notas não pode estar vazia")
+    for nota in notas:
+        if nota < 0 or nota > 10:
+            raise ValueError("Nota inválida")
+    return sum(notas) / len(notas)
+
+class TestCalcularMedia:
+
+    def test_error_empty(self) -> None:
+        with pytest.raises(ValueError) as error:
+            calcular_media([]) 
+        assert str(error.value) == "A lista de notas não pode estar vazia"
+
+    def test_error_note_zero(self) -> None:
+        with pytest.raises(ValueError) as error:
+            calcular_media([-1.1]) 
+        assert str(error.value) == "Nota inválida"
+
+    def test_error_note_success(self) -> None:
+        assert calcular_media([1.1]) == 1.1
+
 ---------------- pytest  output ----------------
+main.py::TestCalcularMedia::test_error_empty PASSED       
+main.py::TestCalcularMedia::test_error_note_zero PASSED   
+main.py::TestCalcularMedia::test_error_note_success PASSED
 -------------- pytest-cov output --------------
 ```
 ## 🧪 94 - Seção vazia (vazia)
