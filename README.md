@@ -3752,7 +3752,7 @@ main.py::TestSavarUsuarioMocker::test_idade_negative PASSED
 -------------- pytest-cov output --------------
 ```
 
-## 🧪 92 - Seção vazia (vazia)
+## 🧪 92 - 
 
 ```python
 ---------------- pytest  output ----------------
