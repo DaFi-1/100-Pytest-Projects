@@ -7,7 +7,7 @@
   <img src="res/LogoEbook.png" width="300" style="display:inline-block;"/>
   <img src="https://docs.pytest.org/en/stable/_static/pytest1.png" width="400" style="display:inline-block;"/>
 </p>
- 
+  
 ### Nenhuma IA foi usada neste repositório. Este repositório é dedicado ao estudo de pytest e aplicações do TDD.
 
 Este repositório foi criado com base no estudo do livro  **Test-Driven Development: By Example**, de Kent Beck, com o objetivo de aplicar na prática os conceitos de **Desenvolvimento Guiado por Testes (TDD)** utilizando pytest.
