@@ -3752,10 +3752,41 @@ main.py::TestSavarUsuarioMocker::test_idade_negative PASSED
 -------------- pytest-cov output --------------
 ```
 
-## 🧪 92 - 
+## 🧪 92 - simples funcao de soma com parametrize
 
 ```python
+import pytest
+
+def multiplicar(a: int, b: int) -> int:
+    if not isinstance(a, int) or not isinstance(b, int):
+        raise TypeError("Os valores precisam ser inteiros")
+    return a * b
+
+class TestMultiplicar:
+
+    @pytest.mark.parametrize('x, y', [
+        ('x', 2),
+        (2, 'x'),
+    ])
+    def test_error(self, x, y):
+        with pytest.raises(TypeError) as error:
+            multiplicar(x , y)
+        assert str(error.value) == "Os valores precisam ser inteiros"
+
+    @pytest.mark.parametrize('x, y, z', [
+        (2, 2, 4),
+        (2, 5, 10),
+        (2, 50, 100),
+    ])
+    def test_success(self, x, y, z):
+        assert multiplicar(x , y) == z
+
 ---------------- pytest  output ----------------
+main.py::TestMultiplicar::test_error[x-2] PASSED       
+main.py::TestMultiplicar::test_error[2-x] PASSED       
+main.py::TestMultiplicar::test_success[2-2-4] PASSED   
+main.py::TestMultiplicar::test_success[2-5-10] PASSED  
+main.py::TestMultiplicar::test_success[2-50-100] PASSED
 -------------- pytest-cov output --------------
 ```
 ## 🧪 93 - Seção vazia (vazia)
