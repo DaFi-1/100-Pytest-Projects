@@ -3946,29 +3946,476 @@ main.py::TestGetUserName::test_reponse_error FAILED
 -------------- pytest-cov output --------------
 ```
 
-## 🧪 98 - Seção vazia (vazia)
+## 🧪 98 - uma facil kkkk pq ta quase no fim 
 
 
 ```python
+import pytest
+import requests
+
+def read_file(path):
+    with open(path, "r", encoding="utf-8") as file:
+        return file.read()
+
+
+class TestReadFile:
+
+    def test_reponse_error(self, mocker) -> None:
+        mocker.patch('builtins.open', mocker.mock_open())
+        assert read_file('orange.txt') == '' 
+
+
 ---------------- pytest  output ----------------
 -------------- pytest-cov output --------------
 ```
 
-## 🧪 99 - Seção vazia (vazia)
+## 🧪 99 - muito barato escrever codigo hoje em dia 
 
 ```python
+# test_api.py
+
+import time
+import pytest
+import requests
+
+
+# =========================================================
+# APP
+# =========================================================
+
+class ApiError(Exception):
+    pass
+
+
+class MathAPI:
+    def __init__(self, base=10):
+        self.base = base
+
+    def sum(self, a, b):
+        return a + b + self.base
+
+    def divide(self, a, b):
+        if b == 0:
+            raise ApiError("division by zero")
+
+        return a / b
+
+    def get_status(self):
+        response = requests.get("https://api.site.com/status")
+
+        if response.status_code != 200:
+            raise ApiError("bad status")
+
+        return response.json()
+
+    def sleep_operation(self):
+        time.sleep(2)
+        return True
+
+    @property
+    def version(self):
+        return "1.0.0"
+
+
+# =========================================================
+# HELPERS
+# =========================================================
+
+def make_response(
+    mocker,
+    status=200,
+    json_data=None,
+):
+    response = mocker.Mock()
+    response.status_code = status
+    response.json.return_value = json_data or {}
+
+    return response
+
+
+# =========================================================
+# FIXTURES
+# =========================================================
+
+@pytest.fixture
+def api():
+    return MathAPI()
+
+
+@pytest.fixture
+def api_base_100():
+    return MathAPI(base=100)
+
+
+# =========================================================
+# PARAMETRIZE
+# =========================================================
+
+@pytest.mark.parametrize(
+    "a,b,expected",
+    [
+        (1, 1, 12),
+        (5, 5, 20),
+        (10, 10, 30),
+        (0, 0, 10),
+    ],
+)
+def test_sum(api, a, b, expected):
+    result = api.sum(a, b)
+
+    assert result == expected
+
+
+@pytest.mark.parametrize(
+    "a,b,expected",
+    [
+        (10, 2, 5),
+        (9, 3, 3),
+        (100, 10, 10),
+    ],
+)
+def test_divide(api, a, b, expected):
+    result = api.divide(a, b)
+
+    assert result == expected
+
+
+@pytest.mark.parametrize(
+    "a,b",
+    [
+        (1, 0),
+        (10, 0),
+        (999, 0),
+    ],
+)
+def test_divide_by_zero(api, a, b):
+    with pytest.raises(ApiError):
+        api.divide(a, b)
+
+
+# =========================================================
+# MOCKER
+# =========================================================
+
+def test_get_status_success(mocker, api):
+    mock_get = mocker.patch("requests.get")
+
+    mock_get.return_value = make_response(
+        mocker,
+        200,
+        {"ok": True},
+    )
+
+    result = api.get_status()
+
+    assert result["ok"] is True
+
+
+def test_get_status_failure(mocker, api):
+    mock_get = mocker.patch("requests.get")
+
+    mock_get.return_value = make_response(
+        mocker,
+        500,
+    )
+
+    with pytest.raises(ApiError):
+        api.get_status()
+
+
+def test_requests_called_once(mocker, api):
+    mock_get = mocker.patch("requests.get")
+
+    mock_get.return_value = make_response(
+        mocker,
+        200,
+    )
+
+    api.get_status()
+
+    assert mock_get.call_count == 1
+
+
+def test_requests_called_with_url(mocker, api):
+    mock_get = mocker.patch("requests.get")
+
+    mock_get.return_value = make_response(
+        mocker,
+        200,
+    )
+
+    api.get_status()
+
+    mock_get.assert_called_once_with(
+        "https://api.site.com/status"
+    )
+
+
+# =========================================================
+# MONKEYPATCH
+# =========================================================
+
+def test_monkeypatch_version(monkeypatch, api):
+    monkeypatch.setattr(
+        api,
+        "version",
+        "9.9.9",
+    )
+
+    assert api.version == "9.9.9"
+
+
+def test_monkeypatch_env(monkeypatch):
+    monkeypatch.setenv("APP_ENV", "test")
+
+    import os
+
+    assert os.getenv("APP_ENV") == "test"
+
+
+def test_monkeypatch_function(monkeypatch, api):
+    def fake_sum(a, b):
+        return 999
+
+    monkeypatch.setattr(
+        api,
+        "sum",
+        fake_sum,
+    )
+
+    result = api.sum(1, 2)
+
+    assert result == 999
+
+
+# =========================================================
+# SKIP
+# =========================================================
+
+@pytest.mark.skip(reason="not implemented yet")
+def test_skip_example():
+    assert True
+
+
+@pytest.mark.skipif(
+    True,
+    reason="temporary skip",
+)
+def test_skipif_example():
+    assert True
+
+
+# =========================================================
+# XFAIL
+# =========================================================
+
+@pytest.mark.xfail
+def test_expected_failure():
+    assert 1 == 2
+
+
+# =========================================================
+# SLOW
+# =========================================================
+
+@pytest.mark.slow
+def test_slow_operation(api):
+    result = api.sleep_operation()
+
+    assert result is True
+
+
+# =========================================================
+# FIXTURE TESTS
+# =========================================================
+
+def test_fixture_base(api):
+    assert api.base == 10
+
+
+def test_fixture_custom_base(api_base_100):
+    assert api_base_100.base == 100
+
+
+# =========================================================
+# TYPES
+# =========================================================
+
+def test_sum_return_type(api):
+    result = api.sum(1, 1)
+
+    assert isinstance(result, int)
+
+
+def test_divide_return_type(api):
+    result = api.divide(10, 2)
+
+    assert isinstance(result, float)
+
+
+# =========================================================
+# EDGE CASES
+# =========================================================
+
+def test_negative_numbers(api):
+    result = api.sum(-1, -1)
+
+    assert result == 8
+
+
+def test_big_numbers(api):
+    result = api.sum(1000, 1000)
+
+    assert result == 2010
+
+
+def test_float_division(api):
+    result = api.divide(5, 2)
+
+    assert result == 2.5
+
+
+# =========================================================
+# EXCEPTIONS
+# =========================================================
+
+def test_api_error_message(api):
+    with pytest.raises(ApiError) as exc:
+        api.divide(1, 0)
+
+    assert "division by zero" in str(exc.value)
+
+
+# =========================================================
+# MOCK SIDE EFFECT
+# =========================================================
+
+def test_mock_side_effect(mocker, api):
+    mocker.patch(
+        "requests.get",
+        side_effect=requests.ConnectionError,
+    )
+
+    with pytest.raises(requests.ConnectionError):
+        api.get_status()
+
+
+# =========================================================
+# SPY
+# =========================================================
+
+def test_spy_sum(mocker, api):
+    spy = mocker.spy(api, "sum")
+
+    result = api.sum(1, 1)
+
+    assert result == 12
+
+    spy.assert_called_once()
+
+
+# =========================================================
+# PATCH OBJECT
+# =========================================================
+
+def test_patch_object(mocker, api):
+    mocker.patch.object(
+        api,
+        "base",
+        999,
+    )
+
+    result = api.sum(1, 1)
+
+    assert result == 1001
+
+
+# =========================================================
+# MULTIPLE ASSERTS
+# =========================================================
+
+def test_multiple_asserts(api):
+    result = api.sum(5, 5)
+
+    assert result == 20
+    assert result > 10
+    assert isinstance(result, int)
+
+
+# =========================================================
+# CUSTOM IDS
+# =========================================================
+
+@pytest.mark.parametrize(
+    "a,b",
+    [
+        (1, 1),
+        (2, 2),
+    ],
+    ids=[
+        "simple_case",
+        "double_case",
+    ],
+)
+def test_custom_ids(api, a, b):
+    result = api.sum(a, b)
+
+    assert result > 0
 ---------------- pytest  output ----------------
+main.py::test_sum[1-1-12] PASSED                                                                      [  2%]
+main.py::test_sum[5-5-20] PASSED                                                                      [  5%]
+main.py::test_sum[10-10-30] PASSED                                                                    [  8%]
+main.py::test_sum[0-0-10] PASSED                                                                      [ 11%]
+main.py::test_divide[10-2-5] PASSED                                                                   [ 14%]
+main.py::test_divide[9-3-3] PASSED                                                                    [ 17%]
+main.py::test_divide[100-10-10] PASSED                                                                [ 20%]
+main.py::test_divide_by_zero[1-0] PASSED                                                              [ 22%]
+main.py::test_divide_by_zero[10-0] PASSED                                                             [ 25%]
+main.py::test_divide_by_zero[999-0] PASSED                                                            [ 28%]
+main.py::test_get_status_success PASSED                                                               [ 31%]
+main.py::test_get_status_failure PASSED                                                               [ 34%]
+main.py::test_requests_called_once PASSED                                                             [ 37%]
+main.py::test_requests_called_with_url PASSED                                                         [ 40%]
+main.py::test_monkeypatch_version FAILED                                                              [ 42%]
+main.py::test_monkeypatch_version ERROR                                                               [ 42%]
+main.py::test_monkeypatch_env PASSED                                                                  [ 45%]
+main.py::test_monkeypatch_function PASSED                                                             [ 48%]
+main.py::test_skip_example SKIPPED (not implemented yet)                                              [ 51%]
+main.py::test_skipif_example SKIPPED (temporary skip)                                                 [ 54%]
+main.py::test_expected_failure XFAIL                                                                  [ 57%]
+main.py::test_slow_operation PASSED                                                                   [ 60%]
+main.py::test_fixture_base PASSED                                                                     [ 62%]
+main.py::test_fixture_custom_base PASSED                                                              [ 65%]
+main.py::test_sum_return_type PASSED                                                                  [ 68%]
+main.py::test_divide_return_type PASSED                                                               [ 71%]
+main.py::test_negative_numbers PASSED                                                                 [ 74%]
+main.py::test_big_numbers PASSED                                                                      [ 77%]
+main.py::test_float_division PASSED                                                                   [ 80%]
+main.py::test_api_error_message PASSED                                                                [ 82%]
+main.py::test_mock_side_effect PASSED                                                                 [ 85%]
+main.py::test_spy_sum PASSED                                                                          [ 88%]
+main.py::test_patch_object PASSED                                                                     [ 91%]
+main.py::test_multiple_asserts PASSED                                                                 [ 94%]
+main.py::test_custom_ids[simple_case] PASSED                                                          [ 97%]
+main.py::test_custom_ids[double_case] PASSED                                                          [100%]
 -------------- pytest-cov output --------------
 ```
+so de sacanagem utilizei um agent par escrever aaa funaco & os tests perceba que com aa ia 
+ee muito barato escrever codigo , barato ee absurddmente rapido, acretido eu que no fututo nao
+muito longe, programadores de nivel cormercial vao ser apenas arquitetos de IA, aplicando conceitos 
+de engenharia de software. TDD,BDD..... ee toda essa bosta que so existe pq tem oo seguimento comercial
 
-## 🧪 100 - Seção vazia (vazia)
+ja que escrever codigo ee muito barato pq nao voltar para linguagens padrao, tipo C? qp nao voltar para uma 
+linguagem padrao, para padronizar tudo ee parar de iventar inventar aaa roda com coisas como, typescrip
+lua, javascript, pq nao padronizar uma unica linguagem de programacao?, afinal eee eee mais do que possivel
+uma unica linguagens de programacao subrir todas asss necessidades.
+
+## 🧪 100 -  Mid-Map
 
 
 ```python
----------------- pytest  output ----------------
--------------- pytest-cov output --------------
 ```
-
+sse aqui eu vou faze um mapa menta o do comteudo todo que eu vi
 
 
 
