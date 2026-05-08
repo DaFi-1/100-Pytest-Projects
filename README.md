@@ -3573,8 +3573,8 @@ class TestReadFile:
 ---------------- pytest  output ----------------
 -------------- pytest-cov output --------------
 ```
-pensei em faze so com python puro, eu eu tinha que injetarr com escopos
-assim que fizer aa chamada da funcao.
+Pensei em fazer só com Python puro, mas eu tinha que injetar com escopos
+assim que fizer a chamada da função.
 
 ## 🧪 88 - Fibonacci 
 
