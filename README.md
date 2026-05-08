@@ -2288,7 +2288,7 @@ main.py::TestProcessarArquivo::test_open_file_success PASSED
 main.py::TestProcessarArquivo::test_open_file_error PASSED
 main.py::TestProcessarArquivo::test_json_error PASSED
 main.py::TestProcessarArquivo::test_json_empty PASSED
-main.py::TestProcessarArquivo::test_valoar_menor_que_0 PASSED
+main.py::TestProcessarArquivo::test_valor_menor_que_0 PASSED
 main.py::TestProcessarArquivo::test_time_time PASSED
 
 -------------- pytest-cov output --------------
