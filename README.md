@@ -44,7 +44,7 @@ import pytest
 def sum(x: int, y: int) -> int:
     return x + y
 
-def test_sum_succes() -> None:
+def test_sum_success() -> None:
     assert sum(10,10) == 20 
 ```
 
@@ -63,13 +63,13 @@ def sum(x: int, y: int) -> int:
     (2,2,4),
     (10,10,20),
 ])
-def test_sum_succes(x, y, output) -> None:
+def test_sum_success(x, y, output) -> None:
     assert sum(x, y) == output 
 
 -------------- pytest  output --------------
-main.py::test_sum_succes[1-1-2] PASSED
-main.py::test_sum_succes[2-2-4] PASSED
-main.py::test_sum_succes[10-10-20] PASSED
+main.py::test_sum_success[1-1-2] PASSED
+main.py::test_sum_success[2-2-4] PASSED
+main.py::test_sum_success[10-10-20] PASSED
 ```
 
 Com o decorador **@pytest.mark.parametrize()** podemos simular várias chamadas ao mesmo teste com diversos argumentos
@@ -100,7 +100,7 @@ def sum(x: int, y: int) -> int:
 
 class TestSum:
 
-    def test_sum_succes(self) -> None:
+    def test_sum_success(self) -> None:
         assert sum(10,10) == 20
 
     @pytest.mark.parametrize('x , y, output',[
@@ -108,16 +108,16 @@ class TestSum:
         (2,2,4),
         (10,10,20),
     ])
-    def test_sum_succes(self, x, y, output) -> None:
+    def test_sum_success(self, x, y, output) -> None:
         assert sum(x, y) == output 
 
     def test_docstring_exist(self, ) -> None:
         assert sum.__doc__ is not None
 
 -------------- pytest  output --------------
-main.py::TestSum::test_sum_succes[1-1-2] PASSED
-main.py::TestSum::test_sum_succes[2-2-4] PASSED
-main.py::TestSum::test_sum_succes[10-10-20] PASSED
+main.py::TestSum::test_sum_success[1-1-2] PASSED
+main.py::TestSum::test_sum_success[2-2-4] PASSED
+main.py::TestSum::test_sum_success[10-10-20] PASSED
 main.py::TestSum::test_docstring_exist PASSED
 ```
 Toda classe de teste do pytest começa com **Test...**, e todos os seus métodos recebem a instância da classe como argumento **self**. Ao criar uma classe com nome Test--- seguido do nome da função, melhora-se a legibilidade para outras pessoas ao lerem os testes
