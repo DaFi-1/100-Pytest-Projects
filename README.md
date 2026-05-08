@@ -3240,7 +3240,7 @@ class TestLerPegarModo:
 main.py::TestLerPegarModo::test_open PASSED
 -------------- pytest-cov output --------------
 ```
-muito simples de mock com pytest-mock comparado com o monkeypatch
+Muito simples de mock com pytest-mock comparado com o monkeypatch
 
 ## 🧪 77 - implementando a função de cima com monkeypatch 
 
