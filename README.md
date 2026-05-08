@@ -198,11 +198,11 @@ def send_message(phone: str) -> bool:
 
 class TestSendMessage:
 
-    def test_strin_phone(self) -> None:
+    def test_string_phone(self) -> None:
         assert send_message('99 9999 9999') 
 
 -------------- pytest  output --------------
-main.py::TestSendMessage::test_strin_phone send OK
+main.py::TestSendMessage::test_string_phone send OK
 PASSED
 ```
 
@@ -227,7 +227,7 @@ class TestSendMessage:
         ([]),
         ('99 9999 9999'),
     ])
-    def test_strin_phone(self, x) -> None:
+    def test_string_phone(self, x) -> None:
         assert not send_message(x) 
 
 -------------- pytest  output --------------
@@ -251,7 +251,7 @@ def create_dir(pathdir: str) -> None:
 
 class TestCreateDir:
 
-    def test_strin_phone(self) -> None:
+    def test_string_phone(self) -> None:
         # criar o dir 
         create_dir("./testDir") 
         # verifica se o dir existe
@@ -260,7 +260,7 @@ class TestCreateDir:
             os.rmdir("./testDir")
 
 -------------- pytest  output --------------
-main.py::TestCreateDir::test_strin_phone PASSED                                                                                                         [100%]
+main.py::TestCreateDir::test_string_phone PASSED                                                                                                         [100%]
 ```
 
 Agora, como testar uma função que depende de outra? Podemos criar um diretório, verificar sua existência e removê-lo em seguida, como no código acima.
@@ -276,7 +276,7 @@ def create_dir(pathdir: str) -> None:
 
 class TestCreateDir:
 
-    def test_strin_phone(self, mocker) -> None:
+    def test_string_phone(self, mocker) -> None:
         # objeto fake da função sobrescrita
         fake = mocker.patch('main.os.makedirs')
         create_dir('./FakeDir')
@@ -284,7 +284,7 @@ class TestCreateDir:
         fake.assert_called_once_with('./FakeDir', exist_ok=True)
 
 -------------- pytest  output --------------
-main.py::TestCreateDir::test_strin_phone PASSED                                                                                                         [100%]
+main.py::TestCreateDir::test_string_phone PASSED                                                                                                         [100%]
 ```
 
 Podemos usar o conceito de mock para substituir funções por retornos conhecidos e simular comportamentos desejados.
