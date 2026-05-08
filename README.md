@@ -898,7 +898,7 @@ def get_user_name(user_id: int) -> str:
 
 class TestGetUserName:
 
-    def test_reponse_error(self, mocker) -> None:
+    def test_response_error(self, mocker) -> None:
         fake_response = mocker.Mock()
         fake_response.status_code = 400
         fake = mocker.patch('main.requests.get', side_effect=fake_response)
@@ -909,7 +909,7 @@ class TestGetUserName:
 
         fake.assert_called_once_with('https://jsonplaceholder.typicode.com/todos/1')
 
-    def test_reponse_200(self, mocker) -> None:
+    def test_response_200(self, mocker) -> None:
         fake_response = mocker.Mock()
         fake_response.status_code = 200
         fake_response.json.return_value = {
@@ -923,8 +923,8 @@ class TestGetUserName:
         fake.assert_called_once_with('https://jsonplaceholder.typicode.com/todos/1')
 
 ---------------- pytest  output ----------------
-main.py::TestGetUserName::test_reponse_error PASSED
-main.py::TestGetUserName::test_reponse_200 PASSED
+main.py::TestGetUserName::test_response_error PASSED
+main.py::TestGetUserName::test_response_200 PASSED
 
 -------------- pytest-cov output --------------
 Name      Stmts   Miss  Cover   Missing
@@ -3927,13 +3927,13 @@ def get_user_name(user_id):
 
 class TestGetUserName:
 
-    def test_reponse_error(self,mocker) -> None:
+    def test_response_error(self,mocker) -> None:
         fakeobj = mocker.Mock() 
         fakeobj.status_code = 300
         mocker.patch('main.requests.get', return_value=fakeobj)
         assert get_user_name('orange') == None
 
-    def test_reponse_error(self,mocker) -> None:
+    def test_response_error(self,mocker) -> None:
         fakeobj = mocker.Mock() 
         fakeobj.status_code = 200
         mocker.patch('main.requests.get', return_value=fakeobj)
@@ -3941,8 +3941,8 @@ class TestGetUserName:
 
 
 ---------------- pytest  output ----------------
-main.py::TestGetUserName::test_reponse_error PASSED 
-main.py::TestGetUserName::test_reponse_error FAILED 
+main.py::TestGetUserName::test_response_error PASSED 
+main.py::TestGetUserName::test_response_error FAILED 
 -------------- pytest-cov output --------------
 ```
 
@@ -3960,7 +3960,7 @@ def read_file(path):
 
 class TestReadFile:
 
-    def test_reponse_error(self, mocker) -> None:
+    def test_response_error(self, mocker) -> None:
         mocker.patch('builtins.open', mocker.mock_open())
         assert read_file('orange.txt') == '' 
 
