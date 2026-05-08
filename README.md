@@ -3752,7 +3752,7 @@ main.py::TestSavarUsuarioMocker::test_idade_negative PASSED
 -------------- pytest-cov output --------------
 ```
 
-## 🧪 92 - simples funcao de soma com parametrize
+## 🧪 92 - simples função de soma com parametrize
 
 ```python
 import pytest
