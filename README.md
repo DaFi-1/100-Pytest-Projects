@@ -4405,8 +4405,8 @@ Só de sacanagem utilizei um agente para escrever a função & os testes. Perceb
 muito longe, programadores de nível comercial vão ser apenas arquitetos de IA, aplicando conceitos
 de engenharia de software. TDD, BDD... é toda essa bosta que só existe porque tem o segmento comercial
 
-ja que escrever codigo ee muito barato pq nao voltar para linguagens padrao, tipo C? qp nao voltar para uma 
-linguagem padrao, para padronizar tudo ee parar de iventar inventar aaa roda com coisas como, typescrip
+Já que escrever código é muito barato, por que não voltar para linguagens padrão, tipo C? E por que não voltar para uma
+linguagem padrão, para padronizar tudo e parar de inventar a roda com coisas como, TypeScript
 lua, javascript, pq nao padronizar uma unica linguagem de programacao?, afinal eee eee mais do que possivel
 uma unica linguagens de programacao subrir todas asss necessidades.
 
