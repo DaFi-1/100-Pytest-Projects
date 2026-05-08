@@ -1997,7 +1997,7 @@ class TestObterUsuario:
         fake = mocker.Mock()
         fake.status_code = 300
         mocker.patch('main.requests.get', return_value=fake)
-        assert obter_usuario('user')['erro'] == 'usuario nao encontrado'
+        assert obter_usuario('user')['erro'] == 'usuário não encontrado'
 
     def test_data_error(self, mocker) -> None:
         fake = mocker.Mock()
