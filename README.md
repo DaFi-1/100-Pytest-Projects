@@ -3969,7 +3969,7 @@ class TestReadFile:
 -------------- pytest-cov output --------------
 ```
 
-## 🧪 99 - muito barato escrever codigo hoje em dia 
+## 🧪 99 - muito barato escrever código hoje em dia 
 
 ```python
 # test_api.py
