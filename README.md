@@ -4402,8 +4402,8 @@ main.py::test_custom_ids[double_case] PASSED                                    
 ```
 Só de sacanagem utilizei um agente para escrever a função & os testes. Perceba que com a IA
 é muito barato escrever código, barato é absurdamente rápido. Acredito eu que no futuro, não
-muito longe, programadores de nivel cormercial vao ser apenas arquitetos de IA, aplicando conceitos 
-de engenharia de software. TDD,BDD..... ee toda essa bosta que so existe pq tem oo seguimento comercial
+muito longe, programadores de nível comercial vão ser apenas arquitetos de IA, aplicando conceitos
+de engenharia de software. TDD, BDD... é toda essa bosta que só existe porque tem o segmento comercial
 
 ja que escrever codigo ee muito barato pq nao voltar para linguagens padrao, tipo C? qp nao voltar para uma 
 linguagem padrao, para padronizar tudo ee parar de iventar inventar aaa roda com coisas como, typescrip
