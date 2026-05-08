@@ -4400,8 +4400,8 @@ main.py::test_custom_ids[simple_case] PASSED                                    
 main.py::test_custom_ids[double_case] PASSED                                                          [100%]
 -------------- pytest-cov output --------------
 ```
-so de sacanagem utilizei um agent par escrever aaa funaco & os tests perceba que com aa ia 
-ee muito barato escrever codigo , barato ee absurddmente rapido, acretido eu que no fututo nao
+Só de sacanagem utilizei um agente para escrever a função & os testes. Perceba que com a IA
+é muito barato escrever código, barato é absurdamente rápido. Acredito eu que no futuro, não
 muito longe, programadores de nivel cormercial vao ser apenas arquitetos de IA, aplicando conceitos 
 de engenharia de software. TDD,BDD..... ee toda essa bosta que so existe pq tem oo seguimento comercial
 
