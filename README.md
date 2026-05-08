@@ -4412,8 +4412,10 @@ uma unica linguagens de programacao subrir todas asss necessidades.
 
 ## 🧪 100 -  Mid-Map
 
-
 ```python
+
+
+
 ```
 sse aqui eu vou faze um mapa menta o do comteudo todo que eu vi
 
