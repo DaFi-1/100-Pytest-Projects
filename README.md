@@ -45,7 +45,7 @@ def sum(x: int, y: int) -> int:
     return x + y
 
 def test_sum_succes() -> None:
-    assert sun(10,10) == 20 
+    assert sum(10,10) == 20 
 ```
 
 Veja que fiz um teste unitário: todo teste unitário é único, não depende de nada para funcionar, apenas da própria função. 
@@ -64,7 +64,7 @@ def sum(x: int, y: int) -> int:
     (10,10,20),
 ])
 def test_sum_succes(x, y, output) -> None:
-    assert sun(x, y) == output 
+    assert sum(x, y) == output 
 
 -------------- pytest  output --------------
 main.py::test_sum_succes[1-1-2] PASSED
