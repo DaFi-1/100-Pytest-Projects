@@ -4410,16 +4410,6 @@ linguagem padrao, para padronizar tudo ee parar de iventar inventar aaa roda com
 lua, javascript, pq nao padronizar uma unica linguagem de programacao?, afinal eee eee mais do que possivel
 uma unica linguagens de programacao subrir todas asss necessidades.
 
-## 🧪 100 -  Mid-Map
-
-```python
-
-
-
-```
-sse aqui eu vou faze um mapa menta o do comteudo todo que eu vi
-
-
 
 # Flash cards
 
@@ -4428,79 +4418,6 @@ de flash cards com o anki, todos os flash cards foram revisados ao decorrer
 do estudo deste projeto, alguns vão ser mantidos ou não vai depender muito 
 das onde minha area vai comvergir no futuro,
 
-### CARD 1
-        O que eu uso para inventar atributos e métodos.            ------ mocker.Mock()
-        Como capturar um erro para teste no pytest                ------ pytest.raises()
-        pytest.raises() usa junto com                             ------ with
-        Para que serve o pytest.raises()                          ------ capturar um erro
+## 🧪 100 -  Mid-Map
 
-        Como capturar esse erro para teste
-        if response.status_code != 200:                                  with pytest.raises(Exception) as error:
-            raise Exception("Erro ao buscar usuário")             ------     get_user_name('1')
-                                                                         assert str(error.value) == "Erro ao buscar usuário"
-### CARD 2
-        O que o mocker dentro do argumento da função retorna?     ------ MockerFixture
-        O objeto retornado por mocker.spy é                       ------ MagicMock
-        O objeto retornado por mocker.patch é                     ------ MagicMock
-        O objeto retornado por mocker.stub é                      ------ MagicMock
-        mocker.stub()                                             ------ cria uma função falsa (stub) que não executa lógica real, apenas registra chamadas
-        mocker.patch()                                            ------ substitui uma função, método ou objeto real por um mock durante o teste
-        mocker.spy()                                              ------ observa uma função real sem substituí-la, registrando chamadas feitas nela
-        Como fazer mock de funções built-in                       ------ mocker.patch("builtins.nome_da_função")
-        Como mockar open("arquivo", "a")                          ------ mocker.patch("builtins.open", mocker.mock_open())
-
-    métodos de verificação de comportamento do mock
-        fake.assert_called()                                      ------ Verifica se o mock foi chamado pelo menos 1 vez.
-        fake.assert_called_once()                                 ------ Verifica se o mock foi chamado exatamente 1 vez.
-        fake.assert_called_once_with(*args, **kwargs)             ------ Verifica se o mock foi chamado exatamente 1 vez com os argumentos exatos.
-        fake.assert_called_with(*args, **kwargs)                  ------ Verifica se a última chamada do mock teve esses argumentos.
-        fake.assert_not_called()                                  ------ Verifica se o mock nunca foi chamado.
-        fake.assert_has_calls(calls, any_order=False)             ------ Verifica se o mock recebeu uma sequência específica de chamadas.
-        fake.assert_any_call(*args, **kwargs)                     ------ Verifica se o mock foi chamado pelo menos uma vez com esses argumentos.
-
-### CARD 3
-        o return_value do mocker.patch() levanta erro             ------ não
-        return_value ou side_effect para levantar erro            ------ side_effect
-        o que isso faz mocker.Mock()                              ------ cria um objeto falso
-        para que serve o side_effect no mocker.patch()            ------ define o que acontece quando a função é chamada
-        três coisas que o side_effect faz()                       ------ lançar erro, retornar valores, executar uma função
-        diferença entre mocker.patch() & mocker.Mock()            ------ mocker.patch() substitui algo real no código
-                                                                         mocker.Mock() cria um objeto falso
-        ----- como mockar isso -----
-        host = dpg.get_value("host")        → "x"
-        port = dpg.get_value("port")        → "y"                 ------ mocker.patch(
-        minutes = dpg.get_value("minutes")  → "z"                           'modulo.dpg.get_value',
-                                                                         side_effect=["x", "y", "z"]
-                                                                     )
-### CARD 4
-        Qual o primeiro argumento do mocker.patch()               ------ o caminho da função real
-        Qual o tipo de objeto retornado por mocker.patch()        ------ MagicMock
-        O que isso faz mocker.patch()                             ------ substitui função real por fake 
-        Como ter mock no pytest                                   ------ usando o plugin pytest-mock ou o unittest.mock.patch
-        Como substituir uma função real por uma falsa             ------ usando mocker.patch()
-        Com o plugin pytest-mock a função recebe o parâmetro      ------ mocker
-        Os parâmetros mais usados em mocker.patch()               ------ return_value, side_effect, name,x,y 
-
-### CARD 5
-        O segundo argumento do monkeypatch.setattr() tem que ser um                     ----- uma função chamável
-        Assim como pytest-mock, devemos usar o monkeypatch se a função depender de algo ----- sim
-        O que eu uso para mudar variáveis de ambiente no monkeypatch                    ----- monkeypatch.setenv
-        O que eu uso para mudar objetos/method/mock com monkeypatch                     ----- monkeypatch.setattr
-        O que eu uso para mudar um valor de dict com monkeypatch                        ----- monkeypatch.setitem
-
-        Defina:
-            monkeypatch.setattr                                                         ----- muda atributo de objeto/módulo
-            monkeypatch.setitem                                                         ----- muda valor em dict
-            monkeypatch.setenv                                                          ----- muda variável de ambiente
-
-
-        O que o Python faz aqui internamente with open() as x:                          ----- open().__enter__()
-                                                                                              open().__exit__()
-
-        Faça um objeto fake do open() no Python                                         ----- class FakeFile:
-                                                                                              def __enter__(self):
-                                                                                                  return self
-                                                                                              def __exit__(self, exc_type, exc_value, traceback):
-                                                                                                  pass
-
-
+![](./res/flashcard.png)
