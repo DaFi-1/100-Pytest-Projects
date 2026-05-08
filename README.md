@@ -4407,8 +4407,8 @@ de engenharia de software. TDD, BDD... é toda essa bosta que só existe porque 
 
 Já que escrever código é muito barato, por que não voltar para linguagens padrão, tipo C? E por que não voltar para uma
 linguagem padrão, para padronizar tudo e parar de inventar a roda com coisas como, TypeScript
-lua, javascript, pq nao padronizar uma unica linguagem de programacao?, afinal eee eee mais do que possivel
-uma unica linguagens de programacao subrir todas asss necessidades.
+lua, javascript, por que não padronizar uma única linguagem de programação? Afinal, é mais do que possível
+uma única linguagem de programação suprir todas as necessidades.
 
 
 # Flash cards
