@@ -87,7 +87,7 @@ def test_docstring_exist() -> None:
     assert sum.__doc__ is not None
 ```
 
-para pegar a docstring de uma função usamos **func.__doc__**, se não tiver docstring retorna **None**
+para pegar a docstring de uma função usamos **func.__doc__**, se não tiver docstring, retorna **None**
 
 ## 🧪 4 - Organizando vários testes em uma única classe
 
@@ -184,7 +184,7 @@ main.py::TestSumError::test_sum_error[int-int-None] PASSED
 main.py::TestSumError::test_sum_error[bool-bool-None] PASSED
 ```
 
-Vamos agora fazer a Parametrização para garantir que não vai dar erro com diferentes entradas
+Vamos agora fazer a parametrização para garantir que não vai dar erro com diferentes entradas
 
 ## 🧪 8 - Função de enviar uma mensagem
 
@@ -957,7 +957,7 @@ def get_user_posts_titles(user_id: int) -> list[str]:
         return []
 
     return [post["title"] for post in data]
-get_user_posts_titles(1)
+
 class TestGetUserPostsTitles:
 
     def test_error(self, mocker) -> None:
@@ -2030,7 +2030,7 @@ main.py      29      0   100%
 TOTAL        29      0   100%
 ```
 
-mocando e testando um simples retorno de dict do python comparando o dict interno. 
+mockando e testando um simples retorno de dict do python comparando o dict interno. 
 
 ## 🧪 48 - Testando se uma função tem docstring
 
@@ -2973,7 +2973,7 @@ main.py::TestCheckApiStatusModeTwo::test_success_success PASSED                 
 
 não sei por que o chatgpt quando eu mando ele fazer uma função difícil ele faz uma 
 função que faz 100 coisas diferentes na mesma função kkkkkkk cadê o SOLID...
-em cenarios reais concerteza vai ter funcoes GOD feitas por programadores ruims
+em cenários reais com certeza vai ter funções GOD feitas por programadores ruins
 
 Simples teste para mostrar a um amigo como se faz teste.
 
@@ -3047,7 +3047,7 @@ main.py::TestOpenFile::testopenfile PASSED
 -------------- pytest-cov output --------------
 ```
 
-interessante para fazer um builtins.open() preciso de um objetos fake
+interessante para fazer um builtins.open() preciso de objetos fake
 vou estudar mais detalhado esse método open() e como ele funciona. 
 Eu sei no fundo como ele funciona em C, mas no Python tem coisas como namespaces, escopos, etc. Acho que ele tem mecânicas bem únicas no Python. 
 
@@ -4401,7 +4401,7 @@ main.py::test_custom_ids[double_case] PASSED                                    
 -------------- pytest-cov output --------------
 ```
 Só de sacanagem utilizei um agente para escrever a função & os testes. Perceba que com a IA
-é muito barato escrever código, barato é absurdamente rápido. Acredito eu que no futuro, não
+é muito barato escrever código, barato e absurdamente rápido. Acredito eu que no futuro, não
 muito longe, programadores de nível comercial vão ser apenas arquitetos de IA, aplicando conceitos
 de engenharia de software. TDD, BDD... é toda essa bosta que só existe porque tem o segmento comercial
 
