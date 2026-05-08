@@ -2018,7 +2018,7 @@ class TestObterUsuario:
         assert obter_usuario('user') == fake.json.return_value 
 
 ---------------- pytest  output ----------------
-main.py::TestObterUsuario::test_staus_code_error PASSED
+main.py::TestObterUsuario::test_status_code_error PASSED
 main.py::TestObterUsuario::test_data_error PASSED
 main.py::TestObterUsuario::test_success_return_dict PASSED
 
