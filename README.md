@@ -4413,10 +4413,10 @@ uma única linguagem de programação suprir todas as necessidades.
 
 # Flash cards
 
-essa parte é dedicada aos flashcards criados ao decorrer do estudo. 
-de flash cards com o anki, todos os flash cards foram revisados ao decorrer
-do estudo deste projeto, alguns vão ser mantidos ou não vai depender muito 
-das onde minha area vai comvergir no futuro,
+Essa parte é dedicada aos flashcards criados no decorrer do estudo.
+Criei flash cards com o Anki, todos os flash cards foram revisados no decorrer
+do estudo deste projeto. Alguns serão mantidos ou não, vai depender muito
+de onde minha área vai convergir no futuro.
 
 ## 🧪 100 -  Mid-Map
 
