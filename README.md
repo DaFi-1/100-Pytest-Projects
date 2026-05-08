@@ -3846,7 +3846,7 @@ main.py::TestContarLetras::test_error_empty PASSED
 -------------- pytest-cov output --------------
 ```
 
-## 🧪 95 - podira usar parametrize para nao duplicar uma funcao 
+## 🧪 95 - poderia usar parametrize para não duplicar uma função 
 
 ```python
 import pytest
