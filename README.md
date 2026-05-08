@@ -3908,11 +3908,41 @@ main.py::TestFatorial::test_error PASSED
 -------------- pytest-cov output --------------
 ```
 
-## 🧪 97 - Seção vazia (vazia)
+## 🧪 97 - mais um
 
 
 ```python
+import pytest
+import requests
+
+def get_user_name(user_id):
+    response = requests.get(f"https://api.site.com/users/{user_id}")
+
+    if response.status_code != 200:
+        return None
+
+    data = response.json()
+    return data["name"]
+
+
+class TestGetUserName:
+
+    def test_reponse_error(self,mocker) -> None:
+        fakeobj = mocker.Mock() 
+        fakeobj.status_code = 300
+        mocker.patch('main.requests.get', return_value=fakeobj)
+        assert get_user_name('orange') == None
+
+    def test_reponse_error(self,mocker) -> None:
+        fakeobj = mocker.Mock() 
+        fakeobj.status_code = 200
+        mocker.patch('main.requests.get', return_value=fakeobj)
+        assert get_user_name('orange') == None
+
+
 ---------------- pytest  output ----------------
+main.py::TestGetUserName::test_reponse_error PASSED 
+main.py::TestGetUserName::test_reponse_error FAILED 
 -------------- pytest-cov output --------------
 ```
 
