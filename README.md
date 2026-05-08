@@ -2012,7 +2012,7 @@ class TestObterUsuario:
         fake.json.return_value = {
             'id':'fake1234',
             'name':'fakename',
-            'email':'fake@gamil.com',
+            'email':'fake@gmail.com',
         } 
         mocker.patch('main.requests.get', return_value=fake)
         assert obter_usuario('user') == fake.json.return_value 
