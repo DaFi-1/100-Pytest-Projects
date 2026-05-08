@@ -3946,7 +3946,7 @@ main.py::TestGetUserName::test_reponse_error FAILED
 -------------- pytest-cov output --------------
 ```
 
-## 🧪 98 - uma facil kkkk pq ta quase no fim 
+## 🧪 98 - uma fácil kkkk pq tá quase no fim 
 
 
 ```python
