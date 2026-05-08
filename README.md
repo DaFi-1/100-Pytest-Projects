@@ -3698,7 +3698,7 @@ Duas formas de fazer mocker de funções builtins do python, embora eu prefira
 utilizar o unittest do python que segue uma arquitetura legal e bem sólida.
 Até onde eu sei, originalmente criada em Java, e virou padrão para todas as linguagens.
 
-## 🧪 91 - main um de fake open() 
+## 🧪 91 - mais um de fake open() 
 ```python
 import pytest
 
