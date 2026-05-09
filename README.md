@@ -1,8 +1,5 @@
 # 🧪 TDD com Pytest — 100 Projetos Práticos 
 
-
-
-   
 <p align="center">
   <img src="res/LogoEbook.png" width="300" style="display:inline-block;"/>
   <img src="https://docs.pytest.org/en/stable/_static/pytest1.png" width="400" style="display:inline-block;"/>
